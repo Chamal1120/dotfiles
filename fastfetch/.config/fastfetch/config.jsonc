@@ -1,0 +1,69 @@
+
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "~/.config/fastfetch/asuna.png",
+        "type": "kitty",
+        "height": 18,
+        "padding": {
+          "top": 1
+        }
+    },
+    "display": {
+        "separator": " ›  ",
+        "constants": [
+            "██ "
+        ],
+    },
+    "modules": [
+        "break",
+        "break",
+        "break",
+        "break",
+        {
+            "key": "{$1}OS  ",
+            "keyColor": "38;5;183",  // Mauve
+            "type": "os"
+        },
+        {
+            "key": "{$1}KER ",
+            "keyColor": "38;5;111",  // Blue
+            "type": "kernel"
+        },
+        {
+            "key": "{$1}SH  ",
+            "keyColor": "38;5;218",  // Pink
+            "type": "shell"
+        },
+        {
+            "key": "{$1}TER ",
+            "keyColor": "38;5;218",  // Pink
+            "type": "terminal"
+        },
+        {
+            "key": "{$1}LOG ",
+            "keyColor": "38;5;151",  // Green
+            "type": "lm",
+        },
+        {
+            "key": "{$1}WM  ",
+            "keyColor": "38;5;151",  // Green
+            "type": "wm",
+        },
+        {
+            "key": "{$1}PKG ",
+            "keyColor": "38;5;187",  // Yellow
+            "type": "packages"
+        },
+        {
+            "key": "{$1}CPU ",
+            "keyColor": "38;5;183",  // Mauve
+            "type": "cpu"
+        },
+        {
+            "key": "{$1}MEM ",
+            "keyColor": "38;5;111",  // Blue
+            "type": "memory"
+        }
+    ]
+}

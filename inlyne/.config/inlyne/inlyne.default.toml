@@ -1,0 +1,129 @@
+# A different scale factor can be specified
+# Example:
+# scale = 1.5
+# Default: The window's scale factor (system dependent)
+
+# The Maximum page width can be specified in pixels
+# Example:
+# page-width = 800
+# Default: Unconstrained
+
+# Force the use of a specific color theme
+# Example:
+# theme = "Dark"
+# Possible values: ["Auto", "Light", "Dark"]
+theme = "Dark"
+
+# Number of lines to scroll when using a line-based scrolling device (a lot of
+# mice)
+# Example:
+# lines-to-scroll = 4.5
+lines-to-scroll = 3.0
+
+# The light and dark themes can be customized as well
+# Both the light and dark theme colors can be fully customized
+[dark-theme]
+# Regular text color
+text-color = 0x9dacbb
+# Background canvas color
+background-color = 0x1a1d22
+# Inline code text color
+code-color = 0xb38fac
+# Quote block background color
+quote-block-color = 0x1d2025
+# Hyperlink text color
+link-color = 0x4182eb
+# Text selection color
+select-color = 0x3675cb
+# Checkbox ticked background color
+checkbox-color = 0x0a5301
+# Syntax highlighting theme. All of `syntect`s default themes are supported
+# Possible values: [
+#     "base16-eighties-dark", "base16-mocha-dark", "base16-ocean-dark",
+#     "base16-ocean-light",   "coldark-cold",      "coldark-dark",
+#     "dark-neon",            "dracula",           "github",
+#     "gruvbox-dark",         "gruvbox-light",     "leet",
+#     "monokai-extended",     "monokai-extended-light",
+#     "nord",                 "one-half-dark",     "one-half-light",
+#     "solarized-dark",       "solarized-light",   "sublime-snazzy",
+#     "two-dark",             "visual-studio-dark-plus",
+#     "zenburn"
+# ]
+# You can also pass a path to a `.tmTheme` file for a custom theme instead
+# Example:
+# code-highlighter.path = "/path/to/custom.tmTheme"
+code-highlighter = "base16-ocean-dark"
+
+# And the same settings are available for the light theme as well
+[light-theme]
+text-color = 0x000000
+background-color = 0xffffff
+code-color = 0x95114e
+quote-block-color = 0xeef9fe
+link-color = 0x5466ff
+select-color = 0xcde8f0
+checkbox-color = 0x96ecae
+code-highlighter = "github"
+
+# Specify the main and monospace font families
+[font-options]
+# Font family for regular text. E.g.
+# Example:
+# regular-font = "Chalkduster"
+# Default: System dependent
+
+# Font family for monospace text such as code
+# Example:
+# monospace-font = "Monaco"
+# Default: System dependent
+
+# Custom keybinds for actions
+#
+# HOT TIP: If you want to understand the key events received and actions that
+#     are emitted then you can run `inlyne` with the `INLYNE_LOG` env var set
+#     to "inlyne::keybindings=debug"
+#
+# Each entry maps an action to a key combo
+#
+# Action -> Predefined list of possible interactions to perform
+# Key Combo -> Either a single modified key or an array of modified keys
+# Modified Key -> Either an unmodified key or an obj with a key and modifiers
+#
+# Possible Modifiers: ["Alt", "Ctrl", "Os", "Shift"]
+# Possible Actions: [
+#     "ToTop", "ToBottom",
+#     "ScrollUp", "ScrollDown",
+#     "PageUp", "PageDown",
+#     "ZoomIn", "ZoomOut", "ZoomReset",
+#     "Copy",
+#     "Quit",
+# ]
+# Possible Keys: [
+#     "a"-"z",
+#     "0"-"9",
+#     "`", "@", "*", "-", "=", "+", "[", "]", "\\", ";", ":", "'", ",", ".",
+#     "/",
+#     "F1"-"F12",
+#     "Up", "Down", "Left", "Right",
+#     "Enter", "Space", "Tab", Backspace", "Escape", PageUp", "PageDown",
+#     "Home", "End", "Delete", "Insert"
+# ]
+[keybindings]
+# The default keybindings include both normal and vim-like bindings
+
+# Base will override the defaults keybindings if set. Useful for when you want
+# to fully specify all of the keybindings
+# Example:
+# base = [
+#     ["ToTop", "Home"],
+#     ["ToBottom", "End"],
+#     ["Copy", { key = "c", mod = ["Ctrl"] }],
+#     ["ToTop", ["g", "g"]],
+#     ["ToBottom", { key = "g", mod = ["Shift"] }],
+#     ["Copy", "y"],
+# ]
+# Default: Not set
+
+# Extra will be applied on top of base/defaults. Useful for when you want to
+# just add some extra keybindings on top of the defaults
+# Default: Not set
