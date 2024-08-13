@@ -1,36 +1,35 @@
-# Dotfiles-linux (i3 | TTY login | Catppuccin flavoured)
+# Dotfiles-linux (Hyprland | TTY login | Catppuccin flavoured)
 
 Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 
 ## Previews
-![preview_01](./previews/2024-08-07-130211_2560x1600_scrot.png)
-![preview_01](./previews/2024-08-07-120612_2560x1600_scrot.png)
+![preview_01](previews/2024-08-13T17:20:36,928349926+05:30.png)
+![preview_02](previews/2024-08-13T17:19:24,575088456+05:30.png)
+![preview_02](previews/2024-08-13T17:27:24,278130750+05:30.png)
 
 ## What's in?
 
-1. `i3` Window Manager [WM]
-2. `Kitty` i3 sensible terminal
-3. `Starship` prompt
-4. `ls` replaced with `eza`
-5. `$LS_COLORS` managed with `vivid`
-6. `zoxide` is configured (not aliased to cd though)
-7. `fzf` for fuzzy finding
-8. `cat` replaced with `bat`
-9. `fsh` for syntax highlighting
-10. `yazi` file explorer
-11. `btop` system monitor
-12. `neovim` (with LSP, Debugging, syntax highlighting and many more)
-13. `tmux` (Configured to use vim keys)
-14. `fastfetch` and for sys-info fetching
-15. `.hushlogin` file to disable "last login" message.
+1. `Hyprland` Window Manager and compositor
+2. `Hypridle` Idle manager for hyprland
+3. `Hyprlock` Lockscreen for hyprland
+4. `Hyprpaper` Wallpaper manager for hyprland
+5. `Waybar` Status bar
+6. `Kitty` Terminal (wezterm config also available)
+7. `Starship` Prompt
+8. `eza` DIR lister
+9. `vivid` $LS_COLOR manager 
+10. `zoxide` cd replacement
+11. `fzf` Fuzzy finder
+12.  `bat` A cat(1) replacement
+13. `fsh` Zsh syntax highlighting
+14. `yazi` File explorer
+15. `btop` System monitor
+16. `neovim` (with LSP, Debugging, syntax highlighting and many more)
+17. `tmux` terminal multiplexer
+18. `fastfetch` sysfetch
+19. `.hushlogin` file to disable "last login" message.
 
 <br>
-
-> NOTE: Check out my individual repos for the details of my neovim and tmux configs.
-
-➡️ neovim repo - https://github.com/Chamal1120/Lazy-neovim-config
-<br>
-➡️ tmux repo - https://github.com/Chamal1120/Custom_tmux_config
 
 ## How to use
 I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
@@ -62,27 +61,23 @@ stow bat btop fsh kitty nvim starship tmux yazi yt-dlp zsh hushlogin # This comm
 
 This project uses the following open-source packages and applications. Special thanks to their authors and maintainers:
 
-- [Git](https://github.com/git/git) - A free and open source distributed version control system.
-- [Wget](https://git.savannah.gnu.org/cgit/wget.git) - A network utility to retrieve files from the web.
-- [homebrew](https://github.com/Homebrew/brew) - The missing package manager for macOS (or Linux).
-- [eza](https://github.com/eza-community/eza) - A modern, maintained replacement for ls.
-- [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find'.
-- [fzf](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finder.
-- [ripgrep](https://github.com/BurntSushi/ripgrep) - A line-oriented search tool that recursively searches the current directory for a regex pattern.
-- [vivid](https://github.com/sharkdp/vivid) - A themeable LS_COLORS generator with a rich filetype datebase.
-- [Neovim](https://github.com/neovim/neovim) - Hyperextensible Vim-based text editor.
-- [tmux](https://github.com/tmux/tmux) - A terminal multiplexer.
-- [starship](https://github.com/starship/starship) - The minimal, blazing-fast, and infinitely customizable prompt for any shell.
-- [zsh-fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) - Fast syntax highlighting for Zsh.
-- [yazi](https://github.com/sxyazi/yazi) - Yet another command line fuzzy finder.
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A youtube-dl fork with additional features and fixes.
-- [GNU Stow](https://git.savannah.gnu.org/cgit/stow.git) - A symlink farm manager.
-- [bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration.
-- [btop](https://github.com/aristocratos/btop) - A monitor of resources.
-- [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
-- [kitty](https://github.com/kovidgoyal/kitty) - A cross-platform, fast, feature-rich, GPU based terminal emulator.
-- [Firefox](https://github.com/mozilla/gecko-dev) - The popular open-source web browser.
-- [Rectangle](https://github.com/rxhanson/Rectangle) - Move and resize windows on macOS using keyboard shortcuts or snap areas.
-- [Alt-Tab](https://github.com/lwouis/alt-tab-macos) - Windows alt-tab on macOS.
+- [Git](https://github.com/git/git) - _A free and open source distributed version control system._
+- [eza](https://github.com/eza-community/eza) - _A modern, maintained replacement for ls._
+- [fd](https://github.com/sharkdp/fd) - _A simple, fast and user-friendly alternative to 'find'._
+- [fzf](https://github.com/junegunn/fzf) - _A general-purpose command-line fuzzy finder._
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - _A line-oriented search tool that recursively searches the current directory for a regex pattern._
+- [vivid](https://github.com/sharkdp/vivid) - _A themeable LS_COLORS generator with a rich filetype datebase._
+- [Neovim](https://github.com/neovim/neovim) - _Hyperextensible Vim-based text editor._
+- [tmux](https://github.com/tmux/tmux) - _A terminal multiplexer._
+- [starship](https://github.com/starship/starship) - _The minimal, blazing-fast, and infinitely customizable prompt for any shell._
+- [zsh-fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) - _Fast syntax highlighting for Zsh._
+- [yazi](https://github.com/sxyazi/yazi) - _A TUI file explorer._
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - _A youtube-dl fork with additional features and fixes._
+- [GNU Stow](https://git.savannah.gnu.org/cgit/stow.git) - _A symlink farm manager._
+- [bat](https://github.com/sharkdp/bat) - _A cat(1) clone with syntax highlighting and Git integration._
+- [btop](https://github.com/aristocratos/btop) - _A monitor for resources._
+- [zoxide](https://github.com/ajeetdsouza/zoxide) - _A smarter cd command._
+- [kitty](https://github.com/kovidgoyal/kitty) - _A cross-platform, fast, feature-rich, GPU based terminal emulator._
+- [Firefox](https://github.com/mozilla/gecko-dev) - _The popular open-source web browser._
 
-### Thanks N3RDS ❤️
+### and btw, thanks N3RDS ❤️
