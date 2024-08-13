@@ -1,0 +1,63 @@
+@define-color active @color0;
+
+* {
+  border: none;
+  font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";
+  font-size: 13px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+window {
+	/*font-weight: bold;*/
+}
+window#waybar {
+  background: rgba(0, 0, 0, 0);
+}
+
+/*-----module groups----*/
+.modules-left {
+  background-color: rgba(30,30,46,0.85);
+  margin: 10px 5px 0px 10px;
+  padding: 0px 5px 0px 5px;
+}
+
+.modules-center {
+  /*background-color: rgba(180,190,254,0.40);
+  margin: 10px 0px 0px 0px;
+  padding: 0px 5px 0px 5px;*/
+}
+
+.modules-right {
+  background-color: rgba(30,30,46,0.85);
+  margin: 10px 10px 0px 5px;
+  padding: 0px 5px 0px 5px;
+}
+
+/*-----modules indv----*/
+
+#workspaces button {
+  border-radius: 0px;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;    
+  background: none;
+  border: none;
+}
+
+
+
+#workspaces button.active {
+    border-bottom: solid 2px @active;
+}
+
+#network,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#clock {
+  padding: 0px 8px 0px 8px;
+}
+
