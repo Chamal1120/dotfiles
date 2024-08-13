@@ -12,6 +12,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 vim.o.termguicolors = true
+vim.opt.relativenumber = true
 
 -- Source vim-options.lua
 require("vim-options")
