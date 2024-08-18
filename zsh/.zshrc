@@ -1,6 +1,8 @@
 #Alias for fastfetch
 alias ffetch='fastfetch'
 
+alias cd='z'
+
 # Aliases for eza commands
 alias ls='eza --icons'
 alias la='eza -a'
@@ -82,3 +84,4 @@ esac
 # pnpm end
 
 #fastfetch
+
