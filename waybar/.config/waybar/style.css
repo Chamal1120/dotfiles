@@ -22,9 +22,9 @@ window#waybar {
 }
 
 .modules-center {
-  /*background-color: rgba(180,190,254,0.40);
+  background-color: rgba(30,30,46,0.85);
   margin: 10px 0px 0px 0px;
-  padding: 0px 5px 0px 5px;*/
+  padding: 0px 5px 0px 5px;
 }
 
 .modules-right {
@@ -50,6 +50,11 @@ window#waybar {
 
 #workspaces button.active {
     border-bottom: solid 2px @active;
+}
+
+#custom-weather,
+#custom-pacman {
+  padding: 0px 8px 0px 8px;
 }
 
 #network,
