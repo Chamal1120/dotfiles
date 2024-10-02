@@ -39,8 +39,8 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 # intel vaapi driver for mbp12,1/arch/i3
-#export LIBVA_DRIVER_NAME=i965
-export LIBVA_DRIVER_NAME=iHD
+export LIBVA_DRIVER_NAME=i965
+#export LIBVA_DRIVER_NAME=iHD
 
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
 
