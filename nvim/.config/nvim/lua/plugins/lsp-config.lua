@@ -13,7 +13,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "ruff_lsp", "tailwindcss" },
+        ensure_installed = { "lua_ls", "tsserver","pylsp", "tailwindcss" },
       })
     end,
   },
