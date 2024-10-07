@@ -10,7 +10,7 @@ return {
 			sources = {
 				require("none-ls.diagnostics.eslint_d"),
 				null_ls.builtins.diagnostics.pylint.with({
-          command = "/Users/randy99/miniconda/base/envs/my-venv/bin/pylint",
+          command = "/home/randy99/.conda/envs/myenv/bin/pylint",
 					diagnostics_postprocess = function(diagnostic)
 						diagnostic.code = diagnostic.message_id
 					end,
