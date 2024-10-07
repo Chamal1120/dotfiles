@@ -15,7 +15,7 @@ return {
 					settings = {
 						search = {
 							anaconda_base = {
-								command = "fd /python$ /Users/randy99/miniconda/base/envs --full-path --color never -E /proc",
+								command = "fd /python$ /home/randy99/.conda/envs --full-path --color never -E /proc",
 								type = "anaconda",
 							},
 						},
@@ -39,7 +39,7 @@ return {
 			local dapui = require("dapui")
 
 			dapui.setup()
-			require("dap-python").setup("/usr/local/Caskroom/miniconda/base/envs/my-venv/bin/python") -- Default Python path
+			require("dap-python").setup("/home/randy99//.conda/envs/myenv/bin/python") -- Default Python path
 
 			dap.listeners.before.attach.dapui_config = function()
 				dapui.open()
