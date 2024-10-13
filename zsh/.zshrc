@@ -51,11 +51,18 @@ export QT_SCALE_FACTOR=1
 export GDK_SCALE=1
 export GDK_DPI_SCALE=1
 export MOZ_ENABLE_WAYLAND=1
-
+export GDK_BACKEND=wayland
 export QT_QPA_PLATFORM=wayland
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export WAYLAND_DISPLAY=wayland-1
 export XDG_SESSION_TYPE=wayland
 export ELECTRON_ENABLE_WAYLAND=1
+export GTK_CSD=0
+
+# Wayland Electron Development (v28+)
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+
+export THEME_DIR="/usr/share/themes/catppuccin-mocha-lavender-standard+default"
 
 # source directories for custom plugins
 # Fast Syntax Highlighting
