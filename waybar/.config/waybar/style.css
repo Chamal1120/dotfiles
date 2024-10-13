@@ -3,7 +3,7 @@
 * {
   border: none;
   font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";
-  font-size: 13px;
+  font-size: 12px;
   color: #ffffff;
   border-radius: 5px;
 }
@@ -17,20 +17,20 @@ window#waybar {
 /*-----module groups----*/
 .modules-left {
   background-color: rgba(30,30,46,0.85);
-  margin: 10px 5px 0px 10px;
-  padding: 0px 5px 0px 5px;
+  margin: 10px 3px 0px 10px;
+  padding: 0px 3px 0px 3px;
 }
 
 .modules-center {
   background-color: rgba(30,30,46,0.85);
   margin: 10px 0px 0px 0px;
-  padding: 0px 5px 0px 5px;
+  padding: 0px 3px 0px 3px;
 }
 
 .modules-right {
   background-color: rgba(30,30,46,0.85);
-  margin: 10px 10px 0px 5px;
-  padding: 0px 5px 0px 5px;
+  margin: 10px 10px 0px 3px;
+  padding: 0px 3px 0px 3px;
 }
 
 /*-----modules indv----*/
