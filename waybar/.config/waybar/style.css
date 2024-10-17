@@ -1,60 +1,78 @@
-@define-color active @color0;
-
 * {
-  border: none;
-  font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";
-  font-size: 12px;
-  color: #ffffff;
-  border-radius: 5px;
+  font-size: 10px;
+  border-radius: 15px;
+  padding: 0;
+  margin: 0;
 }
-window {
-	/*font-weight: bold;*/
-}
+
 window#waybar {
+  border: none;
+  border-top: 0px;
+  border-bottom: 0px;
+  color: #ffffff;
+  font-family: FontAwesome, monospace;
+  /*font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";*/
   background: rgba(0, 0, 0, 0);
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
 /*-----module groups----*/
 .modules-left {
-  background-color: rgba(30,30,46,0.85);
+  background-color: rgba(17, 17, 27,0.85);
   margin: 10px 3px 0px 10px;
-  padding: 0px 3px 0px 3px;
+  padding: 0px 10px 0px 10px;
 }
 
 .modules-center {
-  background-color: rgba(30,30,46,0.85);
+  background-color: rgba(17, 17, 27,0.85);
   margin: 10px 0px 0px 0px;
-  padding: 0px 3px 0px 3px;
+  padding: 0px 10px 0px 10px;
 }
 
 .modules-right {
-  background-color: rgba(30,30,46,0.85);
+  background-color: rgba(17, 17, 27,0.85);
   margin: 10px 10px 0px 3px;
-  padding: 0px 3px 0px 3px;
+  padding: 0px 10px 0px 10px;
 }
 
 /*-----modules indv----*/
 
 #workspaces button {
-  border-radius: 0px;
+  border-radius: 20px;
+  min-width: 30px;
+  color: #ffffff;
 }
 
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;    
-  background: none;
-  border: none;
-}
-
-
+    box-shadow: inherit;
+    text-shadow: inherit;    
+    background: none;
+    min-width: 30px;
+    border-color: rgba(17, 17, 27,0.85);
+  }
 
 #workspaces button.active {
-    border-bottom: solid 2px @active;
+    /*border-bottom: solid 2px @active;*/
+    background-color: rgba(203, 166, 247, 0.85);
+    border-radius: 20px;
+    margin: 0px;
+    min-width: 30px;
+    color: #000000;
 }
 
-#custom-weather,
+#cava {
+  min-width: 60px;
+  padding: 0px 8px 0px 8px;
+}
+
 #custom-pacman {
   padding: 0px 8px 0px 8px;
+  min-width:  90px;
+}
+
+#cpu {
+  min-width:  32px;
 }
 
 #network,
@@ -62,7 +80,8 @@ window#waybar {
 #memory,
 #temperature,
 #battery,
+#pulseaudio,
 #clock {
-  padding: 0px 8px 0px 8px;
+  padding: 0px 6px 0px 6px;
 }
 
