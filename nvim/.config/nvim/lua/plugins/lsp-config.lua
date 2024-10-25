@@ -13,7 +13,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver","pylsp", "tailwindcss" },
+        ensure_installed = { "lua_ls", "tsserver", "tailwindcss", "rust_analyzer" },
       })
     end,
   },
@@ -40,6 +40,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.tailwindcss.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.rust_analyzer.setup({
         capabilities = capabilities,
       })
 
