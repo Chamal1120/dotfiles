@@ -11,11 +11,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
-vim.o.termguicolors = true
-vim.opt.relativenumber = true
 
--- Source vim-options.lua
+-- Source vim settings
 require("vim-options")
+require("session-save")
 
 -- Source plugins.lua
 require("lazy").setup("plugins")
