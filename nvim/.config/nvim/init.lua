@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Source vim settings
 require("vim-options")
-require("session-save")
 
 -- Source plugins.lua
 require("lazy").setup("plugins")
