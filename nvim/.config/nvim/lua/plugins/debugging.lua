@@ -4,28 +4,19 @@ return {
 		dependencies = {
 			"neovim/nvim-lspconfig",
 			"mfussenegger/nvim-dap",
-			"mfussenegger/nvim-dap-python", --optional
+			"mfussenegger/nvim-dap-python",
 			{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
 		},
 		lazy = false,
-		branch = "regexp", -- This is the regexp branch, use this for the new version
+		branch = "regexp",
 		config = function()
 			require("venv-selector").setup({
-				require("venv-selector").setup({
-					settings = {
-						search = {
-							anaconda_base = {
-								command = "fd /python$ /home/randy99/.conda/envs --full-path --color never -E /proc",
-								type = "anaconda",
-							},
-						},
-					},
-				}),
+				name = ".venv",
+				search = false, -- Only look for `.venv` in the current working directory
 			})
+
+			vim.keymap.set("n", "<Leader>vs", "<cmd>VenvSelect<cr>", { noremap = true })
 		end,
-		keys = {
-			{ "<Leader>vs", "<cmd>VenvSelect<cr>" },
-		},
 	},
 	{
 		"mfussenegger/nvim-dap",
@@ -35,12 +26,42 @@ return {
 			"mfussenegger/nvim-dap-python",
 		},
 		config = function()
+			-- Helper function to dynamically resolve the Python path
+			local function get_python_venv()
+				local cwd = vim.fn.getcwd()
+				local python_path = cwd .. "/.venv/bin/python"
+				if vim.fn.filereadable(python_path) == 1 then
+					return python_path
+				else
+					return "python" -- Fallback to system Python
+				end
+			end
+
+			-- DAP setup
 			local dap = require("dap")
 			local dapui = require("dapui")
 
 			dapui.setup()
-			require("dap-python").setup("/home/randy99//.conda/envs/myenv/bin/python") -- Default Python path
 
+			require("dap-python").setup(get_python_venv())
+
+			dap.adapters.python = {
+				type = "executable",
+				command = get_python_venv(), -- Dynamic path to Python interpreter
+				args = { "-m", "debugpy.adapter" },
+			}
+
+			dap.configurations.python = {
+				{
+					type = "python",
+					request = "launch",
+					name = "Launch file",
+					program = "${file}", -- This runs the current file
+					pythonPath = get_python_venv, -- Dynamically resolved Python path
+				},
+			}
+
+			-- Auto-open and close dap-ui
 			dap.listeners.before.attach.dapui_config = function()
 				dapui.open()
 			end
@@ -54,9 +75,9 @@ return {
 				dapui.close()
 			end
 
+			-- Keybindings for debugging
 			local keymap = vim.keymap
 
-			-- Keybindings for nvim-dap
 			keymap.set("n", "<Leader>dt", function()
 				require("dap").toggle_breakpoint()
 			end, {})
@@ -85,7 +106,7 @@ return {
 				require("dap").run_last()
 			end, {})
 
-			-- Keybindings for nvim-dap-ui
+			-- Keybindings for dap-ui
 			keymap.set("n", "<Leader>du", function()
 				dapui.toggle()
 			end, {})

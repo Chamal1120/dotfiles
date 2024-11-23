@@ -19,6 +19,7 @@ return {
 					"tailwindcss",
 					"rust_analyzer",
 					"clangd",
+          "ruff_lsp",
 				},
 			})
 		end,
@@ -50,6 +51,17 @@ return {
 			})
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
+			})
+
+      -- Add Ruff LSP Setup
+			lspconfig.ruff_lsp.setup({
+				cmd = { vim.loop.cwd() .. "/.venv/bin/ruff-lsp" }, -- Use ruff-lsp from local .venv
+				capabilities = capabilities,
+				init_options = {
+					settings = {
+						args = { "--line-length=88" }, -- Example of ruff configuration
+					},
+				},
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
