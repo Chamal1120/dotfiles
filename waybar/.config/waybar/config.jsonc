@@ -7,16 +7,15 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces"
-    ],
-    "modules-center": [
+        "hyprland/workspaces",
         "custom/pacman"
-       
     ],
     "modules-right": [
         "cpu",
         "memory",
         "temperature",
+        "network#speeddown",
+        "network#speedup",
         "network",
         "pulseaudio",
         "battery",
@@ -120,14 +119,29 @@
     "ignored-sinks": ["Easy Effects Sink","JamesDSP Sink"]
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "Ethernet ",
+        "format-wifi": "{essid} ({signalStrength}%) {icon} ",
+        "format-ethernet": "Ethernet  ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
     },
-    "custom/power": {
+    "network#speedup": {
+        "interval": 1,
+        "format-wifi": "{bandwidthUpBytes} 󰶣",
+        "format-ethernet": "{bandwidthUpBytes} 󰶣",
+        "format-disconnected": "⚠",
+        "align": 1,
+    },
+    "network#speeddown": {
+        "interval": 1,
+        "format-wifi": "{bandwidthDownBytes} 󰶡",
+        "format-ethernet": "{bandwidthDownBytes} 󰶡",
+        "format-disconnected": "⚠",
+        "align": 1,
+    },
+      "custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,
 		"menu": "on-click",

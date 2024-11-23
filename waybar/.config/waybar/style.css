@@ -21,16 +21,14 @@ window#waybar {
 
 /*-----module groups----*/
 .modules-left {
-  background-color: rgba(17, 17, 27,0.85);
-  margin: 10px 3px 0px 10px;
-  padding: 0px 10px 0px 10px;
+
 }
 
-.modules-center {
+/*.modules-center {
   background-color: rgba(17, 17, 27,0.85);
   margin: 10px 0px 0px 0px;
   padding: 0px 10px 0px 10px;
-}
+}*/
 
 .modules-right {
   background-color: rgba(17, 17, 27,0.85);
@@ -39,6 +37,12 @@ window#waybar {
 }
 
 /*-----modules indv----*/
+
+#workspaces {
+  background-color: rgba(17, 17, 27,0.85);
+  margin: 10px 3px 0px 10px;
+  padding: 0px 10px 0px 10px;
+}
 
 #workspaces button {
   border-radius: 20px;
@@ -68,9 +72,16 @@ window#waybar {
   padding: 0px 8px 0px 8px;
 }
 
+#network.speeddown, #network.speedup {
+  min-width: 62px;
+}
+
 #custom-pacman {
+  background-color: rgba(17, 17, 27,0.85);
+  margin: 10px 0px 0px 0px;
   padding: 0px 8px 0px 8px;
   min-width:  90px;
+
 }
 
 #cpu {
@@ -78,6 +89,7 @@ window#waybar {
 }
 
 #network,
+#networkSpeed,
 #cpu,
 #memory,
 #temperature,
