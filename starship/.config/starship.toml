@@ -1,0 +1,167 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[line_break]
+disabled = false
+
+format = """ 
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$docker_context\
+$line_break$character
+"""
+
+[character] 
+success_symbol = '[➜](bold fg:green)'
+error_symbol = '[➜](bold fg:red)'
+vimcmd_symbol = '[](bold fg:green)'
+vimcmd_replace_one_symbol = '[](bold fg:yellow)'
+vimcmd_replace_symbol = '[](bold fg:green)'
+vimcmd_visual_symbol = '[](bold fg:yellow)'
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+style = "bold fg:blue"
+format = "[ $path ]($style)"
+read_only = " 󰌾"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[docker_context]
+symbol = " "
+format = ' [$symbol $context](blue bold)'
+disabled = false
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+style = "bold green" 
+symbol = " "
+format = 'on [$symbol$branch(:$remote_branch)]($style) '
+
+[git_commit]
+style = "green" 
+tag_symbol = '  '
+format = '[\($hash$tag\)]($style) '
+
+[git_status]
+style = "green" 
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+style = "bold yellow"
+format = 'via[ $symbol($version)]($style)'
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
+
+[gradle]
+symbol = " "
+
+[package]
+disabled = true
