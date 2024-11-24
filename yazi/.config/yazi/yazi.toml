@@ -30,3 +30,9 @@ prepend_previewers = [
 ]
 [manager]
 show_hidden = false
+
+[preview]
+wrap            = "no"
+tab_size        = 2
+max_width       = 800
+max_height      = 1200
