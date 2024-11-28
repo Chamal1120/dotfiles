@@ -18,6 +18,13 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
+export QT_QPA_PLATFORM=xcb
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+
 export LIBVA_DRIVER_NAME=iHD # intel vaapi driver for mbp12,1/arch/i3
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
 export DOCKER_CLIENT_PARALLELISM=1
