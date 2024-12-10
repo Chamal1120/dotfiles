@@ -16,7 +16,7 @@ Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 05. Terminal multiplexer - Tmux
 06. Nerd font - CaskaydiaCove Nerd Font
 07. Text editor and IDE - Neovim
-08. Browser - Thorium (default), Firefox(with custom chrome.css)
+08. Browser - Thorium (default), Firefox (with custom chrome.css)
 09. File Manager - Thunar
 10. Document viewer - Zathura
 11. File Manager (Terminal) - Yazi
@@ -38,12 +38,12 @@ yay -S stow # replace with your package manager's syntax
 2. clone the repo
 
 ```bash
-git clone https://github.com/Chamal1120RE/dotfiles-linux.git
+git clone https://github.com/Chamal1120/dotfiles-linux-hyprland.git
 ```
 3. Navigate to the directory
 
 ```bash
-cd dotfiles-linux/
+cd dotfiles-linux-hyprland/
 ```
 
 4. Simlink the configs you need with `stow`.
