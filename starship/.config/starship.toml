@@ -24,6 +24,7 @@ vimcmd_visual_symbol = '[](bold fg:yellow)'
 
 [aws]
 symbol = "  "
+disabled = true
 
 [buf]
 symbol = " "
