@@ -47,7 +47,7 @@ export BAT_CONFIG_PATH="/Users/randy99/.config/bat/config/bat.conf"
 export STARSHIP_CONFIG=~/.config/starship.toml
 export COLORTERM=truecolor
 export FZF_DEFAULT_OPTS=" --preview 'bat -n --color=always {}' --bind=down:preview-down --bind=up:preview-up \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=bg+:-1,bg:-1,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
@@ -62,5 +62,6 @@ esac
 # source directories for custom plugins
 source /home/randy99/.fsh-repo/fast-syntax-highlighting.plugin.zsh # Fast Syntax Highlighting
 source /home/randy99/.zsh-auto-suggest-repo/zsh-autosuggestions.zsh # zsh Autosuggestions
+source <(fzf --zsh) # enable fzf for zsh completions (use ctrl + t)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
