@@ -4,8 +4,7 @@
     "logo": {
         "source": "~/.config/fastfetch/yui-snafu.jpg",
         "type": "sixel",
-        "width": 32,
-        "height": 16,
+        "height": 14,
         "padding": {
             "top": 1
         }
@@ -65,11 +64,6 @@
         {
             "key": "│ {#35} memory  {#keys}│",
             "type": "memory"
-        },
-        {
-            "key": "│ {#36}󰩟 network {#keys}│",
-            "type": "localip",
-            "format": "{ipv4} ({ifname})"
         },
         {
             "key": "├───────────┤",
