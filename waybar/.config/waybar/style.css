@@ -51,20 +51,20 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;    
-    background: none;
-    min-width: 30px;
-    border-color: rgba(17, 17, 27,0.85);
+  box-shadow: inherit;
+  text-shadow: inherit;    
+  background: none;
+  min-width: 30px;
+  border-color: rgba(17, 17, 27,0.85);
   }
 
 #workspaces button.active {
-    /*border-bottom: solid 2px @active;*/
-    background-color: rgba(203, 166, 247, 0.85);
-    border-radius: 20px;
-    margin: 0px;
-    min-width: 30px;
-    color: #000000;
+  /*border-bottom: solid 2px @active;*/
+  background-color: rgba(203, 166, 247, 0.85);
+  border-radius: 20px;
+  margin: 0px;
+  min-width: 30px;
+  color: #000000;
 }
 
 #cava {
@@ -79,9 +79,16 @@ window#waybar {
 #custom-pacman {
   background-color: rgba(17, 17, 27,0.85);
   margin: 10px 0px 0px 0px;
-  padding: 0px 8px 0px 8px;
+  padding: 0px 8px;
   min-width:  90px;
+}
 
+#mpris {
+  background-color: rgba(17, 17, 27,0.85);
+  margin: 10px 4px 0px 4px;
+  padding: 0px 8px;
+  min-width:  310px;
+  padding: 0 15px;
 }
 
 #cpu {
