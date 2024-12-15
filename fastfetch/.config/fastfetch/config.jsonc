@@ -1,69 +1,88 @@
-
+// Inspired by Catnap
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "source": "~/.config/fastfetch/asuna.png",
-        "type": "kitty",
-        "height": 18,
+        "source": "~/.config/fastfetch/yui-snafu.jpg",
+        "type": "sixel",
+        "width": 32,
+        "height": 16,
         "padding": {
-          "top": 1
+            "top": 1
         }
     },
     "display": {
-        "separator": " ›  ",
-        "constants": [
-            "██ "
-        ],
+        "separator": " "
     },
     "modules": [
-        "break",
-        "break",
-        "break",
-        "break",
         {
-            "key": "{$1}OS  ",
-            "keyColor": "38;5;183",  // Mauve
+            "key": "╭───────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#31} user    {#keys}│",
+            "type": "title",
+            "format": "{user-name}"
+        },
+        {
+            "key": "│ {#32}󰇅 hname   {#keys}│",
+            "type": "title",
+            "format": "{host-name}"
+        },
+        {
+            "key": "│ {#33}󰅐 uptime  {#keys}│",
+            "type": "uptime"
+        },
+        {
+            "key": "│ {#34}{icon} distro  {#keys}│",
             "type": "os"
         },
         {
-            "key": "{$1}KER ",
-            "keyColor": "38;5;111",  // Blue
+            "key": "│ {#35} kernel  {#keys}│",
             "type": "kernel"
         },
         {
-            "key": "{$1}SH  ",
-            "keyColor": "38;5;218",  // Pink
-            "type": "shell"
+            "key": "│ {#36}󰇄 desktop {#keys}│",
+            "type": "de"
         },
         {
-            "key": "{$1}TER ",
-            "keyColor": "38;5;218",  // Pink
+            "key": "│ {#31} term    {#keys}│",
             "type": "terminal"
         },
         {
-            "key": "{$1}LOG ",
-            "keyColor": "38;5;151",  // Green
-            "type": "lm",
+            "key": "│ {#32} shell   {#keys}│",
+            "type": "shell"
         },
         {
-            "key": "{$1}WM  ",
-            "keyColor": "38;5;151",  // Green
-            "type": "wm",
+            "key": "│ {#33}󰍛 cpu     {#keys}│",
+            "type": "cpu",
+            "showPeCoreCount": true
         },
         {
-            "key": "{$1}PKG ",
-            "keyColor": "38;5;187",  // Yellow
-            "type": "packages"
+            "key": "│ {#34}󰉉 disk    {#keys}│",
+            "type": "disk",
+            "folders": "/"
         },
         {
-            "key": "{$1}CPU ",
-            "keyColor": "38;5;183",  // Mauve
-            "type": "cpu"
-        },
-        {
-            "key": "{$1}MEM ",
-            "keyColor": "38;5;111",  // Blue
+            "key": "│ {#35} memory  {#keys}│",
             "type": "memory"
+        },
+        {
+            "key": "│ {#36}󰩟 network {#keys}│",
+            "type": "localip",
+            "format": "{ipv4} ({ifname})"
+        },
+        {
+            "key": "├───────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#39} colors  {#keys}│",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "key": "╰───────────╯",
+            "type": "custom"
         }
     ]
 }
