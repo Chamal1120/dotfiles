@@ -3,9 +3,8 @@
 Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 
 ### Previews
-![preview_01](previews/2024-08-13T17:20:36,928349926+05:30.png)
-![preview_02](previews/2024-08-13T17:19:24,575088456+05:30.png)
-![preview_02](previews/2024-08-13T17:27:24,278130750+05:30.png)
+![preview_01](previews/preview_1.png)
+![preview_02](previews/preview_2.png)
 
 ### What's in?
 
