@@ -15,11 +15,10 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"tsserver",
+					"ts_ls",
 					"tailwindcss",
 					"rust_analyzer",
 					"clangd",
-					"ruff_lsp",
 				},
 			})
 		end,
@@ -34,7 +33,7 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.bashls.setup({
@@ -54,11 +53,13 @@ return {
 			})
 
 			-- Add Ruff LSP Setup
-			lspconfig.ruff_lsp.setup({
+			lspconfig.ruff.setup({
 				cmd = { vim.loop.cwd() .. "/.venv/bin/ruff-lsp" }, -- Use ruff-lsp from local .venv
 				capabilities = capabilities,
+        trace = 'messages',
 				init_options = {
 					settings = {
+            loglevel = 'debug',
 						args = { "--line-length=88" },
 					},
 				},
