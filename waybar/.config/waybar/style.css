@@ -87,8 +87,8 @@ window#waybar {
   background-color: rgba(17, 17, 27,0.85);
   margin: 10px 4px 0px 4px;
   padding: 0px 8px;
-  min-width:  310px;
-  padding: 0 15px;
+  min-width:  320px;
+  padding: 0 0px;
 }
 
 #cpu {

@@ -67,10 +67,10 @@
     },
     "dynamic-order": ["title"],
     "dynamic-importance-order": ["title"],
-    "dynamic-len": 40,
+    "dynamic-len": 38,
     "dynamic-separator": " - ",
-    "title-len": 40,
-    "artist-len": 15,
+    "title-len": 33,
+    "artist-len": 8,
     "ellipsis": "…",
   },
   "clock": {
