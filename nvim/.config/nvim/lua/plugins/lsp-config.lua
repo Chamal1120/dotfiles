@@ -25,46 +25,38 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = { "saghen/blink.cmp" },
 		lazy = false,
-		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.ts_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.bashls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.clangd.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.tailwindcss.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.clangd.setup({
-				capabilities = capabilities,
-			})
-
-			-- Add Ruff LSP Setup
-			lspconfig.ruff.setup({
-				cmd = { vim.loop.cwd() .. "/.venv/bin/ruff-lsp" }, -- Use ruff-lsp from local .venv
-				capabilities = capabilities,
-        trace = 'messages',
-				init_options = {
-					settings = {
-            loglevel = 'debug',
-						args = { "--line-length=88" },
+		opts = {
+			servers = {
+				lua_ls = {},
+				ts_ls = {},
+				bashls = {},
+				clangd = {},
+				tailwindcss = {},
+				rust_analyzer = {},
+				ruff = {
+					cmd = { vim.loop.cwd() .. "/.venv/bin/ruff-lsp" }, -- Use ruff-lsp from local .venv
+					trace = "messages",
+					init_options = {
+						settings = {
+							loglevel = "debug",
+							args = { "--line-length=88" },
+						},
 					},
 				},
-			})
+			},
+		},
+		config = function(_, opts)
+			local lspconfig = require("lspconfig")
+			local blink_cmp = require("blink.cmp")
+			
+			for server, config in pairs(opts.servers) do
+				config.capabilities = blink_cmp.get_lsp_capabilities(config.capabilities)
+				lspconfig[server].setup(config)
+			end
 
+			-- Keybindings
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
@@ -74,3 +66,4 @@ return {
 		end,
 	},
 }
+
