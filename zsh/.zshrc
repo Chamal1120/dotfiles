@@ -18,13 +18,12 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-export QT_QPA_PLATFORM=xcb
-
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 
+export XCURSOR_THEME="BreezeX-RosePine-Linux"
+export XCURSOR_SIZE=24
 export LIBVA_DRIVER_NAME=iHD # intel vaapi driver for mbp12,1/arch/i3
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
 export DOCKER_CLIENT_PARALLELISM=1
@@ -46,6 +45,7 @@ export BAT_THEME="Catppuccin Mocha"
 export BAT_CONFIG_PATH="/Users/randy99/.config/bat/config/bat.conf"
 export STARSHIP_CONFIG=~/.config/starship.toml
 export COLORTERM=truecolor
+export PATH="/home/randy99/.bun/bin:$PATH"
 export FZF_DEFAULT_OPTS=" --preview 'bat -n --color=always {}' --bind=down:preview-down --bind=up:preview-up \
 --color=bg+:-1,bg:-1,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
