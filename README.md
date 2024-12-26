@@ -21,10 +21,12 @@ Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 10. Document viewer - Zathura
 11. File Manager (Terminal) - Yazi
 12. Git manager (Terminal) - Lazygit
-13. Terminal LS replacement - eza
-14. Terminal CD replacement - Zoxide
+13. Terminal ls replacement - eza
+14. Terminal cd replacement - Zoxide
 15. Terminal sysfetch - Fastfetch
 16. App launcher - Rofi wayland fork
+17. Cursor - Rose-pine-hyprland (for Hyprland), BreezX-RosePine (for X)
+18. Cat(1) replacement - Bat
 
 ### How to use
 I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
@@ -46,14 +48,16 @@ git clone https://github.com/Chamal1120/dotfiles-linux-hyprland.git
 cd dotfiles-linux-hyprland/
 ```
 
-4. Simlink the configs you need with `stow`.
+4. Install the packages before simlinking their configs to reduce errors.
+
+5. Simlink the configs you need with `stow`.
 
 ```bash
 stow bat btop fsh kitty nvim starship tmux yazi yt-dlp zsh hushlogin # A combined command should look like this
 ```
 
 ### Credits
-Huge thank and respect to all the authors and maintainers of the open source softwares I have used for this setup.
+All credits and respect goes to all the authors and maintainers of the open source software I have used for this setup.
 
 ### Thanks ❤️
 Thank you for reading upto this point. Feel free to fork the repo if you need and don't forget to star.
