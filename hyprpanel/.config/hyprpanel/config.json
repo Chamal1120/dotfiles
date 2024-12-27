@@ -1,0 +1,109 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.size": "0.8rem",
+  "theme.font.name": "CaskaydiaCove Nerd Font Propo Bold",
+  "notifications.timeout": 5000,
+  "theme.bar.transparent": false,
+  "menus.transition": "none",
+  "theme.bar.floating": false,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.showAllActive": true,
+  "theme.osd.enable": false,
+  "theme.font.weight": 600,
+  "menus.transitionTime": 0,
+  "notifications.position": "top right",
+  "theme.bar.menus.menu.notifications.height": "25rem",
+  "notifications.displayedTotal": 5,
+  "theme.bar.buttons.modules.cpu.enableBorder": false,
+  "menus.clock.time.hideSeconds": true,
+  "menus.clock.weather.enabled": false,
+  "theme.bar.layer": "top",
+  "scalingPriority": "hyprland",
+  "theme.tooltip.scaling": 50,
+  "theme.bar.menus.popover.scaling": 80,
+  "theme.bar.menus.card_radius": "0.4em",
+  "theme.bar.menus.border.radius": "0.7em",
+  "theme.bar.menus.border.size": "0.13em",
+  "theme.bar.menus.popover.radius": "1em",
+  "theme.bar.menus.buttons.radius": "0.4em",
+  "wallpaper.enable": false,
+  "theme.bar.buttons.style": "default",
+  "theme.bar.buttons.borderSize": "0.1em",
+  "theme.bar.border_radius": "0.4em",
+  "theme.bar.buttons.radius": "0.6rem",
+  "theme.bar.buttons.padding_y": "0.3em",
+  "theme.bar.buttons.padding_x": "0.8rem",
+  "theme.bar.buttons.spacing": "0.3em",
+  "theme.bar.buttons.y_margins": "0.5em",
+  "theme.bar.menus.menu.dashboard.profile.radius": "5em",
+  "theme.bar.menus.menu.dashboard.profile.size": "10em",
+  "theme.bar.dropdownGap": "4.5em",
+  "menus.dashboard.powermenu.avatar.image": "/home/randy99/dotfiles-linux-hyprland/hyprpanel/profile_pic/asuna_mean.png",
+  "theme.bar.outer_spacing": "1.2em",
+  "theme.bar.buttons.modules.ram.enableBorder": false,
+  "theme.bar.buttons.modules.cpuTemp.enableBorder": false,
+  "terminal": "foot",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle",
+        "hypridle",
+        "hyprsunset",
+        "updates"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "cpu",
+        "ram",
+        "netsat",
+        "volume",
+        "network",
+        "battery",
+        "systray",
+        "clock",
+        "power"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "bar.customModules.cpuTemp.sensor": "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input",
+  "bar.customModules.netstat.networkInterface": "wlp3s0",
+  "bar.customModules.netstat.dynamicIcon": true,
+  "menus.clock.time.military": false,
+  "bar.network.showWifiInfo": true,
+  "bar.network.truncation_size": 10
+}
