@@ -58,15 +58,12 @@
         "media"
       ],
       "right": [
+        "netstat",
         "cpu",
-        "ram",
-        "netsat",
-        "volume",
-        "network",
-        "battery",
         "systray",
-        "clock",
-        "power"
+        "volume",
+        "battery",
+        "clock"
       ]
     }
   },
@@ -86,7 +83,13 @@
   "theme.bar.margin_top": "0.8em",
   "theme.bar.margin_sides": "1.2em",
   "menus.dashboard.stats.enabled": false,
-  "menus.dashboard.controls.enabled": false,
+  "menus.dashboard.controls.enabled": true,
   "theme.bar.menus.menu.dashboard.scaling": 80,
-  "theme.bar.menus.menu.power.scaling": 80
+  "theme.bar.menus.menu.power.scaling": 80,
+  "bar.customModules.netstat.labelType": "in",
+  "bar.workspaces.numbered_active_indicator": "underline",
+  "bar.customModules.netstat.icon": "",
+  "bar.customModules.netstat.rateUnit": "auto",
+  "bar.customModules.netstat.pollingInterval": 5000,
+  "bar.customModules.cpuTemp.pollingInterval": 10000
 }

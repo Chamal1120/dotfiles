@@ -2,7 +2,7 @@
   "*": {
     "left": ["dashboard", "workspaces", "windowtitle", "hypridle", "hyprsunset","updates"],
     "middle": ["media"],
-    "right": ["cpu","ram","netsat", "volume", "network", "battery", "systray", "clock", "power"]
+    "right": ["netstat", "cpu", "systray", "volume", "battery", "clock"]
   }
 }
 
