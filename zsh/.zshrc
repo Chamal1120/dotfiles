@@ -21,6 +21,7 @@ HISTFILE=~/.zsh_history
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export CHROME_EXECUTABLE=/usr/bin/brave
 
 export XCURSOR_THEME="BreezeX-RosePine-Linux"
 export XCURSOR_SIZE=24
