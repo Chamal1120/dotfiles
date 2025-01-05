@@ -29,28 +29,34 @@ return {
 		lazy = false,
 		opts = {
 			servers = {
+        html = {},
+        cssls = {},
+        jinja_lsp = {},
 				lua_ls = {},
 				ts_ls = {},
 				bashls = {},
 				clangd = {},
 				tailwindcss = {},
 				rust_analyzer = {},
-				ruff = {
-					cmd = { vim.loop.cwd() .. "/.venv/bin/ruff-lsp" }, -- Use ruff-lsp from local .venv
-					trace = "messages",
-					init_options = {
-						settings = {
-							loglevel = "debug",
-							args = { "--line-length=88" },
+				pylsp = {
+					settings = {
+						pylsp = {
+							configurationSources = { "flake8" },
 						},
 					},
+					on_new_config = function(config, root_dir)
+						local venv_path = root_dir .. "/.venv/bin/python"
+						if vim.fn.filereadable(venv_path) == 1 then
+							config.cmd = { venv_path, "-m", "pylsp" }
+						end
+					end,
+					root_dir = require("lspconfig.util").root_pattern(".venv", ".git"),
 				},
 			},
 		},
 		config = function(_, opts)
 			local lspconfig = require("lspconfig")
 			local blink_cmp = require("blink.cmp")
-			
 			for server, config in pairs(opts.servers) do
 				config.capabilities = blink_cmp.get_lsp_capabilities(config.capabilities)
 				lspconfig[server].setup(config)
