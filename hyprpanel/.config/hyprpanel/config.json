@@ -38,7 +38,7 @@
   "theme.bar.buttons.y_margins": "0.5em",
   "theme.bar.menus.menu.dashboard.profile.radius": "5em",
   "theme.bar.menus.menu.dashboard.profile.size": "10em",
-  "theme.bar.dropdownGap": "4.5em",
+  "theme.bar.dropdownGap": "3.5em",
   "menus.dashboard.powermenu.avatar.image": "/home/randy99/Downloads/oreki.jpg",
   "theme.bar.outer_spacing": "0.4em",
   "theme.bar.buttons.modules.ram.enableBorder": false,
@@ -60,6 +60,7 @@
       "right": [
         "netstat",
         "cpu",
+        "cputemp",
         "systray",
         "volume",
         "battery",
