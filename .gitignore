@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-.DS_Store
-=======
 ### dotfiles ###
 .vscode/
+brave-settings/
 btop/.config/btop/btop.log
->>>>>>> github/main
