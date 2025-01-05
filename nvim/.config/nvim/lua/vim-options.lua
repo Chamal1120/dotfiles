@@ -6,6 +6,8 @@ vim.cmd("set number")
 vim.g.mapleader = " "
 vim.o.termguicolors = true
 vim.opt.relativenumber = true
+-- Show a vertical line at column 80
+vim.o.colorcolumn = "80"
 
 -- Navigate vim panes better
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
