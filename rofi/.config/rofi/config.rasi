@@ -21,7 +21,6 @@ configuration {
 
 /*****----- Global Properties -----*****/
 @import                          "/colors.rasi"
-@import                          "/fonts.rasi"
 
 * {
     border-colour:               var(selected);
@@ -47,6 +46,7 @@ configuration {
     alternate-urgent-foreground: var(background);
     alternate-active-background: var(active);
     alternate-active-foreground: var(background);
+    font: "caskaydiacove nerd font 10";
 }
 
 /*****----- Main Window -----*****/
@@ -69,7 +69,7 @@ window {
     border-radius:               0px;
     border-color:                @border-colour;
     cursor:                      "default";
-    background-color:            transparent;
+    background-color:            rgba(17, 17, 27, 0.50);
 }
 
 /*****----- Main Box -----*****/
@@ -218,7 +218,7 @@ element-text {
 
 /*****----- Mode Switcher -----*****/
 mode-switcher{
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     margin:                      0px;
     padding:                     0px;
@@ -244,7 +244,7 @@ button selected {
 
 /*****----- Message -----*****/
 message {
-    enabled:                     true;
+    enabled:                     false;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
