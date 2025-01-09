@@ -39,7 +39,7 @@
   "theme.bar.menus.menu.dashboard.profile.radius": "5em",
   "theme.bar.menus.menu.dashboard.profile.size": "10em",
   "theme.bar.dropdownGap": "3.5em",
-  "menus.dashboard.powermenu.avatar.image": "/home/randy99/Downloads/oreki.jpg",
+  "menus.dashboard.powermenu.avatar.image": "~/.face.icon",
   "theme.bar.outer_spacing": "0.4em",
   "theme.bar.buttons.modules.ram.enableBorder": false,
   "theme.bar.buttons.modules.cpuTemp.enableBorder": false,
@@ -92,5 +92,9 @@
   "bar.customModules.netstat.icon": "",
   "bar.customModules.netstat.rateUnit": "auto",
   "bar.customModules.netstat.pollingInterval": 5000,
-  "bar.customModules.cpuTemp.pollingInterval": 10000
+  "bar.customModules.cpuTemp.pollingInterval": 10000,
+  "theme.osd.location": "bottom",
+  "theme.osd.orientation": "horizontal",
+  "theme.osd.margins": "0px 0px 25px 0px",
+  "theme.osd.radius": "2em"
 }
