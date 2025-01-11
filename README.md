@@ -6,6 +6,7 @@ Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 ![preview_00](previews/preview_0.png)
 ![preview_01](previews/preview_1.png)
 ![preview_02](previews/preview_2.png)
+![preview_03](previews/preview_3.png)
 
 ### What's in?
 
@@ -53,7 +54,7 @@ cd dotfiles-linux-hyprland/
 5. Simlink the configs you need with `stow`.
 
 ```bash
-stow bat btop fsh kitty nvim starship tmux yazi yt-dlp zsh hushlogin # A combined command should look like this
+stow bat btop fsh kitty nvim starship tmux yazi yt-dlp zsh hushlogin # You can simlink multiple files like this
 ```
 
 ### Credits
