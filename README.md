@@ -41,7 +41,7 @@ yay -S stow # replace with your package manager's syntax
 2. clone the repo
 
 ```bash
-git clone https://github.com/Chamal1120/dotfiles-linux-hyprland.git
+git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles-linux-hyprland.git
 ```
 3. Navigate to the directory
 
@@ -49,12 +49,12 @@ git clone https://github.com/Chamal1120/dotfiles-linux-hyprland.git
 cd dotfiles-linux-hyprland/
 ```
 
-4. Install the packages before simlinking their configs to reduce errors.
+4. Install the packages before simlinking their configs to reduce errors. You can use yay_installed.txt
 
 5. Simlink the configs you need with `stow`.
 
 ```bash
-stow bat btop fsh kitty nvim starship tmux yazi yt-dlp zsh hushlogin # You can simlink multiple files like this
+stow foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # You can simlink multiple files like this
 ```
 
 ### Credits
