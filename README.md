@@ -93,7 +93,7 @@ cd dotfiles-linux-hyprland/configs
 
 ```bash
 stow -D --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # Remove all the symlinks you linked earlier
-
+```
 
 ### Credits
 All credits and respect goes to all the authors and maintainers of the open source software I have used for this setup.
