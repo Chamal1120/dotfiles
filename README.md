@@ -32,6 +32,9 @@ Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 ### How to use
 I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
 
+> [!IMPORTANT]
+> Please make sure you backup your exisitng configs first.
+
 1. Install stow:
 
 ```bash
@@ -49,21 +52,21 @@ git clone --depth 1 --branch main --single branch https://github.com/chamal1120/
 cd dotfiles-linux-hyprland/configs
 ```
 
-5. Remove your existing conflicting configs otherwise stow would not symlink at all.
+4. Remove your existing conflicting configs otherwise stow would not symlink at all.
 
-4. Exit hyprland (You cannot remove existing hyprland config while running it as it will create a new one automcatically)
+5. Exit hyprland (You cannot remove existing hyprland config while running it as it will create a new one automcatically).
 
 ```bash
 hyprctl dispatch exit
 ```
 
-5. Delete the existing hyprland config while in TTY.
+6. Delete the existing hyprland config while in TTY.
 
 ```bash
 rm -rf ~/.config/hypr
 ```
 
-5. Simlink the configs you need with `stow`.
+7. Simlink the configs you need with `stow`.
 
 ```bash
 stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # You can simlink multiple files like this
@@ -71,6 +74,26 @@ stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi
 
 > [!IMPORTANT]
 > Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to the folders that have configured in .zshrc.
+
+### Removing the symlinks
+
+1. Exit hyprland:
+
+```bash
+hyprctl dispatch exit
+```
+
+2. Navigate to the configs directory in the git repo:
+
+```bash
+cd dotfiles-linux-hyprland/configs
+```
+
+3. Remove the symlinks:
+
+```bash
+stow -D --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # Remove all the symlinks you linked earlier
+
 
 ### Credits
 All credits and respect goes to all the authors and maintainers of the open source software I have used for this setup.
