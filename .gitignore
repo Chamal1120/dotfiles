@@ -1,4 +1,4 @@
 ### dotfiles ###
 .vscode/
-brave-settings/
-btop/.config/btop/btop.log
+configs/brave-settings/
+configs/btop/.config/btop/btop.log
