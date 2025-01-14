@@ -96,5 +96,6 @@
   "theme.osd.location": "bottom",
   "theme.osd.orientation": "horizontal",
   "theme.osd.margins": "0px 0px 25px 0px",
-  "theme.osd.radius": "2em"
+  "theme.osd.radius": "2em",
+  "theme.bar.opacity": 80
 }
