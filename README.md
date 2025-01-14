@@ -11,13 +11,13 @@ Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 ### What's in?
 
 01. WM - Hyprland
-02. Bar - Waybar
-03. Terminal emulator - Foot (default), Kitty, Wezterm
+02. Bar - Hyprpanel(default), waybar
+03. Terminal emulator - Foot (default), Kitty
 04. Shell - zsh
 05. Terminal multiplexer - Tmux
 06. Nerd font - CaskaydiaCove Nerd Font
 07. Text editor and IDE - Neovim
-08. Browser - Thorium (default), Firefox (with custom chrome.css)
+08. Browser - Brave
 09. File Manager - Thunar
 10. Document viewer - Zathura
 11. File Manager (Terminal) - Yazi
@@ -32,30 +32,45 @@ Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 ### How to use
 I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
 
-1. Install with any package manager. (or build from source).
+1. Install stow:
 
 ```bash
 yay -S stow # replace with your package manager's syntax
 ```
 
-2. clone the repo
+2. clone the repo:
 
 ```bash
 git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles-linux-hyprland.git
 ```
-3. Navigate to the directory
+3. Navigate to the configs directory in the git repo:
 
 ```bash
-cd dotfiles-linux-hyprland/
+cd dotfiles-linux-hyprland/configs
 ```
 
-4. Install the packages before simlinking their configs to reduce errors. You can use yay_installed.txt
+5. Remove your existing conflicting configs otherwise stow would not symlink at all.
+
+4. Exit hyprland (You cannot remove existing hyprland config while running it as it will create a new one automcatically)
+
+```bash
+hyprctl dispatch exit
+```
+
+5. Delete the existing hyprland config while in TTY.
+
+```bash
+rm -rf ~/.config/hypr
+```
 
 5. Simlink the configs you need with `stow`.
 
 ```bash
-stow foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # You can simlink multiple files like this
+stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # You can simlink multiple files like this
 ```
+
+> [!IMPORTANT]
+> Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to the folders that have configured in .zshrc.
 
 ### Credits
 All credits and respect goes to all the authors and maintainers of the open source software I have used for this setup.
