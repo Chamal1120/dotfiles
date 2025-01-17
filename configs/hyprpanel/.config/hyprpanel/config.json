@@ -69,7 +69,7 @@
     }
   },
   "bar.customModules.cpuTemp.sensor": "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input",
-  "bar.customModules.netstat.networkInterface": "wlp3s0",
+  "bar.customModules.netstat.networkInterface": "wlan0",
   "bar.customModules.netstat.dynamicIcon": false,
   "menus.clock.time.military": false,
   "bar.network.showWifiInfo": true,
@@ -97,5 +97,5 @@
   "theme.osd.orientation": "horizontal",
   "theme.osd.margins": "0px 0px 25px 0px",
   "theme.osd.radius": "2em",
-  "theme.bar.opacity": 80
+  "theme.bar.opacity": 95
 }
