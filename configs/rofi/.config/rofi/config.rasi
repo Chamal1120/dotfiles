@@ -56,8 +56,8 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  true;
-    width:                       1366px;
-    height:                      768px;
+    width:                       2560px;
+    height:                      1600px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -69,7 +69,7 @@ window {
     border-radius:               0px;
     border-color:                @border-colour;
     cursor:                      "default";
-    background-color:            rgba(17, 17, 27, 0.50);
+    background-color:            "transparent";
 }
 
 /*****----- Main Box -----*****/
@@ -92,7 +92,7 @@ inputbar {
     margin:                      0px;
     padding:                     20px;
     border:                      0px;
-    border-radius:               8px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
@@ -139,7 +139,7 @@ listview {
     margin:                      0px;
     padding:                     30px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
