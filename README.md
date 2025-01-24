@@ -1,14 +1,14 @@
-## Dotfiles-linux (Hyprland)
+# Dotfiles-linux (Hyprland)
 
 Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 
-### Previews
+## Previews
 ![preview_00](previews/preview_0.png)
 ![preview_01](previews/preview_1.png)
 ![preview_02](previews/preview_2.png)
 ![preview_03](previews/preview_3.png)
 
-### What's in?
+## What's in?
 
 01. WM - Hyprland
 02. Bar - Hyprpanel(default), waybar
@@ -29,7 +29,7 @@ Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 17. Cursor - Rose-pine-hyprland (for Hyprland), BreezX-RosePine (for X)
 18. Cat(1) replacement - Bat
 
-### How to use
+## How to use
 I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
 
 > [!IMPORTANT]
@@ -75,7 +75,7 @@ stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi
 > [!IMPORTANT]
 > Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to the folders that have configured in .zshrc.
 
-### Removing the symlinks
+## Removing the symlinks
 
 1. Exit hyprland:
 
@@ -95,8 +95,8 @@ cd dotfiles-linux-hyprland/configs
 stow -D --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # Remove all the symlinks you linked earlier
 ```
 
-### Credits
+## Credits
 All credits and respect goes to all the authors and maintainers of the open source software I have used for this setup.
 
-### Thanks ❤️
+## Thanks ❤️
 Thank you for reading upto this point. Feel free to fork the repo if you need and don't forget to star.
