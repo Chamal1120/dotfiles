@@ -19,6 +19,7 @@ return {
 					"tailwindcss",
 					"rust_analyzer",
 					"clangd",
+					"pylsp",
 				},
 			})
 		end,
@@ -29,9 +30,9 @@ return {
 		lazy = false,
 		opts = {
 			servers = {
-        html = {},
-        cssls = {},
-        jinja_lsp = {},
+				html = {},
+				cssls = {},
+				jinja_lsp = {},
 				lua_ls = {},
 				ts_ls = {},
 				bashls = {},
@@ -62,7 +63,6 @@ return {
 				lspconfig[server].setup(config)
 			end
 
-			-- Keybindings
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
@@ -72,4 +72,3 @@ return {
 		end,
 	},
 }
-
