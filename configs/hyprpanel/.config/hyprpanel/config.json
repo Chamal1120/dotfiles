@@ -1,7 +1,7 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
   "theme.font.size": "0.8rem",
-  "theme.font.name": "CaskaydiaCove Nerd Font Propo Bold",
+  "theme.font.name": "Noto Sans Bold",
   "notifications.timeout": 5000,
   "theme.bar.transparent": false,
   "menus.transition": "none",
@@ -97,5 +97,8 @@
   "theme.osd.orientation": "horizontal",
   "theme.osd.margins": "0px 0px 25px 0px",
   "theme.osd.radius": "2em",
-  "theme.bar.opacity": 95
+  "theme.bar.opacity": 100,
+  "theme.bar.margin_bottom": "0em",
+  "theme.bar.menus.menu.media.card.tint": 85,
+  "theme.bar.menus.menu.media.card.color": "#1e1e2e"
 }
