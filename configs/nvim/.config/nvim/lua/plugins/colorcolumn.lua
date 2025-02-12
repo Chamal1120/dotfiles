@@ -1,3 +1,3 @@
 return {
-    { 'Bekaboo/deadcolumn.nvim' }
+  { "Bekaboo/deadcolumn.nvim" },
 }

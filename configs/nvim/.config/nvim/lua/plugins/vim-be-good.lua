@@ -1,3 +1,5 @@
 return {
-	"ThePrimeagen/vim-be-good",
+  "ThePrimeagen/vim-be-good",
+  event = "VeryLazy",
+  cmd = "VimBeGood",
 }

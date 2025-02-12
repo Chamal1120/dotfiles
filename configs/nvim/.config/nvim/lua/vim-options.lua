@@ -15,7 +15,10 @@ vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
-
+-- Hyprland syntax highlighting
 vim.filetype.add({
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
+
+-- Copilot colors
+-- vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#363535" })

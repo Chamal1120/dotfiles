@@ -1,5 +1,6 @@
 return {
   "nvimdev/dashboard-nvim",
+  lazy = false,
   event = "VimEnter",
   config = function()
     require("dashboard").setup({
@@ -41,7 +42,7 @@ return {
           enable = false,
           cwd_only = false,
         },
-        footer = {"Hello Chamal 👋, Let's Code!"},
+        footer = { "Hello Chamal 👋, Let's Code!" },
       },
     })
   end,
