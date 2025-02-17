@@ -1,25 +1,7 @@
 return {
   {
-    "linux-cultist/venv-selector.nvim",
-    dependencies = {
-      "neovim/nvim-lspconfig",
-      "mfussenegger/nvim-dap",
-      "mfussenegger/nvim-dap-python",
-      { "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
-    },
-    lazy = false,
-    branch = "regexp",
-    config = function()
-      require("venv-selector").setup({
-        name = ".venv",
-        search = false, -- Only look for `.venv` in the current working directory
-      })
-
-      vim.keymap.set("n", "<Leader>vs", "<cmd>VenvSelect<cr>", { noremap = true })
-    end,
-  },
-  {
     "mfussenegger/nvim-dap",
+    lazy = true,
     dependencies = {
       "rcarriga/nvim-dap-ui",
       "nvim-neotest/nvim-nio",

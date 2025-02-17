@@ -1,6 +1,6 @@
 return {
   "vim-test/vim-test",
-  event = "VeryLazy",
+  lazy = true,
   dependencies = {
     "preservim/vimux",
   },

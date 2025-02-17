@@ -1,6 +1,6 @@
 return {
   "d-vegapunk/live-server.nvim",
-  event = "VeryLazy",
+  lazy = true,
   build = "npm install -g live-server",
   config = function()
     require("live-server").setup({
