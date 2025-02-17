@@ -17,7 +17,7 @@ Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
 05. Terminal multiplexer - Tmux
 06. Nerd font - CaskaydiaCove Nerd Font
 07. Text editor and IDE - Neovim
-08. Browser - Brave
+08. Browser - Vivaldi
 09. File Manager - Thunar
 10. Document viewer - Zathura
 11. File Manager (Terminal) - Yazi
@@ -73,7 +73,10 @@ stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi
 ```
 
 > [!IMPORTANT]
-> Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to the folders that have configured in .zshrc.
+> Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to the folders that have configured in `.zshrc`.
+
+> [!NOTE]
+> I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `config.toml` file in the `~/.config/hypr` directory.
 
 ## Removing the symlinks
 

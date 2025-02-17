@@ -14,7 +14,21 @@ return {
 		config = function()
 			require("telescope").setup({
 				defaults = {
-					file_ignore_patterns = { "node_modules", ".git/", "large_directory/" },
+					file_ignore_patterns = {
+						"node_modules",
+						".git/",
+						"large_directory/",
+						".venv",
+						"venv",
+						".idea",
+						".dart_tool",
+						".vscode",
+					},
+				},
+				pickers = {
+					find_files = {
+						previewer = false, -- Disable preview window for find_files
+					},
 				},
 				extensions = {
 					["ui-select"] = {
