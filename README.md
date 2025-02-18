@@ -1,6 +1,14 @@
-# Dotfiles-linux (Hyprland)
+<div align="center">
 
-Dotfiles of my personal linux rice flavoured with catppuccin-mocha theme.
+# Dotfiles
+
+Everything that I'm currently daily driving on Linux.
+
+![Static Badge](https://img.shields.io/badge/wm-hyprland-%232596be?style=for-the-badge&logo=orange&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/distro-arch_linux-blue?style=for-the-badge&logo=linux&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/colorscheme-catppuccin_mocha-%23cba6f7?style=for-the-badge&logo=medibangpaint&logoColor=ffffff)
+
+</div>
 
 ## Previews
 ![preview_00](previews/preview_0.png)
