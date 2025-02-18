@@ -83,12 +83,9 @@ stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi
 > [!IMPORTANT]
 > Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to the folders that have configured in `.zshrc`.
 
-<<<<<<< HEAD
 > [!NOTE]
 > I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `config.toml` file in the `~/.config/hypr` directory.
 
-=======
->>>>>>> 5bb501b (merge README from bleeding)
 ## Removing the symlinks
 
 1. Exit hyprland:
