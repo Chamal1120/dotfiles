@@ -7,6 +7,9 @@ Everything that I'm currently daily driving on Linux.
 ![Static Badge](https://img.shields.io/badge/wm-hyprland-%232596be?style=for-the-badge&logo=orange&logoColor=ffffff)
 ![Static Badge](https://img.shields.io/badge/distro-arch_linux-blue?style=for-the-badge&logo=linux&logoColor=ffffff)
 ![Static Badge](https://img.shields.io/badge/colorscheme-catppuccin_mocha-%23cba6f7?style=for-the-badge&logo=medibangpaint&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/shell-zsh-%23f2cdcd?style=for-the-badge&logo=shell&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/terminal_emulator-foot-%23fab387?style=for-the-badge&logo=gnometerminal)
+![GitHub License](https://img.shields.io/github/license/Chamal1120/dotfiles?style=for-the-badge&logo=googledocs&logoColor=ffffff)
 
 </div>
 
