@@ -5,6 +5,9 @@ return {
   --@module "ibl"
   --@type ibl.config
   opts = {
+    indent = {
+      char = "▏",
+    },
     exclude = {
       filetypes = { "dashboard", "alpha", "startify", "NvimTree", "help" },
       buftypes = { "nofile", "terminal" },
