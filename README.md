@@ -31,14 +31,14 @@ Everything that I'm currently daily driving on Linux.
 08. Browser - Vivaldi
 09. File Manager - Thunar
 10. Document viewer - Zathura
-11. File Manager (Terminal) - Yazi
-12. Git manager (Terminal) - Lazygit
-13. Terminal ls replacement - eza
-14. Terminal cd replacement - Zoxide
-15. Terminal sysfetch - Fastfetch
+11. File Manager (TUI) - Yazi
+12. Git manager (TUI) - Lazygit
+13. `ls` replacement - eza
+14. `cd` replacement - Zoxide
+15. sysfetch - Fastfetch
 16. App launcher - Rofi wayland fork
-17. Cursor - Rose-pine-hyprland (for Hyprland), BreezX-RosePine (for X)
-18. Cat(1) replacement - Bat
+17. Cursor theme - Rose-pine-hyprland (for Hyprland), BreezX-RosePine (for X)
+18. `cat` replacement - Bat
 
 ## How to use
 I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
@@ -84,10 +84,12 @@ stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi
 ```
 
 > [!IMPORTANT]
-> Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to the folders that have configured in `.zshrc`.
+> * Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to the folders that have configured in `.zshrc`.
+> * On Arch linux you can install them by running `yay -S zsh-autosuggestions zsh-fast-syntax-highlighting`.
+> * Please use **sudo** when simlinking pacman config.
 
 > [!NOTE]
-> I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `config.toml` file in the `~/.config/hypr` directory.
+> I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `hyprland.conf` file in the `~/.config/hypr` directory.
 
 ## Removing the symlinks
 
