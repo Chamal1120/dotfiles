@@ -14,10 +14,10 @@ Everything that I'm currently daily driving on Linux.
 </div>
 
 ## Previews
-![preview_00](previews/preview_0.png)
-![preview_01](previews/preview_1.png)
-![preview_02](previews/preview_2.png)
-![preview_03](previews/preview_3.png)
+![preview_01](previews/preview1.webp)
+![preview_02](previews/preview2.webp)
+![preview_03](previews/preview3.webp)
+![preview_04](previews/preview4.webp)
 
 ## What's in?
 

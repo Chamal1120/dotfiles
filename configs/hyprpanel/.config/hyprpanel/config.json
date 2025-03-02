@@ -5,7 +5,7 @@
   "notifications.timeout": 5000,
   "theme.bar.transparent": false,
   "menus.transition": "none",
-  "theme.bar.floating": true,
+  "theme.bar.floating": false,
   "bar.workspaces.show_icons": false,
   "bar.workspaces.show_numbered": true,
   "bar.workspaces.showAllActive": true,
