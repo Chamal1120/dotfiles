@@ -4,13 +4,13 @@
 
 Everything that I'm currently daily driving on Linux.
 
-![Static Badge](https://img.shields.io/badge/wm-hyprland-%232596be?style=for-the-badge&logo=orange&logoColor=ffffff)
-![Static Badge](https://img.shields.io/badge/distro-arch_linux-blue?style=for-the-badge&logo=linux&logoColor=ffffff)
-![Static Badge](https://img.shields.io/badge/colorscheme-catppuccin_mocha-%23cba6f7?style=for-the-badge&logo=medibangpaint&logoColor=ffffff)
-![Static Badge](https://img.shields.io/badge/shell-zsh-%23f2cdcd?style=for-the-badge&logo=shell&logoColor=ffffff)
-![Static Badge](https://img.shields.io/badge/terminal_emulator-foot-%23fab387?style=for-the-badge&logo=gnometerminal)
-![GitHub License](https://img.shields.io/github/license/Chamal1120/dotfiles?style=for-the-badge&logo=googledocs&logoColor=ffffff)
-
+![Static Badge](https://img.shields.io/badge/WM-HYPRLAND-%232596be?style=for-the-badge&logo=orange&logoColor=%23ffffff&labelColor=%2311111b)
+![Static Badge](https://img.shields.io/badge/distro-arch_linux-blue?style=for-the-badge&logo=linux&logoColor=%23ffffff&labelColor=%2311111b)
+![Static Badge](https://img.shields.io/badge/Colorscheme-Catppuccin-%23b4befe?style=for-the-badge&logo=medibangpaint&logoColor=%23ffffff&labelColor=%2311111b)
+![Static Badge](https://img.shields.io/badge/shell-zsh-%23f9e2af?style=for-the-badge&logo=shell&logoColor=%23ffffff&labelColor=%2311111b)
+![Static Badge](https://img.shields.io/badge/terminal_emulator-foot-%23fab387?style=for-the-badge&logo=iterm2&logoColor=%23ffffff&labelColor=%2311111b)
+![GitHub License](https://img.shields.io/github/license/chamal1120/dotfiles?style=for-the-badge&logo=google-docs&logoColor=%23ffffff&labelColor=%2311111b&color=%2394e2d5)
+![Discord](https://img.shields.io/discord/1121821626305089647?style=for-the-badge&logo=discord&logoColor=%23ffffff&labelColor=%2311111b&color=%23cba6f7)
 </div>
 
 ## Previews
@@ -110,6 +110,9 @@ cd dotfiles-linux-hyprland/configs
 ```bash
 stow -D --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # Remove all the symlinks you linked earlier
 ```
+## Community
+
+Click [here](https://discord.gg/PsxwFB4nJA) and hop onto my discord to talk about tech, vim, linux and all other degenerative stuff :-)
 
 ## Credits
 All credits and respect goes to all the authors and maintainers of the open source software I have used for this setup.
