@@ -12,7 +12,7 @@ return {
     },
     -- Disable for some filetypes
     enabled = function()
-      return not vim.tbl_contains({ "lua", "markdown" }, vim.bo.filetype)
+      return not vim.tbl_contains({ "markdown" }, vim.bo.filetype)
           and vim.bo.buftype ~= "prompt"
           and vim.b.completion ~= false
     end,

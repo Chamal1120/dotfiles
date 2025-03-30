@@ -1,4 +1,4 @@
-vim.g.mapleader = " "      -- set leader to space
+vim.g.mapleader = " " -- set leader to space
 -- vim.g.maplocalleader = " " -- set local leader to space
 vim.o.termguicolors = true
 vim.opt.relativenumber = true
@@ -8,12 +8,12 @@ vim.opt.number = true -- show line numbers
 vim.opt.relativenumber = true -- show relative line numbers
 vim.opt.mouse = "a"
 vim.opt.showmode = false -- don't show mode
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
 vim.o.expandtab = true
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
-
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -72,7 +72,9 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
 -- Hyprland syntax highlighting
 vim.filetype.add({
-  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+	pattern = {
+		[".*/hypr/.*%.conf"] = "hyprlang",
+	},
 })
 
 -- Copilot colors

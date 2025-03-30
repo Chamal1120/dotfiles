@@ -14,7 +14,7 @@
   "menus.transitionTime": 0,
   "notifications.position": "top right",
   "theme.bar.menus.menu.notifications.height": "25rem",
-  "notifications.displayedTotal": 5,
+  "notifications.displayedTotal": 6,
   "theme.bar.buttons.modules.cpu.enableBorder": false,
   "menus.clock.time.hideSeconds": true,
   "menus.clock.weather.enabled": false,
@@ -64,7 +64,8 @@
         "systray",
         "volume",
         "battery",
-        "clock"
+        "clock",
+        "notifications"
       ]
     }
   },
