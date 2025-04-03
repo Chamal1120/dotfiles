@@ -8,6 +8,7 @@ vim.opt.number = true -- show line numbers
 vim.opt.relativenumber = true -- show relative line numbers
 vim.opt.mouse = "a"
 vim.opt.showmode = false -- don't show mode
+vim.opt.showcmd = false
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
 vim.o.expandtab = true
