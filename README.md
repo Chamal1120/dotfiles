@@ -23,7 +23,7 @@ Everything that I'm currently daily driving on Linux.
 
 01. WM - Hyprland
 02. Bar - Hyprpanel(default), waybar
-03. Terminal emulator - Foot (default), Kitty
+03. Terminal emulator - Alacritty (default), foot
 04. Shell - zsh
 05. Terminal multiplexer - Tmux
 06. Nerd font - CaskaydiaCove Nerd Font
