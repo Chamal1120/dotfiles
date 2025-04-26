@@ -71,10 +71,13 @@ vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
--- Hyprland syntax highlighting
+-- Custom filetype matchings
 vim.filetype.add({
+	extension = {
+		bal = 'ballerina' -- Detect as ballerina files
+	},
 	pattern = {
-		[".*/hypr/.*%.conf"] = "hyprlang",
+		[".*/hypr/.*%.conf"] = "hyprlang", -- Detect as hyprlang files
 	},
 })
 

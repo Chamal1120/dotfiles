@@ -30,3 +30,6 @@ mouse = { enabled = true }
 padding = {x = 20, y = 20}
 dynamic_padding = true
 decorations = "None"
+
+[mouse]
+hide_when_typing = false

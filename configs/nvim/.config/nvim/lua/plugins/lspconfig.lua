@@ -73,14 +73,37 @@ return {
 		--					vim.tbl_deep_extend("force", blink_cmp.get_lsp_capabilities(), config.capabilities or {})
 		--				lspconfig[server].setup(config)
 		--			end
+		--
 		config = function(_, opts)
 			local lspconfig = require("lspconfig")
+			local configs = require("lspconfig.configs")
+			local blink_cmp = require("blink.cmp")
+
 			for server, config in pairs(opts.servers) do
-				-- passing config.capabilities to blink.cmp merges with the capabilities in your
-				-- `opts[server].capabilities, if you've defined it
-				config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+				config.capabilities = blink_cmp.get_lsp_capabilities(config.capabilities)
 				lspconfig[server].setup(config)
 			end
+
+			-- Register ballerina server if not already registered
+			if not configs.ballerina then
+				configs.ballerina = {
+					default_config = {
+						cmd = { "bal", "start-language-server" },
+						filetypes = { "ballerina" },
+						root_dir = function(_)
+							return vim.fs.dirname(vim.fs.find({ "Ballerina.toml" }, { upward = true })[1])
+						end,
+						single_file_support = true,
+					},
+				}
+			end
+
+			-- Setup ballerina
+			lspconfig.ballerina.setup({
+				capabilities = blink_cmp.get_lsp_capabilities(),
+			})
+
+			-- Keymaps
 			local map = vim.keymap.set
 			map("n", "K", vim.lsp.buf.hover, {})
 			map("n", "<leader>gd", vim.lsp.buf.definition, {})
