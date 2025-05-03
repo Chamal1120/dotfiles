@@ -65,6 +65,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+[ -f "/home/randy99/.ghcup/env" ] && . "/home/randy99/.ghcup/env" # ghcup-env
 # source directories for custom plugins
 source /home/$USER/.fsh-repo/fast-syntax-highlighting.plugin.zsh # Fast Syntax Highlighting
 source /home/$USER/.zsh-auto-suggest-repo/zsh-autosuggestions.zsh # zsh Autosuggestions

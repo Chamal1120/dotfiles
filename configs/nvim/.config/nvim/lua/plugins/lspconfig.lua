@@ -1,7 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		lazy = "VeryLazy",
+		lazy = "Verylazy",
 		config = function()
 			require("mason").setup()
 		end,
@@ -33,6 +33,7 @@ return {
 		lazy = false,
 		opts = {
 			servers = {
+				hls = {},
 				html = {},
 				cssls = {},
 				jinja_lsp = {},
