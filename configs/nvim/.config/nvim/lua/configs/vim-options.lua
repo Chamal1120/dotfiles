@@ -74,7 +74,7 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 -- Custom filetype matchings
 vim.filetype.add({
 	extension = {
-		bal = 'ballerina' -- Detect as ballerina files
+		bal = 'ballerina' -- Detect .bal as ballerina files
 	},
 	pattern = {
 		[".*/hypr/.*%.conf"] = "hyprlang", -- Detect as hyprlang files

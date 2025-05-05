@@ -1,17 +1,16 @@
 #Aliases
-alias ffetch='fastfetch'
 alias cd='z'
 alias ls='eza --icons'
 alias la='eza -a'
 alias lla='eza -la'
-alias lt='eza -TL 2'
+#alias lt='eza -TL 2'
 alias cat='bat'
-alias yt-dlp-fhd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf'
-alias yt-dlp-hd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-720.conf'
-alias yt-dlp-audio='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-audio.conf'
+#alias yt-dlp-fhd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf'
+#alias yt-dlp-hd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-720.conf'
+#alias yt-dlp-audio='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-audio.conf'
 alias yz='yazi'
-alias kblit='set_kb_backlight'
-alias inlyne="inlyne -c ~/.config/inlyne/inlyne.default.toml"
+alias ctltui='systemctl-tui'
+#alias kblit='set_kb_backlight'
 
 # zsh history config
 HISTSIZE=10000
@@ -46,7 +45,7 @@ export ELECTRON_ENABLE_WAYLAND=1
 export GTK_CSD=0
 export ELECTRON_OZONE_PLATFORM_HINT=auto # Wayland Electron Development (v28+)
 export EDITOR='nvim' # Set default text edtior for terminal
-export BROWSER='brave'
+export BROWSER='vivaldi'
 export BAT_THEME="Catppuccin Mocha"
 export BAT_CONFIG_PATH="/Users/$USER/.config/bat/config/bat.conf"
 export STARSHIP_CONFIG=~/.config/starship.toml
@@ -64,8 +63,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
 [ -f "/home/randy99/.ghcup/env" ] && . "/home/randy99/.ghcup/env" # ghcup-env
+
 # source directories for custom plugins
 source /home/$USER/.fsh-repo/fast-syntax-highlighting.plugin.zsh # Fast Syntax Highlighting
 source /home/$USER/.zsh-auto-suggest-repo/zsh-autosuggestions.zsh # zsh Autosuggestions
