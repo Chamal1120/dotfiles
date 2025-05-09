@@ -1,3 +1,5 @@
+export FUNCNEST=1000
+
 #Aliases
 alias cd='z'
 alias ls='eza --icons'
@@ -8,9 +10,10 @@ alias cat='bat'
 #alias yt-dlp-fhd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf'
 #alias yt-dlp-hd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-720.conf'
 #alias yt-dlp-audio='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-audio.conf'
-alias yz='yazi'
-alias ctltui='systemctl-tui'
+#alias ctltui='systemctl-tui'
 #alias kblit='set_kb_backlight'
+
+DISABLE_AUTO_TITLE="true"
 
 # zsh history config
 HISTSIZE=10000
@@ -51,6 +54,7 @@ export BAT_CONFIG_PATH="/Users/$USER/.config/bat/config/bat.conf"
 export STARSHIP_CONFIG=~/.config/starship.toml
 export COLORTERM=truecolor
 export PATH="/home/$USER/.bun/bin:$PATH"
+export PATH="/home/$USER/.cargo/bin:$PATH"
 export FZF_DEFAULT_OPTS=" --preview 'bat -n --color=always {}' --bind=down:preview-down --bind=up:preview-up \
 --color=bg+:-1,bg:-1,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -66,8 +70,8 @@ esac
 [ -f "/home/randy99/.ghcup/env" ] && . "/home/randy99/.ghcup/env" # ghcup-env
 
 # source directories for custom plugins
-source /home/$USER/.fsh-repo/fast-syntax-highlighting.plugin.zsh # Fast Syntax Highlighting
-source /home/$USER/.zsh-auto-suggest-repo/zsh-autosuggestions.zsh # zsh Autosuggestions
+source /home/$USER/.zsh-plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh # Fast Syntax Highlighting
+source /home/$USER/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh Autosuggestions
 source <(fzf --zsh) # enable fzf for zsh completions (use ctrl + t)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

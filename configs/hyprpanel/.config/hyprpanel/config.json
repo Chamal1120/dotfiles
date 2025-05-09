@@ -1,7 +1,7 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
-  "theme.font.size": "0.8rem",
-  "theme.font.name": "Noto Sans Bold",
+  "theme.font.size": "0.65rem",
+  "theme.font.name": "Adwaita Sans",
   "notifications.timeout": 5000,
   "theme.bar.transparent": false,
   "menus.transition": "none",
@@ -10,11 +10,11 @@
   "bar.workspaces.show_numbered": true,
   "bar.workspaces.showAllActive": true,
   "theme.osd.enable": false,
-  "theme.font.weight": 600,
+  "theme.font.weight": 700,
   "menus.transitionTime": 0,
   "notifications.position": "top right",
   "theme.bar.menus.menu.notifications.height": "25rem",
-  "notifications.displayedTotal": 6,
+  "notifications.displayedTotal": 5,
   "theme.bar.buttons.modules.cpu.enableBorder": false,
   "menus.clock.time.hideSeconds": true,
   "menus.clock.weather.enabled": false,
@@ -43,7 +43,7 @@
   "theme.bar.outer_spacing": "0.4em",
   "theme.bar.buttons.modules.ram.enableBorder": false,
   "theme.bar.buttons.modules.cpuTemp.enableBorder": false,
-  "terminal": "foot",
+  "terminal": "alacritty",
   "bar.layouts": {
     "*": {
       "left": [
@@ -64,8 +64,7 @@
         "systray",
         "volume",
         "battery",
-        "clock",
-        "notifications"
+        "clock"
       ]
     }
   },
@@ -101,5 +100,12 @@
   "theme.bar.opacity": 100,
   "theme.bar.margin_bottom": "0em",
   "theme.bar.menus.menu.media.card.tint": 85,
-  "theme.bar.menus.menu.media.card.color": "#1e1e2e"
+  "theme.bar.menus.menu.media.card.color": "#1e1e2e",
+  "theme.font.label": "Adwaita Sans Bold",
+  "bar.workspaces.workspaces": 5,
+  "bar.workspaces.monitorSpecific": false,
+  "theme.bar.scaling": 100,
+  "theme.bar.menus.menu.clock.scaling": 80,
+  "theme.bar.menus.enableShadow": false,
+  "menus.power.lowBatteryNotification": true
 }
