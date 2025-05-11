@@ -17,7 +17,6 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"ts_ls",
-					"jdtls",
 					"tailwindcss",
 					"rust_analyzer",
 					"clangd",
@@ -39,7 +38,6 @@ return {
 				jinja_lsp = {},
 				lua_ls = {},
 				ts_ls = {},
-				jdtls = {},
 				bashls = {},
 				clangd = {},
 				tailwindcss = {},

@@ -30,8 +30,8 @@
   "wallpaper.enable": false,
   "theme.bar.buttons.style": "default",
   "theme.bar.buttons.borderSize": "0.1em",
-  "theme.bar.border_radius": "1.4em",
-  "theme.bar.buttons.radius": "1rem",
+  "theme.bar.border_radius": "0.4em",
+  "theme.bar.buttons.radius": "0.3rem",
   "theme.bar.buttons.padding_y": "0.2rem",
   "theme.bar.buttons.padding_x": "0.8rem",
   "theme.bar.buttons.spacing": "0.3em",
@@ -64,7 +64,8 @@
         "systray",
         "volume",
         "battery",
-        "clock"
+        "clock",
+        "notifications"
       ]
     }
   },
@@ -107,5 +108,7 @@
   "theme.bar.scaling": 100,
   "theme.bar.menus.menu.clock.scaling": 80,
   "theme.bar.menus.enableShadow": false,
-  "menus.power.lowBatteryNotification": true
+  "menus.power.lowBatteryNotification": true,
+  "theme.bar.border.width": "0.15em",
+  "theme.bar.buttons.innerRadiusMultiplier": "0.4"
 }

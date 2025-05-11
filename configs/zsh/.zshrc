@@ -3,8 +3,8 @@ export FUNCNEST=1000
 #Aliases
 alias cd='z'
 alias ls='eza --icons'
-alias la='eza -a'
-alias lla='eza -la'
+#alias la='eza -a'
+alias ll='eza -la'
 #alias lt='eza -TL 2'
 alias cat='bat'
 #alias yt-dlp-fhd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf'
@@ -68,6 +68,10 @@ case ":$PATH:" in
 esac
 # pnpm end
 [ -f "/home/randy99/.ghcup/env" ] && . "/home/randy99/.ghcup/env" # ghcup-env
+
+if [[ -n "$TMUX" ]]; then
+  setopt ignoreeof
+fi
 
 # source directories for custom plugins
 source /home/$USER/.zsh-plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh # Fast Syntax Highlighting
