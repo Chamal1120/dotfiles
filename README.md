@@ -1,7 +1,6 @@
 <div align="center">
 
 # Dotfiles
-
 Everything that I'm currently daily driving on Linux.
 
 ![Static Badge](https://img.shields.io/badge/WM-HYPRLAND-%232596be?style=for-the-badge&logo=orange&logoColor=%23ffffff&labelColor=%2311111b)
@@ -14,33 +13,61 @@ Everything that I'm currently daily driving on Linux.
 </div>
 
 ## Previews
-![preview_01](previews/preview1.webp)
-![preview_02](previews/preview2.webp)
-![preview_03](previews/preview3.webp)
-![preview_04](previews/preview4.webp)
+![preview_01](previews/2025-05-12-182037_hyprshot.webp)
+<br>
+![preview_02](previews/2025-05-12-184142_hyprshot.webp)
+<br>
+![preview_03](previews/2025-05-12-182322_hyprshot.webp)
+<br>
+![preview_04](previews/2025-05-12-182559_hyprshot.webp)
 
 ## What's in?
-
-01. WM - Hyprland
+01. Compositor - Hyprland(Wayland)
 02. Bar - Hyprpanel(default), waybar
 03. Terminal emulator - Alacritty (default), foot
 04. Shell - zsh
 05. Terminal multiplexer - Tmux
 06. Nerd font - CaskaydiaCove Nerd Font
-07. Text editor and IDE - Neovim
-08. Browser - Vivaldi
-09. File Manager - Thunar
+07. Text editor and IDE - Neovim, Vim
+08. Browser - Vivaldi, Firefox
+09. File Manager(GUI) - Thunar
 10. Document viewer - Zathura
 11. File Manager (TUI) - Yazi
 12. Git manager (TUI) - Lazygit
 13. `ls` replacement - eza
 14. `cd` replacement - Zoxide
-15. sysfetch - Fastfetch
-16. App launcher - Rofi wayland fork
-17. Cursor theme - Rose-pine-hyprland (for Hyprland), BreezX-RosePine (for X)
-18. `cat` replacement - Bat
+15. `cat` replacement - Bat
+16. sysfetch - Fastfetch
+17. App launcher - Rofi wayland fork
+18. Cursor theme - Rose-pine-hyprland (for Hyprland), BreezX-RosePine (for X)
+19. Icon theme - Papirus-Dark
+20. Icon color heme - Catppuccin mocha lavender
 
-## How to use
+## Automated Install
+> [!NOTE]
+> This config is made for a minimal Arch Linux install and might conflict width any other customized distro.
+I recommend using a base Arch install (Hyprland install from ArchInstall Script works).
+
+1. Clone the repo and cd into it:
+```bash
+git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles.git
+cd dotfiles
+```
+
+2. Exit hyprland if you're currently in it.
+
+```bash
+hyprctl dispatch
+
+2. Run below command:
+
+```bash
+make rice
+```
+
+3. Enjoy!
+
+## Manual Install
 I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
 
 > [!IMPORTANT]
@@ -55,7 +82,7 @@ yay -S stow # replace with your package manager's syntax
 2. clone the repo:
 
 ```bash
-git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles-linux-hyprland.git
+git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles.git
 ```
 3. Navigate to the configs directory in the git repo:
 
@@ -84,9 +111,10 @@ stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi
 ```
 
 > [!IMPORTANT]
-> * Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to the folders that have configured in `.zshrc`.
-> * On Arch linux you can install them by running `yay -S zsh-autosuggestions zsh-fast-syntax-highlighting`.
+> * Clone fast-syntax-highlighting and zsh-auto-suggestions from their git repos.
+> * Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to `$HOME/.zsh-plugins/`.
 > * Please use **sudo** when simlinking pacman config.
+> * Use the manual install for catppuccin tmux theme or change the .tmux.conf yourself to get it through tpm.
 
 > [!NOTE]
 > I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `hyprland.conf` file in the `~/.config/hypr` directory.

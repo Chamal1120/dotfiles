@@ -3,7 +3,7 @@ export FUNCNEST=1000
 #Aliases
 alias cd='z'
 alias ls='eza --icons'
-#alias la='eza -a'
+alias la='eza -a'
 alias ll='eza -la'
 #alias lt='eza -TL 2'
 alias cat='bat'

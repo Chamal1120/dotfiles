@@ -39,7 +39,7 @@
   "theme.bar.menus.menu.dashboard.profile.radius": "5em",
   "theme.bar.menus.menu.dashboard.profile.size": "10em",
   "theme.bar.dropdownGap": "3.5em",
-  "menus.dashboard.powermenu.avatar.image": "~/.face.icon",
+  "menus.dashboard.powermenu.avatar.image": "/home/randy99/.face",
   "theme.bar.outer_spacing": "0.4em",
   "theme.bar.buttons.modules.ram.enableBorder": false,
   "theme.bar.buttons.modules.cpuTemp.enableBorder": false,
@@ -110,5 +110,6 @@
   "theme.bar.menus.enableShadow": false,
   "menus.power.lowBatteryNotification": true,
   "theme.bar.border.width": "0.15em",
-  "theme.bar.buttons.innerRadiusMultiplier": "0.4"
+  "theme.bar.buttons.innerRadiusMultiplier": "0.4",
+  "menus.media.noMediaText": "Nothing's Playing"
 }
