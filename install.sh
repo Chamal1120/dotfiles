@@ -130,8 +130,8 @@ backup_existing() {
 
   # Backup other dotfiles
   for file in .zshrc .vimrc .tmux.conf; do
-    if [ -f "$HOME/file" ]; then
-      cp "$HOME/file" "$BACKUP_DIR/home"
+    if [ -f "$HOME/$file" ]; then
+      cp "$HOME/$file" "$BACKUP_DIR/home"
       echo "Backed up $file"
     fi
   done
@@ -171,7 +171,7 @@ setup_chaotic_aur() {
 # Install Packages and dependanceies
 install_packages() {
   echo "Installing the packages"
-  sudo pacman -S --noconfirm "${PACMAN_PKGS[@]}" --neeeded
+  sudo pacman -S --noconfirm "${PACMAN_PKGS[@]}" --needed
   sudo paru -S --noconfirm "${AUR_PKGS[@]}" --needed
   mkdir -p "$ZSH_PLUGINS_DIR"
   cd "$ZSH_PLUGINS_DIR"
@@ -204,4 +204,3 @@ symlink_dotfiles
 install_packages
 finalizing_touces
 put_post_instructions
-
