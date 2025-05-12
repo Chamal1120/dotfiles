@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $EUID -ne 0 ]]; then
+  echo "Please run this script with sudo or as root."
+  exit 1
+fi
+
 # Exit immediately if any command failed
 set -e
 
@@ -91,7 +96,10 @@ PACMAN_PKGS=(
   hyprpaper
   hyprsunset
   papirus-icon-theme
-
+  thunar-media-tags-plugin
+  ripgrep
+  node
+  pnpm
 )
 
 # Define aur package names
@@ -182,9 +190,18 @@ finalizing_touces() {
   source "$HOME/.zshrc"
 }
 
+put_post_instructions() {
+  echo "\nI have disabled the animations, blur and opacity"
+  echo "You can enable them from .config/hypr/hyprland.conf"
+  echo "Plus there are some WindowRules to override opacity in browser and mpv"
+  echo "Remove them if you don't need\n"
+}
+
 # Run the functions
 backup_existing
 delete_existing
 symlink_dotfiles
 install_packages
 finalizing_touces
+put_post_instructions
+

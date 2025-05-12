@@ -46,7 +46,7 @@ Everything that I'm currently daily driving on Linux.
 ## Automated Install
 > [!NOTE]
 > This config is made for a minimal Arch Linux install and might conflict width any other customized distro.
-I recommend using a base Arch install (Hyprland install from ArchInstall Script works).
+> I recommend using a base Arch install (Hyprland install from ArchInstall Script works).
 
 1. Clone the repo and cd into it:
 ```bash
@@ -57,7 +57,11 @@ cd dotfiles
 2. Exit hyprland if you're currently in it.
 
 ```bash
-hyprctl dispatch
+hyprctl dispatch exit
+```
+
+> [!NOTE]
+> If you're using a display manager, you can switch to a different DE or to a new tty using `ctrl + alt + f2`.
 
 2. Run below command:
 
