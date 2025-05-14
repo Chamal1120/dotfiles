@@ -100,6 +100,7 @@ PACMAN_PKGS=(
   ripgrep
   node
   pnpm
+  man-db
 )
 
 # Define aur package names
