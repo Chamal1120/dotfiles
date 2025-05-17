@@ -3,7 +3,7 @@ general.import = [
 ]
 
 [font]
-size = 14.0
+size = 12.0
 
 [font.bold]
 family = "CaskaydiaCove Nerd Font"
@@ -30,6 +30,7 @@ mouse = { enabled = true }
 padding = {x = 20, y = 20}
 dynamic_padding = true
 decorations = "None"
+opacity = 0.90
 
 [mouse]
 hide_when_typing = true

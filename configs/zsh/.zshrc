@@ -28,16 +28,16 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/lib/jvm/java-24-openjdk
 export FLASK_DEBUG=1
-export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+#export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export CHROME_EXECUTABLE=/usr/bin/vivaldi
 export XCURSOR_THEME="BreezeX-RosePine-Linux"
-export XCURSOR_SIZE=24
+export XCURSOR_SIZE=32
 export LIBVA_DRIVER_NAME=iHD # Force Intel-media-driver intel vaapi driver
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
 export DOCKER_CLIENT_PARALLELISM=1
-export QT_SCALE_FACTOR=1
-export GDK_SCALE=1
-export GDK_DPI_SCALE=1
+export QT_SCALE_FACTOR=2
+export GDK_SCALE=2
+export GDK_DPI_SCALE=2
 export MOZ_ENABLE_WAYLAND=1
 export GDK_BACKEND=wayland
 export QT_QPA_PLATFORM=wayland
@@ -67,7 +67,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-[ -f "/home/randy99/.ghcup/env" ] && . "/home/randy99/.ghcup/env" # ghcup-env
+[ -f "/$HOME/.ghcup/env" ] && . "/$HOME/.ghcup/env" # ghcup-env
 
 if [[ -n "$TMUX" ]]; then
   setopt ignoreeof
