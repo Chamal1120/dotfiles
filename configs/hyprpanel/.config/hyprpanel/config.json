@@ -1,6 +1,6 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
-  "theme.font.size": "0.65rem",
+  "theme.font.size": "0.70rem",
   "theme.font.name": "Adwaita Sans",
   "notifications.timeout": 5000,
   "theme.bar.transparent": false,
@@ -58,7 +58,6 @@
       ],
       "right": [
         "netstat",
-        "cpu",
         "cputemp",
         "systray",
         "volume",
@@ -91,8 +90,8 @@
   "bar.workspaces.numbered_active_indicator": "underline",
   "bar.customModules.netstat.icon": "",
   "bar.customModules.netstat.rateUnit": "auto",
-  "bar.customModules.netstat.pollingInterval": 5000,
-  "bar.customModules.cpuTemp.pollingInterval": 10000,
+  "bar.customModules.netstat.pollingInterval": 10000,
+  "bar.customModules.cpuTemp.pollingInterval": 20000,
   "theme.osd.location": "bottom",
   "theme.osd.orientation": "horizontal",
   "theme.osd.margins": "0px 0px 25px 0px",

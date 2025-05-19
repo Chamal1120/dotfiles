@@ -53,6 +53,7 @@ PACMAN_PKGS=(
   zsh
   alacritty
   bat
+  bat-extras
   btop
   cava
   fastfetch
@@ -95,12 +96,17 @@ PACMAN_PKGS=(
   hypridle
   hyprpaper
   hyprsunset
+  hyprpicker
+  rofi-emoji
+  xdg-desktop-portal-hyprland
   papirus-icon-theme
   thunar-media-tags-plugin
   ripgrep
   node
   pnpm
   man-db
+  xdg-utils
+  wtype
 )
 
 # Define aur package names
@@ -185,7 +191,9 @@ install_packages() {
 
 # Do the final touches
 finalizing_touces() {
+  sudo chsh -s /bin/zsh
   echo "Adding the final sprinkes"
+  xdg-mime default org.pwmt.zathura.desktop application/pdf
   papirus-folders -C cat-mocha-lavender --theme Papirus-Dark
   bat cache --build
   source "$HOME/.zshrc"

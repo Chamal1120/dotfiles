@@ -36,6 +36,7 @@ export LIBVA_DRIVER_NAME=iHD # Force Intel-media-driver intel vaapi driver
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
 export DOCKER_CLIENT_PARALLELISM=1
 export QT_SCALE_FACTOR=2
+export QT_ENABLE_HIGHDPI_SCALING=1
 export GDK_SCALE=2
 export GDK_DPI_SCALE=2
 export MOZ_ENABLE_WAYLAND=1
