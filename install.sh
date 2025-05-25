@@ -107,6 +107,8 @@ PACMAN_PKGS=(
   man-db
   xdg-utils
   wtype
+  polkit-gnome
+  polkit
 )
 
 # Define aur package names

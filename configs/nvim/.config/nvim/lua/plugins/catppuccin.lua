@@ -11,7 +11,7 @@ return {
       no_bold = false,      -- Force no bold
       no_underline = false, -- Force no underline
       integrations = {
-        blink_cmp = true,
+        blink_cmp = false,
         copilot_vim = true,
         treesitter = true,
         lsp_trouble = true,

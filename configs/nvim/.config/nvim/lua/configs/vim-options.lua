@@ -1,13 +1,13 @@
-vim.g.mapleader = " " -- set leader to space
--- vim.g.maplocalleader = " " -- set local leader to space
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 vim.o.termguicolors = true
 vim.opt.relativenumber = true
-vim.o.colorcolumn = "80" -- highlight column 80
+vim.o.colorcolumn = "80"
 vim.g.have_nerd_font = true
-vim.opt.number = true -- show line numbers
-vim.opt.relativenumber = true -- show relative line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.mouse = "a"
-vim.opt.showmode = false -- don't show mode
+vim.opt.showmode = false
 vim.opt.showcmd = false
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
@@ -23,7 +23,7 @@ vim.o.shiftwidth = 2
 -- end)
 
 vim.opt.breakindent = true
-vim.opt.undofile = true -- Save undo history
+vim.opt.undofile = true   -- Save undo history
 vim.opt.ignorecase = true -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.smartcase = true
 vim.opt.signcolumn = "yes"
@@ -60,16 +60,20 @@ vim.opt.scrolloff = 10
 -- or just use <C-\><C-n> to exit terminal mode
 -- vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
--- vim.cmd("set expandtab")
--- vim.cmd("set tabstop=2")
--- vim.cmd("set softtabstop=2")
--- vim.cmd("set shiftwidth=2")
-
 -- Navigate vim panes better
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
+
+vim.keymap.set('n', '<C-M-h>', ':vertical resize +5<CR>',
+	{ noremap = true, silent = true, desc = 'Increase vertical split width' })
+vim.keymap.set('n', '<C-M-l>', ':vertical resize -5<CR>',
+	{ noremap = true, silent = true, desc = 'Decrease vertical split width' })
+vim.keymap.set('n', '<C-M-j>', ':resize +5<CR>',
+	{ noremap = true, silent = true, desc = 'Increase horizontal split height' })
+vim.keymap.set('n', '<C-M-k>', ':resize -5<CR>',
+	{ noremap = true, silent = true, desc = 'Decrease horizontal split height' })
 
 -- Custom filetype matchings
 vim.filetype.add({
@@ -80,6 +84,29 @@ vim.filetype.add({
 		[".*/hypr/.*%.conf"] = "hyprlang", -- Detect as hyprlang files
 	},
 })
+
+vim.opt.winblend = 5
+vim.cmd [[
+  highlight BlinkCmpMenu       guibg=#1e1e2e guifg=#cdd6f4
+  highlight BlinkCmpMenuBorder guibg=#1e1e2e guifg=#89b4fa
+  highlight BlinkCmpMenuSelection guibg=#3e4452 guifg=#cdd6f4
+  highlight BlinkCmpScrollBarThumb guibg=#7f849c
+  highlight BlinkCmpScrollBarGutter guibg=#1e1e2e
+  highlight BlinkCmpLabel      guibg=#1e1e2e guifg=#cdd6f4
+  highlight BlinkCmpLabelDeprecated guibg=#1e1e2e guifg=#7f849c gui=strikethrough
+  highlight BlinkCmpLabelDetail guibg=#1e1e2e guifg=#a6accd
+  highlight BlinkCmpLabelDescription guibg=#1e1e2e guifg=#a6accd
+  highlight BlinkCmpKind       guibg=#1e1e2e guifg=#89b4fa
+  highlight BlinkCmpSource     guibg=#1e1e2e guifg=#89b4fa
+  highlight BlinkCmpGhostText  guibg=NONE guifg=#5c6370 gui=italic
+  highlight BlinkCmpDoc        guibg=#1e1e2e guifg=#cdd6f4
+  highlight BlinkCmpDocBorder  guibg=#1e1e2e guifg=#89b4fa
+  highlight BlinkCmpDocSeparator guibg=#1e1e2e guifg=#89b4fa
+  highlight BlinkCmpDocCursorLine guibg=#3e4452
+  highlight BlinkCmpSignatureHelp guibg=#1e1e2e guifg=#cdd6f4
+  highlight BlinkCmpSignatureHelpBorder guibg=#1e1e2e guifg=#89b4fa
+  highlight BlinkCmpSignatureHelpActiveParameter guibg=#89b4fa guifg=#1e1e2e
+]]
 
 -- Copilot colors
 -- vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#363535" })

@@ -80,3 +80,5 @@ source /home/$USER/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zs
 source <(fzf --zsh) # enable fzf for zsh completions (use ctrl + t)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+
+. "$HOME/.local/bin/env"

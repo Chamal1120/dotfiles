@@ -11,7 +11,6 @@ return {
 			root_dir = require("null-ls.utils").root_pattern(".git", "package.json", ".null-ls-root"),
 			sources = {
 				null_ls.builtins.formatting.djhtml,
-				null_ls.builtins.diagnostics.cppcheck,
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.yamlfmt,
 				null_ls.builtins.formatting.prettier.with({
