@@ -23,25 +23,26 @@ Everything that I'm currently daily driving on Linux.
 
 ## What's in?
 01. Compositor - Hyprland(Wayland)
-02. Bar - Hyprpanel(default), waybar
-03. Terminal emulator - Alacritty (default), foot
-04. Shell - zsh
-05. Terminal multiplexer - Tmux
-06. Nerd font - CaskaydiaCove Nerd Font
-07. Text editor and IDE - Neovim, Vim
-08. Browser - Vivaldi, Firefox
-09. File Manager(GUI) - Thunar
-10. Document viewer - Zathura
-11. File Manager (TUI) - Yazi
-12. Git manager (TUI) - Lazygit
-13. `ls` replacement - eza
-14. `cd` replacement - Zoxide
-15. `cat` replacement - Bat
-16. sysfetch - Fastfetch
-17. App launcher - Rofi wayland fork
-18. Cursor theme - Rose-pine-hyprland (for Hyprland), BreezX-RosePine (for X)
-19. Icon theme - Papirus-Dark
-20. Icon color heme - Catppuccin mocha lavender
+02. Bar - waybar(default), Hyprpanel
+03. Notification Daemon - swaync(for waybar only)
+04. Terminal emulator - Alacritty (default), foot
+05. Shell - zsh
+06. Terminal multiplexer - tmux
+07. Nerd font - CaskaydiaCove Nerd Font
+08. Text editor and IDE - Neovim, Vim
+09. Browser - Vivaldi, Firefox
+10. File Manager(GUI) - Thunar
+11. Document viewer - Zathura
+12. File Manager (TUI) - Yazi
+13. Git manager (TUI) - Lazygit
+14. `ls` replacement - eza
+15. `cd` replacement - Zoxide
+16. `cat` replacement - Bat
+17. sysfetch - Fastfetch
+18. App launcher - Rofi wayland fork
+19. Cursor theme - Rose-pine-hyprland (for Hyprland), BreezX-RosePine (for X)
+20. Icon theme - Papirus-Dark
+21. Icon color heme - Catppuccin mocha lavender
 
 ## Automated Install
 > [!NOTE]
@@ -80,7 +81,7 @@ I manage my dotfiles with GNU `stow`. follow the below steps to simlink the file
 1. Install stow:
 
 ```bash
-yay -S stow # replace with your package manager's syntax
+paru -S stow # replace with your package manager's syntax
 ```
 
 2. clone the repo:

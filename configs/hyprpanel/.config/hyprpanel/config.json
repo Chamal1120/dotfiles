@@ -108,5 +108,12 @@
   "menus.power.lowBatteryNotification": true,
   "theme.bar.border.width": "0.15em",
   "theme.bar.buttons.innerRadiusMultiplier": "0.4",
-  "menus.media.noMediaText": "Nothing's Playing"
+  "menus.media.noMediaText": "Nothing's Playing",
+  "theme.bar.enableShadow": false,
+  "bar.launcher.autoDetectIcon": false,
+  "bar.workspaces.showWsIcons": false,
+  "bar.notifications.show_total": true,
+  "bar.notifications.hideCountWhenZero": true,
+  "bar.media.show_active_only": false,
+  "menus.media.displayTimeTooltip": false
 }

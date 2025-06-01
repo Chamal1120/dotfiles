@@ -109,11 +109,13 @@ PACMAN_PKGS=(
   wtype
   polkit-gnome
   polkit
+  rar
+  g4music
+  swaync
 )
 
 # Define aur package names
 AUR_PKGS=(
-  ags-hyprpanel-git 
   catppuccin-gtk-theme-mocha
   papirus-folders-catppuccin-git
 )
@@ -149,8 +151,8 @@ backup_existing() {
 # Delete the backed up configs
 delete_existing() {
   echo "Deleting existing dotfiles"
-  rm -rf "$HOME/.config/*"
-  sudo rm /etc/pacman.conf
+  [ -d "$HOME/.config" ] && rm -rf "$HOME/.config"/*
+  [ -f /etc/pacman.conf ] && sudo rm /etc/pacman.conf
   rm .zshrc .vimrc .tmux.conf
   echo "Deletion done"
 }
@@ -158,7 +160,7 @@ delete_existing() {
 # Symlink randy's dotfiles
 symlink_dotfiles() {
   echo "Installing randy's dotfiles with stow"
-  cd "$HOME/dotfiles/configs/"
+  [ -d "$HOME/dotfiles/configs" ] || { echo "Dotfiles directory not found"; exit 1; }
   sudo pacman -S --noconfirm stow --needed
   stow --target=$HOME "$DOTFILE_LIST"
   sudo stow --target=/etc pacman
@@ -192,13 +194,13 @@ install_packages() {
 }
 
 # Do the final touches
-finalizing_touces() {
-  sudo chsh -s /bin/zsh
+finalizing_touches() {
+  ZSH_PATH=$(command -v zsh)
+  sudo chsh -s "$ZSH_PATH"
   echo "Adding the final sprinkes"
   xdg-mime default org.pwmt.zathura.desktop application/pdf
   papirus-folders -C cat-mocha-lavender --theme Papirus-Dark
   bat cache --build
-  source "$HOME/.zshrc"
 }
 
 put_post_instructions() {
@@ -206,6 +208,7 @@ put_post_instructions() {
   echo "You can enable them from .config/hypr/hyprland.conf"
   echo "Plus there are some WindowRules to override opacity in browser and mpv"
   echo "Remove them if you don't need\n"
+  echo "Restart your shell or run 'exec zsh' to apply changes"
 }
 
 # Run the functions
@@ -213,5 +216,5 @@ backup_existing
 delete_existing
 symlink_dotfiles
 install_packages
-finalizing_touces
+finalizing_touches
 put_post_instructions

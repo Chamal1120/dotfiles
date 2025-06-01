@@ -66,9 +66,9 @@ vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
-vim.keymap.set('n', '<C-M-h>', ':vertical resize +5<CR>',
+vim.keymap.set('n', '<C-M-l>', ':vertical resize +5<CR>',
 	{ noremap = true, silent = true, desc = 'Increase vertical split width' })
-vim.keymap.set('n', '<C-M-l>', ':vertical resize -5<CR>',
+vim.keymap.set('n', '<C-M-h>', ':vertical resize -5<CR>',
 	{ noremap = true, silent = true, desc = 'Decrease vertical split width' })
 vim.keymap.set('n', '<C-M-j>', ':resize +5<CR>',
 	{ noremap = true, silent = true, desc = 'Increase horizontal split height' })

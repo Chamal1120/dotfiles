@@ -1,108 +1,160 @@
+@import "mocha.css";
+
 * {
-  font-size: 11px;
-  border-radius: 10px;
-  padding: 0;
-  margin: 0;
+  font-size: 10px;
+  border-radius: 0px;
+  font-weight: bold;
 }
 
 window#waybar {
-  border: none;
-  border-top: 0px;
+  font-family: "Cantarell", fontawesome, sans-serif;
   border-bottom: 0px;
-  color: #ffffff;
-  font-family: FontAwesome, Meslo LGS Bold NF;
-  font-weight: Bold;
-  letter-spacing: 0.5px;
-  /*font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";*/
-  background: rgba(0, 0, 0, 0);
+  background-color: @crust;
+  color: @text;
   transition-property: background-color;
-  transition-duration: .5s;
+  transition-duration: 0s;
+  margin: 0;
+  padding: 0;
 }
 
-/*-----module groups----*/
-.modules-left {
-
+window#waybar.empty #window {
+  background-color: transparent;
 }
-
-/*.modules-center {
-  background-color: rgba(17, 17, 27,0.85);
-  margin: 10px 0px 0px 0px;
-  padding: 0px 10px 0px 10px;
-}*/
 
 .modules-right {
-  background-color: rgba(17, 17, 27,0.85);
-  margin: 10px 10px 0px 3px;
-  padding: 0px 10px 0px 10px;
+  margin: 0px 5px 0px 0px;
+}
+.modules-center {
+  margin: 0px 0px 0px 0px;
+}
+.modules-left {
+  margin: 0px 0px 0px 5px;
 }
 
-/*-----modules indv----*/
+button {
+  border: none;
+}
 
 #workspaces {
-  background-color: rgba(17, 17, 27,0.85);
-  margin: 10px 3px 0px 10px;
-  padding: 0px 10px 0px 10px;
+  background-color: @base;
+  border-radius: 5px;
+  margin: 3px 0px 3px 0px;
 }
 
 #workspaces button {
-  border-radius: 20px;
-  min-width: 30px;
-  color: #ffffff;
+  padding: 0px 3px 0px 3px;
+  background-color: transparent;
+  color: @lavender;
+  border-radius: 0;
+}
+
+#workspaces button:first-child {
+  border-radius: 0px 0px 3px 3px;
+}
+
+#workspaces button:last-child {
+  border-radius: 0px 3px 3px 0px;
 }
 
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;    
-  background: none;
-  min-width: 30px;
-  border-color: rgba(17, 17, 27,0.85);
-  }
+  color: @peach;
+}
 
 #workspaces button.active {
-  /*border-bottom: solid 2px @active;*/
-  background-color: rgba(203, 166, 247, 0.85);
-  border-radius: 20px;
-  margin: 0px;
-  min-width: 30px;
-  color: #000000;
+  color: @peach;
+}
+
+#idle_inhibitor,
+#cava,
+#mode,
+#window,
+#clock,
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#networkSpeed,
+#tray,
+#custom-notification,
+#mpris{
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px;
+  margin: 3px 0px 3px 0px;
+  background-color: @base;
+  color: @lavender;
+}
+
+#mode {
+  background-color: @base;
+  color: @subtext1;
+}
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
 }
 
 #cava {
-  min-width: 60px;
-  padding: 0px 8px 0px 8px;
+  padding: 0px 0px;
 }
 
-#network.speeddown, #network.speedup {
-  min-width: 62px;
+@keyframes blink {
+  to {
+    background-color: @base;
+    color: @lavender;
+  }
 }
 
-#custom-pacman {
-  background-color: rgba(17, 17, 27,0.85);
-  margin: 10px 0px 0px 0px;
-  padding: 0px 8px;
-  min-width:  90px;
+#battery.overcharge {
+  color: @maroon;
 }
 
-#mpris {
-  background-color: rgba(17, 17, 27,0.85);
-  margin: 10px 4px 0px 4px;
-  padding: 0px 8px;
-  min-width:  320px;
-  padding: 0 0px;
+#battery.good {
+  color: @green;
 }
 
-#cpu {
-  min-width:  32px;
+#battery.warning {
+  color: @red;
 }
 
-#network,
-#networkSpeed,
-#cpu,
-#memory,
-#temperature,
-#battery,
-#pulseaudio,
-#clock {
-  padding: 0px 6px 0px 6px;
+#battery.critical:not(.charging) {
+  background-color: @base;
+  color: @red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
+label:focus {
+  background-color: @base;
+}
+
+#wireplumber.muted {
+  background-color: @base;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+#mpris.playing {
+  background-color: @base;
+  color: @lavender;
+}
+
+#tray menu {
+  font-family: sans-serif;
+}
+
+#scratchpad.empty {
+  background: transparent;
+}
