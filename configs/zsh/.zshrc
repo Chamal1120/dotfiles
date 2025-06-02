@@ -69,6 +69,8 @@ case ":$PATH:" in
 esac
 # pnpm end
 [ -f "/$HOME/.ghcup/env" ] && . "/$HOME/.ghcup/env" # ghcup-env
+export PATH="$PATH":"$HOME/.local/scripts/"
+bindkey -s '^f' 'tmux-sessionizer\n'
 
 if [[ -n "$TMUX" ]]; then
   setopt ignoreeof

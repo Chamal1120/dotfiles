@@ -108,5 +108,11 @@ vim.cmd [[
   highlight BlinkCmpSignatureHelpActiveParameter guibg=#89b4fa guifg=#1e1e2e
 ]]
 
+vim.api.nvim_create_user_command("Tms", function()
+  vim.fn.jobstart({ "tmux", "new-window", "tmux-sessionizer" }, { detach = true })
+end, {})
+
+vim.keymap.set("n", "<C-f>", ":Tms<CR>", { noremap = true, silent = true })
+
 -- Copilot colors
 -- vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#363535" })
