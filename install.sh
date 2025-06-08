@@ -63,6 +63,13 @@ PACMAN_PKGS=(
   rofi-wayland
   starship
   thunar
+  tumbler
+  ffmpegthumbnailer
+  thunar-media-tags-plugin
+  thunar-shares-plugin
+  thunar-volum
+  thunar-archive-plugin
+  xarchiver
   tmux
   vim
   yazi
@@ -100,7 +107,6 @@ PACMAN_PKGS=(
   rofi-emoji
   xdg-desktop-portal-hyprland
   papirus-icon-theme
-  thunar-media-tags-plugin
   ripgrep
   node
   pnpm

@@ -6,6 +6,7 @@
     "modules-left": [
         "hyprland/workspaces",
         "idle_inhibitor",
+        "custom/hyprsunset",
         "backlight",
         "hyprland/window",
     ],
@@ -221,4 +222,17 @@
         "on-click-right": "swaync-client -d -sw",
         "escape": true
     },
+    "custom/hyprsunset": {
+        "interval": "once",
+        "exec": "cat ~/.cache/hyprsunset.state 2>/dev/null | awk '{ print \"{\\\"alt\\\": \\\"\" $1 \"\\\"}\" }'",
+        "on-click": "~/.config/waybar/scripts/toggle-hyprsunset.sh",
+        "signal": 1, // SIGRTMIN+1
+        "return-type": "json",
+        "format": "{icon}",
+        "tooltip-format": "Blue light filter: {alt}",
+        "format-icons": {
+            "on": "󱩌",
+            "off": "󰛨"
+        }
+    }
 }

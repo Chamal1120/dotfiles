@@ -28,7 +28,7 @@ prepend_previewers = [
     { name = "*.config", run = "bat" },
     { name = "*.conf", run = "bat" },
 ]
-[mgr]
+[manager]
 show_hidden = false
 
 [preview]
