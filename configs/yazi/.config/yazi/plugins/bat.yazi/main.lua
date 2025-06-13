@@ -2,7 +2,7 @@ local M = {}
 
 function M:peek(job)
     local child = Command("bat")
-        :args({
+        :arg({
             "--style", "plain",
             "--color", "always",
             tostring(job.file.url),

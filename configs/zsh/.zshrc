@@ -71,7 +71,10 @@ esac
 # pnpm end
 [ -f "/$HOME/.ghcup/env" ] && . "/$HOME/.ghcup/env" # ghcup-env
 export PATH="$PATH":"$HOME/.local/scripts/"
+
+# Shell hotkeys (keybinds)
 bindkey -s '^f' 'tmux-sessionizer\n'
+bindkey -s '^g' 'gropen\n'
 
 if [[ -n "$TMUX" ]]; then
   setopt ignoreeof

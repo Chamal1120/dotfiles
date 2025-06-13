@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Check if we're inside a github repo
+if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+  echo "Not inside a git repo!"
+  exit 1
+fi
+
+# Get the origin URL from git config
+origin_url=$(git config --get remote.origin.url)
+
+# if origin is not set, exit
+if [ -z "$origin_url" ]; then
+  echo "No remote origin url found!"
+  exit 1
+fi
+
+# Format the git origin url to browser friendly format
+web_url=$(echo "$origin_url" | sed 's#git@github.com:#https://github.com/#' | sed 's#\.git##')
+
+# open the url in default browser
+xdg-open "$web_url"
