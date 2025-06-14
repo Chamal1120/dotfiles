@@ -23,7 +23,7 @@ vim.o.shiftwidth = 2
 -- end)
 
 vim.opt.breakindent = true
-vim.opt.undofile = true   -- Save undo history
+vim.opt.undofile = true
 vim.opt.ignorecase = true -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.smartcase = true
 vim.opt.signcolumn = "yes"
@@ -62,11 +62,12 @@ vim.opt.scrolloff = 10
 
 -- Custom nvim commands
 vim.api.nvim_create_user_command("Tms", function()
-  vim.fn.jobstart({ "tmux", "new-window", "tmux-sessionizer" }, { detach = true })
+	vim.fn.jobstart({ "tmux", "new-window", "tmux-sessionizer" }, { detach = true })
 end, {})
 
 vim.api.nvim_create_user_command("Gropen", function()
-  vim.fn.jobstart({ "gropen" })
+	vim.fn.jobstart({ "gropen" }, { detach = true })
+	vim.api.nvim_echo({ { "remote repo opened in default browser!", "Normal" } }, false, {})
 end, {})
 
 -- Navigate vim panes better
@@ -76,13 +77,13 @@ vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
 vim.keymap.set('n', '<C-M-l>', ':vertical resize +5<CR>',
-	{ noremap = true, silent = true, desc = 'Increase vertical split width' })
+  { noremap = true, silent = true, desc = 'Increase vertical split width' })
 vim.keymap.set('n', '<C-M-h>', ':vertical resize -5<CR>',
-	{ noremap = true, silent = true, desc = 'Decrease vertical split width' })
+  { noremap = true, silent = true, desc = 'Decrease vertical split width' })
 vim.keymap.set('n', '<C-M-j>', ':resize +5<CR>',
-	{ noremap = true, silent = true, desc = 'Increase horizontal split height' })
+  { noremap = true, silent = true, desc = 'Increase horizontal split height' })
 vim.keymap.set('n', '<C-M-k>', ':resize -5<CR>',
-	{ noremap = true, silent = true, desc = 'Decrease horizontal split height' })
+  { noremap = true, silent = true, desc = 'Decrease horizontal split height' })
 
 -- Other keymaps
 vim.keymap.set("n", "<C-f>", ":Tms<CR>", { noremap = true, silent = true })
@@ -90,29 +91,29 @@ vim.keymap.set("n", "<C-g>", ":Gropen<CR>", { noremap = true, silent = true })
 
 -- Custom filetype matchings
 vim.filetype.add({
-	extension = {
-		bal = 'ballerina' -- Detect .bal as ballerina files
-	},
-	pattern = {
-		[".*/hypr/.*%.conf"] = "hyprlang", -- Detect as hyprlang files
-	},
+  extension = {
+    bal = 'ballerina' -- Detect .bal as ballerina files
+  },
+  pattern = {
+    [".*/hypr/.*%.conf"] = "hyprlang", -- Detect as hyprlang files
+  },
 })
 
 vim.opt.winblend = 5
 vim.cmd [[
-  highlight BlinkCmpMenu       guibg=#1e1e2e guifg=#cdd6f4
+  highlight BlinkCmpMenui guibg=#1e1e2e guifg=#cdd6f4
   highlight BlinkCmpMenuBorder guibg=#1e1e2e guifg=#89b4fa
   highlight BlinkCmpMenuSelection guibg=#3e4452 guifg=#cdd6f4
   highlight BlinkCmpScrollBarThumb guibg=#7f849c
   highlight BlinkCmpScrollBarGutter guibg=#1e1e2e
-  highlight BlinkCmpLabel      guibg=#1e1e2e guifg=#cdd6f4
+  highlight BlinkCmpLabel guibg=#1e1e2e guifg=#cdd6f4
   highlight BlinkCmpLabelDeprecated guibg=#1e1e2e guifg=#7f849c gui=strikethrough
   highlight BlinkCmpLabelDetail guibg=#1e1e2e guifg=#a6accd
   highlight BlinkCmpLabelDescription guibg=#1e1e2e guifg=#a6accd
-  highlight BlinkCmpKind       guibg=#1e1e2e guifg=#89b4fa
-  highlight BlinkCmpSource     guibg=#1e1e2e guifg=#89b4fa
-  highlight BlinkCmpGhostText  guibg=NONE guifg=#5c6370 gui=italic
-  highlight BlinkCmpDoc        guibg=#1e1e2e guifg=#cdd6f4
+  highlight BlinkCmpKind guibg=#1e1e2e guifg=#89b4fa
+  highlight BlinkCmpSource guibg=#1e1e2e guifg=#89b4fa
+  highlight BlinkCmpGhostText guibg=NONE guifg=#5c6370 gui=italic
+  highlight BlinkCmpDoc guibg=#1e1e2e guifg=#cdd6f4
   highlight BlinkCmpDocBorder  guibg=#1e1e2e guifg=#89b4fa
   highlight BlinkCmpDocSeparator guibg=#1e1e2e guifg=#89b4fa
   highlight BlinkCmpDocCursorLine guibg=#3e4452
@@ -120,7 +121,6 @@ vim.cmd [[
   highlight BlinkCmpSignatureHelpBorder guibg=#1e1e2e guifg=#89b4fa
   highlight BlinkCmpSignatureHelpActiveParameter guibg=#89b4fa guifg=#1e1e2e
 ]]
-
 
 -- Copilot colors
 -- vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#363535" })

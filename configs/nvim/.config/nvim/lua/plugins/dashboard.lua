@@ -31,7 +31,7 @@ return {
 					{
 						desc = " dotfiles",
 						group = "Number",
-						action = "Telescope find_files cwd=~/dotfiles-linux-hyprland hidden=true follow=true", -- Give your dotfiles path
+						action = "Telescope find_files cwd=~/dotfiles-linux-hyprland hidden=true follow=true", -- dotfiles path
 						key = "d",
 					},
 				},
@@ -45,7 +45,7 @@ return {
 					enable = false,
 					cwd_only = false,
 				},
-				footer = { "Hello Chamal 👋, Let's Code!" },
+				footer = { "Hello " .. os.getenv("USER") .." 👋, Let's Code!" },
 			},
 		})
 	end,

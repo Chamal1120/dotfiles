@@ -11,7 +11,11 @@ return {
 			root_dir = require("null-ls.utils").root_pattern(".git", "package.json", ".null-ls-root"),
 			sources = {
 				null_ls.builtins.formatting.djhtml,
-				null_ls.builtins.formatting.stylua,
+				null_ls.builtins.formatting.stylua.with({
+					extra_args = function(params)
+						return { "--config-path", params.root .. "/stylua.toml" }
+					end,
+				}),
 				null_ls.builtins.formatting.yamlfmt,
 				null_ls.builtins.formatting.prettier.with({
 					command = "node_modules/.bin/prettier",
