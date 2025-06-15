@@ -1,7 +1,7 @@
 export FUNCNEST=1000
 
 #Aliases
-alias cd='z'
+#alias cd='z'
 alias ls='eza --icons'
 alias la='eza -a'
 alias lla='eza -la'
