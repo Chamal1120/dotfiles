@@ -106,6 +106,7 @@ PACMAN_PKGS=(
   hyprpicker
   rofi-emoji
   xdg-desktop-portal-hyprland
+  xdg-desktop-portal-gtk
   papirus-icon-theme
   ripgrep
   node
@@ -124,6 +125,7 @@ PACMAN_PKGS=(
 AUR_PKGS=(
   catppuccin-gtk-theme-mocha
   papirus-folders-catppuccin-git
+  webapp-manager
 )
 
 # Backup exisiting configs

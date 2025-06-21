@@ -11,5 +11,17 @@
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>
+	<unique-id>1730089871</unique-id>
+	<name>Compress PDF</name>
+	<description>Compress a PDF file using ghostscript</description>
+	<command>ghostscript -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=%n-compressed.pdf %f</command>
+	<icon>document-save</icon>
+	<startup-notify>false</startup-notify>
+	<patterns>*.pdf;*.PDF</patterns>
+	<audio-files>false</audio-files>
+	<image-files>false</image-files>
+	<other-files>false</other-files>
+	<text-files>false</text-files>
+	<video-files>false</video-files>
 </action>
 </actions>

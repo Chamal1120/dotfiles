@@ -221,7 +221,7 @@ sensitivity = 60
 
 # SDL and sdl_glsl only support hex code colors, these are the default:
 ; background = '#111111'
-; foreground = '#33ffff'
+foreground = '#b4befe'
 
 
 # Gradient mode, only hex defined colors are supported,

@@ -157,17 +157,17 @@
         "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
     },
     "network#speedup": {
-        "interval": 1,
+        "interval": 3,
         "format-wifi": "{bandwidthUpBytes} ",
         "format-ethernet": "{bandwidthUpBytes} ",
-        "format-disconnected": "⚠",
+        "format-disconnected": "0B/s ",
         "align": 1,
     },
     "network#speeddown": {
-        "interval": 1,
+        "interval": 3,
         "format-wifi": "{bandwidthDownBytes} ",
         "format-ethernet": "{bandwidthDownBytes} ",
-        "format-disconnected": "⚠",
+        "format-disconnected": "0B/s ",
         "align": 1,
     },
     "custom/pacman": {
