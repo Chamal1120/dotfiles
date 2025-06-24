@@ -41,7 +41,29 @@ return {
 				bashls = {},
 				clangd = {},
 				tailwindcss = {},
-				rust_analyzer = {},
+				rust_analyzer = {
+					settings = {
+						["rust-analyzer"] = {
+							imports = {
+								granularity = {
+									group = "module",
+								},
+								prefix = "self",
+							},
+							cargo = {
+								buildScripts = {
+									enable = true,
+								},
+							},
+							procMacro = {
+								enable = true,
+							},
+							rustfmt = {
+								extraArgs = { "--config", "tab_spaces=2" },
+							},
+						},
+					},
+				},
 				pylsp = {
 					settings = {
 						pylsp = {
