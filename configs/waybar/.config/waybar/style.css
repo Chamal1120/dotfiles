@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-  font-family: "Cantarell", fontawesome, sans-serif;
+  font-family: "Cantarell", "CaskaydiaCove NFP";
   border-bottom: 0px;
   background-color: @crust;
   color: @text;
@@ -37,7 +37,7 @@ button {
 
 #workspaces {
   background-color: @base;
-  border-radius: 5px;
+  border-radius: 0px;
   margin: 3px 0px 3px 0px;
 }
 
@@ -49,11 +49,11 @@ button {
 }
 
 #workspaces button:first-child {
-  border-radius: 0px 0px 3px 3px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 #workspaces button:last-child {
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 #workspaces button:hover {
@@ -79,7 +79,7 @@ button {
 #custom-notification,
 #mpris{
   padding: 0px 10px 0px 10px;
-  border-radius: 5px;
+  border-radius: 0px;
   margin: 3px 0px 3px 0px;
   background-color: @base;
   color: @lavender;

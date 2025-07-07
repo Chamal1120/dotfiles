@@ -1,7 +1,7 @@
 <div align="center">
 
-# Dotfiles
-Everything that I'm currently daily driving on Linux.
+# Dotfiles (WIP - Changing to a boxy UI)
+_Everything that I'm currently daily driving on Linux._
 
 ![Static Badge](https://img.shields.io/badge/WM-HYPRLAND-%232596be?style=for-the-badge&logo=orange&logoColor=%23ffffff&labelColor=%2311111b)
 ![Static Badge](https://img.shields.io/badge/distro-arch_linux-blue?style=for-the-badge&logo=linux&logoColor=%23ffffff&labelColor=%2311111b)
@@ -12,7 +12,7 @@ Everything that I'm currently daily driving on Linux.
 ![Discord](https://img.shields.io/discord/1121821626305089647?style=for-the-badge&logo=discord&logoColor=%23ffffff&labelColor=%2311111b&color=%23cba6f7)
 </div>
 
-## Previews
+## Previews (from the commit hash: a197024)
 ![preview_01](previews/2025-05-12-182037_hyprshot.webp)
 <br>
 ![preview_02](previews/2025-05-12-184142_hyprshot.webp)

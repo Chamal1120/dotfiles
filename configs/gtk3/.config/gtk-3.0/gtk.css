@@ -1,0 +1,4 @@
+/* Square corners for GTK3 windows and widgets */
+window, .window, .csd, .decorated, button, .button, entry, .entry, .popover, .menu, .tooltip {
+    border-radius: 0px;
+}

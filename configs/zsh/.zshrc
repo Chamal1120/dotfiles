@@ -9,11 +9,12 @@ alias lla='eza -la'
 alias vim='nvim'
 alias cat='bat'
 alias man='batman'
-#alias yt-dlp-fhd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf'
+alias yt-dlp-fhd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf'
 alias yt-dlp-hd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-720.conf'
 alias yt-dlp-audio='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-audio.conf'
 #alias ctltui='systemctl-tui'
 #alias kblit='set_kb_backlight'
+alias myed="ed -p ':'"
 
 DISABLE_AUTO_TITLE="true"
 
@@ -30,6 +31,8 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/lib/jvm/java-24-openjdk
 export FLASK_DEBUG=1
+export XCURSOR_THEME=Adwaita
+export XCURSOR_SIZE=24
 #export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export CHROME_EXECUTABLE=/usr/bin/vivaldi
 export LIBVA_DRIVER_NAME=iHD

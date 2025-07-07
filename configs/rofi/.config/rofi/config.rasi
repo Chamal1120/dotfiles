@@ -68,7 +68,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               8px;
+    border-radius:               0px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
@@ -90,7 +90,7 @@ mainbox {
     margin:                      0px;
     padding:                     20px;
     border:                      0px solid;
-    border-radius:               5px 5px 5px 5px;
+    border-radius:               0px;
     border-color:                @border-colour;
     background-color:            transparent;
     children:                    [ "inputbar", "message", "listview" ];
@@ -103,7 +103,7 @@ inputbar {
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               5px;
+    border-radius:               0px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
@@ -181,7 +181,7 @@ listview {
 scrollbar {
     handle-width:                5px ;
     handle-color:                @handle-colour;
-    border-radius:               5px;
+    border-radius:               0px;
     background-color:            @alternate-background;
 }
 
@@ -192,7 +192,7 @@ element {
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               5px;
+    border-radius:               0px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
