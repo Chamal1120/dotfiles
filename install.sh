@@ -125,6 +125,7 @@ PACMAN_PKGS=(
 AUR_PKGS=(
   catppuccin-gtk-theme-mocha
   papirus-folders-catppuccin-git
+  rose-pine-hyprland
   webapp-manager
 )
 
@@ -211,6 +212,11 @@ finalizing_touches() {
   bat cache --build
 }
 
+optimizing_vivaldi() {
+  css_file="/opt/vivaldi/resources/vivaldi/style/common.css"
+  echo -e "\n#header {\n  display: none;\n}" | sudo tee -a "$css_file" > /dev/null
+}
+
 put_post_instructions() {
   echo "\nI have disabled the animations, blur and opacity"
   echo "You can enable them from .config/hypr/hyprland.conf"
@@ -224,5 +230,6 @@ backup_existing
 delete_existing
 symlink_dotfiles
 install_packages
+optimizing_vivaldi
 finalizing_touches
 put_post_instructions

@@ -1,5 +1,3 @@
-export FUNCNEST=1000
-
 #Aliases
 #alias cd='z'
 alias ls='eza --icons'
@@ -16,6 +14,7 @@ alias yt-dlp-audio='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-audio.conf'
 #alias kblit='set_kb_backlight'
 alias myed="ed -p ':'"
 
+export FUNCNEST=1000
 DISABLE_AUTO_TITLE="true"
 
 # zsh history config
@@ -74,7 +73,7 @@ fi
 
 # source directories for custom plugins
 source /home/$USER/.zsh-plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh # Fast Syntax Highlighting
-source /home/$USER/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh Autosuggestions
+#source /home/$USER/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh Autosuggestions
 source <(fzf --zsh) # enable fzf for zsh completions (use ctrl + t)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

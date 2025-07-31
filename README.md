@@ -46,7 +46,7 @@ _Everything that I'm currently daily driving on Linux._
 
 ## Automated Install
 > [!NOTE]
-> This config is made for a minimal Arch Linux install and might conflict width any other customized distro.
+> This config is made for a minimal Arch Linux install and might conflict with any other customized distro.
 > I recommend using a base Arch install (Hyprland install from ArchInstall Script works).
 
 1. Clone the repo and cd into it:
@@ -150,5 +150,5 @@ Click [here](https://discord.gg/PsxwFB4nJA) and hop onto my discord to talk abou
 ## Credits
 All credits and respect goes to all the authors and maintainers of the open source software I have used for this setup.
 
-## Thanks ❤️
-Thank you for reading upto this point. Feel free to fork the repo if you need and don't forget to star.
+## License
+This peice of software is licensed under MIT.

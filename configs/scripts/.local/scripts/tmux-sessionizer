@@ -6,7 +6,7 @@ else
     FZF_DEFAULT_OPTS="--color=bg+:-1,bg:-1,spinner:#f5e0dc,hl:#f38ba8 \
     --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
     --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-    selected=$(find ~/things ~/.config -mindepth 1 -maxdepth 1 \( -type d -o -type l \) | fzf)
+    selected=$(find ~/things ~/random-stuff  ~/.config -mindepth 1 -maxdepth 1 \( -type d -o -type l \) | fzf)
 fi
 
 if [[ -z $selected ]]; then
