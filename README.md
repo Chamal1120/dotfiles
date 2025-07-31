@@ -14,9 +14,9 @@ _Everything that I'm currently daily driving on Linux._
 
 ## Preview
 
-![image]("2025-07-31-180721_hyprshot.webp")
+![image](previews/2025-07-31-180431_hyprshot.webp)
 <br>
-![image]("2025-07-31-180721_hyprshot.webp")
+![image](previews/2025-07-31-180721_hyprshot.webp)
 
 ## What's in?
 01. Compositor - Hyprland(Wayland)
