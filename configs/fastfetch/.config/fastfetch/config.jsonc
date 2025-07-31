@@ -2,85 +2,94 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "source": "~/.config/fastfetch/excited_chibi",
-        "type": "auto",
-        "height": 14,
-        "padding": {
-            "top": 1
+    "source": "~/.config/fastfetch/excited_chibi",
+    "type": "auto",
+    "padding": {
+        "top": 0
         },
-        "color": {
-            "1": "magenta",
+    "color": {
+        "1": "magenta",
         }
-
     },
     "display": {
-        "separator": " "
+        "separator": "",
+        "key": {
+            "width": 15
+        }
     },
     "modules": [
         {
-            "key": "╭───────────╮",
-            "type": "custom"
-        },
-        {
-            "key": "│ {#31} user    {#keys}│",
+            // draw borders first to make colors of left and right border consistant
+            "key": " user",
             "type": "title",
-            "format": "{user-name}"
+            "format": "{user-name}",
+            "keyColor": "31"
         },
         {
-            "key": "│ {#32}󰇅 hname   {#keys}│",
+            "key": "󰇅 hname",
             "type": "title",
-            "format": "{host-name}"
+            "format": "{host-name}",
+            "keyColor": "32"
+
         },
         {
-            "key": "│ {#33}󰅐 uptime  {#keys}│",
-            "type": "uptime"
+            "key": "󰅐 uptime",
+            "type": "uptime",
+            "keyColor": "33"
         },
         {
-            "key": "│ {#34}{icon} distro  {#keys}│",
-            "type": "os"
+            "key": "{icon} distro",
+            "type": "os",
+            "keyColor": "34"
         },
         {
-            "key": "│ {#35} kernel  {#keys}│",
-            "type": "kernel"
+            "key": " kernel",
+            "type": "kernel",
+            "keyColor": "35"
         },
         {
-            "key": "│ {#36}󰇄 desktop {#keys}│",
-            "type": "de"
+            "key": "󰇄 desktop",
+            "type": "de",
+            "keyColor": "36"
         },
         {
-            "key": "│ {#31} term    {#keys}│",
-            "type": "terminal"
+            "key": " term",
+            "type": "terminal",
+            "keyColor": "31"
         },
         {
-            "key": "│ {#32} shell   {#keys}│",
-            "type": "shell"
+            "key": " shell",
+            "type": "shell",
+            "keyColor": "32"
         },
         {
-            "key": "│ {#33}󰍛 cpu     {#keys}│",
+            "key": "󰍛 cpu",
             "type": "cpu",
-            "showPeCoreCount": true
+            "showPeCoreCount": true,
+            "keyColor": "33"
         },
         {
-            "key": "│ {#34}󰉉 disk    {#keys}│",
+            "key": "󰉉 disk",
             "type": "disk",
-            "folders": "/"
+            "folders": "/",
+            "keyColor": "34"
         },
         {
-            "key": "│ {#35} memory  {#keys}│",
-            "type": "memory"
+            "key": " memory",
+            "type": "memory",
+            "keyColor": "35"
         },
         {
-            "key": "├───────────┤",
-            "type": "custom"
+            "key": "󰩟 network",
+            "type": "localip",
+            "format": "{ipv4} ({ifname})",
+            "keyColor": "36"
         },
         {
-            "key": "│ {#39} colors  {#keys}│",
+            "key": " colors",
             "type": "colors",
-            "symbol": "circle"
-        },
-        {
-            "key": "╰───────────╯",
-            "type": "custom"
+            "symbol": "circle",
+            "keyColor": "39"
         }
     ]
 }

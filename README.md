@@ -13,13 +13,10 @@ _Everything that I'm currently daily driving on Linux._
 </div>
 
 ## Previews (from the commit hash: a197024)
-![preview_01](previews/2025-05-12-182037_hyprshot.webp)
-<br>
-![preview_02](previews/2025-05-12-184142_hyprshot.webp)
-<br>
-![preview_03](previews/2025-05-12-182322_hyprshot.webp)
-<br>
-![preview_04](previews/2025-05-12-182559_hyprshot.webp)
+<div>
+    <img src="2025-07-31-180721_hyprshot.webp" alt="rice preview 01">
+    <img src="2025-07-31-180721_hyprshot.webp" alt="rice preview 02">
+</div>
 
 ## What's in?
 01. Compositor - Hyprland(Wayland)
