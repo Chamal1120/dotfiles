@@ -12,11 +12,11 @@ _Everything that I'm currently daily driving on Linux._
 ![Discord](https://img.shields.io/discord/1121821626305089647?style=for-the-badge&logo=discord&logoColor=%23ffffff&labelColor=%2311111b&color=%23cba6f7)
 </div>
 
-## Previews (from the commit hash: a197024)
-<div>
-    <img src="2025-07-31-180721_hyprshot.webp" alt="rice preview 01">
-    <img src="2025-07-31-180721_hyprshot.webp" alt="rice preview 02">
-</div>
+## Preview
+
+![image]("2025-07-31-180721_hyprshot.webp")
+<br>
+![image]("2025-07-31-180721_hyprshot.webp")
 
 ## What's in?
 01. Compositor - Hyprland(Wayland)
