@@ -43,7 +43,9 @@ DOTFILE_LIST=(
   yazi
   yt-dlp
   zathura
+  tk
   zsh
+  wiremix
 )
 
 # Define the pacman package names

@@ -64,7 +64,7 @@ esac
 export PATH="$PATH":"$HOME/.local/scripts/"
 
 # Shell hotkeys (keybinds)
-bindkey -s '^f' 'tmux-sessionizer\n'
+bindkey -s '^f' 'tsesh\n'
 bindkey -s '^g' 'gropen\n'
 
 if [[ -n "$TMUX" ]]; then

@@ -10,6 +10,7 @@ vim.opt.mouse = "a"
 vim.opt.showmode = false
 vim.opt.showcmd = false
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
+vim.opt.swapfile = false
 
 vim.o.expandtab = true
 vim.o.tabstop = 2
@@ -62,13 +63,17 @@ vim.opt.scrolloff = 10
 
 -- Custom nvim commands
 vim.api.nvim_create_user_command("Tms", function()
-	vim.fn.jobstart({ "tmux", "new-window", "tmux-sessionizer" }, { detach = true })
+	vim.fn.jobstart({ "tmux", "new-window", "tsesh" }, { detach = true })
 end, {})
 
 vim.api.nvim_create_user_command("Gropen", function()
 	vim.fn.jobstart({ "gropen" }, { detach = true })
 	vim.api.nvim_echo({ { "remote repo opened in default browser!", "Normal" } }, false, {})
 end, {})
+
+-- Keymaps for custom nvim commands
+vim.keymap.set("n", "<C-f>", ":Tms<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-g>", ":Gropen<CR>", { noremap = true, silent = true })
 
 -- Navigate vim panes better
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
@@ -84,10 +89,6 @@ vim.keymap.set('n', '<C-M-j>', ':resize +5<CR>',
   { noremap = true, silent = true, desc = 'Increase horizontal split height' })
 vim.keymap.set('n', '<C-M-k>', ':resize -5<CR>',
   { noremap = true, silent = true, desc = 'Decrease horizontal split height' })
-
--- Other keymaps
-vim.keymap.set("n", "<C-f>", ":Tms<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-g>", ":Gropen<CR>", { noremap = true, silent = true })
 
 -- Custom filetype matchings
 vim.filetype.add({

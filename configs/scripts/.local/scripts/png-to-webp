@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+for img in *.png; do ffmpeg -i "$img" -qscale:v 90 "${img%.png}.webp"; done

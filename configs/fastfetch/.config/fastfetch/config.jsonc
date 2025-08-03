@@ -4,6 +4,7 @@
     "logo": {
     "source": "~/.config/fastfetch/excited_chibi",
     "type": "auto",
+    "height": 12,
     "padding": {
         "top": 0
         },
@@ -65,7 +66,7 @@
         {
             "key": "󰍛 cpu",
             "type": "cpu",
-            "showPeCoreCount": true,
+            "showPeCoreCount": false,
             "keyColor": "33"
         },
         {
@@ -78,12 +79,6 @@
             "key": " memory",
             "type": "memory",
             "keyColor": "35"
-        },
-        {
-            "key": "󰩟 network",
-            "type": "localip",
-            "format": "{ipv4} ({ifname})",
-            "keyColor": "36"
         },
         {
             "key": " colors",
