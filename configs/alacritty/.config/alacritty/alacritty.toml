@@ -31,7 +31,7 @@ mouse = { enabled = true }
 padding = {x = 20, y = 20}
 dynamic_padding = true
 decorations = "None"
-opacity = 0.9
+opacity = 1
 
 [mouse]
 hide_when_typing = false

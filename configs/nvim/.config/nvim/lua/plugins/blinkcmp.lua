@@ -24,7 +24,11 @@ return {
         draw = {
           -- We don't need label_description now because label and label_description are already
           -- combined together in label by colorful-menu.nvim.
-          columns = { { "kind_icon" }, { "label", gap = 1 } },
+          columns = {
+            { "kind_icon" }, 
+            { "label", gap = 1 },
+            {"kind"},
+          },
           components = {
             label = {
               text = function(ctx)
