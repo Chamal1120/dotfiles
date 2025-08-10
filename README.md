@@ -18,28 +18,39 @@ _Everything that I'm currently daily driving on Linux._
 <br>
 ![image](previews/2025-07-31-180721_hyprshot.webp)
 
+<details>
+
+<summary>
+
 ## What's in?
-01. Compositor - Hyprland(Wayland)
-02. Bar - waybar(default), Hyprpanel
-03. Notification Daemon - swaync(for waybar only)
-04. Terminal emulator - Alacritty (default), foot
-05. Shell - zsh
-06. Terminal multiplexer - tmux
-07. Nerd font - CaskaydiaCove Nerd Font
-08. Text editor and IDE - Neovim, Vim
-09. Browser - Vivaldi, Firefox
-10. File Manager(GUI) - Thunar
-11. Document viewer - Zathura
-12. File Manager (TUI) - Yazi
-13. Git manager (TUI) - Lazygit
-14. `ls` replacement - eza
-15. `cd` replacement - Zoxide
-16. `cat` replacement - Bat
-17. sysfetch - Fastfetch
-18. App launcher - Rofi wayland fork
-19. Cursor theme - Rose-pine-hyprland (for Hyprland), BreezX-RosePine (for X)
-20. Icon theme - Papirus-Dark
-21. Icon color heme - Catppuccin mocha lavender
+
+</summary>
+
+| #  | Component                 | Description                                         |
+|-----|--------------------------|-----------------------------------------------------|
+| 01 | Compositor               | Hyprland                                           |
+| 02 | Bar                      | waybar                                             |
+| 03 | Notification Daemon      | swaync                                             |
+| 04 | Terminal emulator        | Alacritty                                          |
+| 05 | Shell                    | zsh                                                |
+| 06 | Terminal multiplexer     | tmux                                               |
+| 07 | Nerd font                | CaskaydiaCove Nerd Font                            |
+| 08 | Text editor and IDE      | Neovim                                             |
+| 09 | Browser                  | Vivaldi                                            |
+| 10 | File Manager (GUI)       | Thunar                                             |
+| 11 | Document viewer          | Zathura                                            |
+| 12 | File Manager (TUI)       | Yazi                                               |
+| 13 | Git manager (TUI)        | Lazygit                                            |
+| 14 | `ls` replacement         | eza                                                |
+| 15 | `cd` replacement         | Zoxide                                             |
+| 16 | `cat` replacement        | Bat                                                |
+| 17 | sysfetch                 | Fastfetch                                          |
+| 18 | App launcher             | Rofi wayland fork                                  |
+| 19 | Cursor theme             | Rose-pine-hyprland (Hyprland), BreezX-RosePine (X)|
+| 20 | Icon theme               | Papirus-Dark                                       |
+| 21 | Icon color theme         | Catppuccin mocha lavender                          |
+
+</details>
 
 ## Automated Install
 > [!NOTE]
@@ -71,62 +82,72 @@ make rice
 
 <details>
 
-    <summary>Manual Install</summary
+<summary>
 
-    I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
+## Manual Install
 
-    > [!IMPORTANT]
-    > Please make sure you backup your exisitng configs first.
+</summary
 
-    1. Install stow:
+I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
 
-    ```bash
-    paru -S stow # replace with your package manager's syntax
-    ```
+> [!IMPORTANT]
+> Please make sure you backup your exisitng configs first.
 
-    2. clone the repo:
+1. Install stow:
 
-    ```bash
-    git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles.git
-    ```
-    3. Navigate to the configs directory in the git repo:
+```bash
+paru -S stow # replace with your package manager's syntax
+```
 
-    ```bash
-    cd dotfiles-linux-hyprland/configs
-    ```
+2. clone the repo:
 
-    4. Remove your existing conflicting configs otherwise stow would not symlink at all.
+```bash
+git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles.git
+```
+3. Navigate to the configs directory in the git repo:
 
-    5. Exit hyprland (You cannot remove existing hyprland config while running it as it will create a new one automcatically).
+```bash
+cd dotfiles-linux-hyprland/configs
+```
 
-    ```bash
-    hyprctl dispatch exit
-    ```
+4. Remove your existing conflicting configs otherwise stow would not symlink at all.
 
-    6. Delete the existing hyprland config while in TTY.
+5. Exit hyprland (You cannot remove existing hyprland config while running it as it will create a new one automcatically).
 
-    ```bash
-    rm -rf ~/.config/hypr
-    ```
+```bash
+hyprctl dispatch exit
+```
 
-    7. Simlink the configs you need with `stow`.
+6. Delete the existing hyprland config while in TTY.
 
-    ```bash
-    stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # You can simlink multiple files like this
-    ```
+```bash
+rm -rf ~/.config/hypr
+```
 
-    > [!IMPORTANT]
-    > * Clone fast-syntax-highlighting and zsh-auto-suggestions from their git repos.
-    > * Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to `$HOME/.zsh-plugins/`.
-    > * Please use **sudo** when simlinking pacman config.
-    > * Use the manual install for catppuccin tmux theme or change the .tmux.conf yourself to get it through tpm.
+7. Simlink the configs you need with `stow`.
 
-    > [!NOTE]
-    > I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `hyprland.conf` file in the `~/.config/hypr` directory.
+```bash
+stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # You can simlink multiple files like this
+```
+
+> [!IMPORTANT]
+> * Clone fast-syntax-highlighting and zsh-auto-suggestions from their git repos.
+> * Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to `$HOME/.zsh-plugins/`.
+> * Please use **sudo** when simlinking pacman config.
+> * Use the manual install for catppuccin tmux theme or change the .tmux.conf yourself to get it through tpm.
+
+> [!NOTE]
+> I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `hyprland.conf` file in the `~/.config/hypr` directory.
 
 </details>
 
+<details>
+
+<summary>
+
 ## Removing the symlinks
+
+</summary>
 
 1. Exit hyprland:
 
@@ -145,6 +166,8 @@ cd dotfiles-linux-hyprland/configs
 ```bash
 stow -D --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # Remove all the symlinks you linked earlier
 ```
+</details>
+
 ## Community
 
 Click [here](https://discord.gg/PsxwFB4nJA) and hop onto my discord to talk about tech, vim, linux and all other degenerative stuff :-)
