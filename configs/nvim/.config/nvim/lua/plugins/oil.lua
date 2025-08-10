@@ -14,6 +14,13 @@ return {
       view_options = {
         show_hidden = true,
       },
+      float = {
+        padding = 2,
+        border = "single",
+      },
+      confirmation = {
+        border = "single",
+      }
     })
     vim.keymap.set("n", "_", oil.toggle_float, {})
   end,

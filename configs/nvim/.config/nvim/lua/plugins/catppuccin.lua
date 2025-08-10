@@ -5,13 +5,19 @@ return {
   priority = 1000,
   config = function()
     require("catppuccin").setup({
+      color_overrides = {
+        mocha = {
+          mantle = "#1e1e2e",
+          base = "#181825"
+        },
+      },
       flavour = "mocha",
-      transparent_background = true,
+      transparent_background = false,
       no_italic = false,    -- Force no italic
       no_bold = false,      -- Force no bold
       no_underline = false, -- Force no underline
       integrations = {
-        blink_cmp = false,
+        blink_cmp = true,
         copilot_vim = true,
         treesitter = true,
         lsp_trouble = true,
@@ -19,7 +25,6 @@ return {
         mason = true,
         telescope = {
           enabled = true,
-          style = "nvchad",
         },
         indent_blankline = {
           enabled = true,

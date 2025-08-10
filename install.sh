@@ -46,6 +46,7 @@ DOTFILE_LIST=(
   tk
   zsh
   wiremix
+  evince
 )
 
 # Define the pacman package names
