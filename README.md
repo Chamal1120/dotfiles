@@ -69,57 +69,62 @@ make rice
 
 3. Enjoy!
 
-## Manual Install
-I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
+<details>
 
-> [!IMPORTANT]
-> Please make sure you backup your exisitng configs first.
+    <summary>Manual Install</summary
 
-1. Install stow:
+    I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
 
-```bash
-paru -S stow # replace with your package manager's syntax
-```
+    > [!IMPORTANT]
+    > Please make sure you backup your exisitng configs first.
 
-2. clone the repo:
+    1. Install stow:
 
-```bash
-git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles.git
-```
-3. Navigate to the configs directory in the git repo:
+    ```bash
+    paru -S stow # replace with your package manager's syntax
+    ```
 
-```bash
-cd dotfiles-linux-hyprland/configs
-```
+    2. clone the repo:
 
-4. Remove your existing conflicting configs otherwise stow would not symlink at all.
+    ```bash
+    git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles.git
+    ```
+    3. Navigate to the configs directory in the git repo:
 
-5. Exit hyprland (You cannot remove existing hyprland config while running it as it will create a new one automcatically).
+    ```bash
+    cd dotfiles-linux-hyprland/configs
+    ```
 
-```bash
-hyprctl dispatch exit
-```
+    4. Remove your existing conflicting configs otherwise stow would not symlink at all.
 
-6. Delete the existing hyprland config while in TTY.
+    5. Exit hyprland (You cannot remove existing hyprland config while running it as it will create a new one automcatically).
 
-```bash
-rm -rf ~/.config/hypr
-```
+    ```bash
+    hyprctl dispatch exit
+    ```
 
-7. Simlink the configs you need with `stow`.
+    6. Delete the existing hyprland config while in TTY.
 
-```bash
-stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # You can simlink multiple files like this
-```
+    ```bash
+    rm -rf ~/.config/hypr
+    ```
 
-> [!IMPORTANT]
-> * Clone fast-syntax-highlighting and zsh-auto-suggestions from their git repos.
-> * Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to `$HOME/.zsh-plugins/`.
-> * Please use **sudo** when simlinking pacman config.
-> * Use the manual install for catppuccin tmux theme or change the .tmux.conf yourself to get it through tpm.
+    7. Simlink the configs you need with `stow`.
 
-> [!NOTE]
-> I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `hyprland.conf` file in the `~/.config/hypr` directory.
+    ```bash
+    stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # You can simlink multiple files like this
+    ```
+
+    > [!IMPORTANT]
+    > * Clone fast-syntax-highlighting and zsh-auto-suggestions from their git repos.
+    > * Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to `$HOME/.zsh-plugins/`.
+    > * Please use **sudo** when simlinking pacman config.
+    > * Use the manual install for catppuccin tmux theme or change the .tmux.conf yourself to get it through tpm.
+
+    > [!NOTE]
+    > I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `hyprland.conf` file in the `~/.config/hypr` directory.
+
+</details>
 
 ## Removing the symlinks
 
@@ -145,7 +150,7 @@ stow -D --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux y
 Click [here](https://discord.gg/PsxwFB4nJA) and hop onto my discord to talk about tech, vim, linux and all other degenerative stuff :-)
 
 ## Credits
-All credits and respect goes to all the authors and maintainers of the open source software I have used for this setup.
+To all FOSS creators, maintainers and other contributors.
 
 ## License
-This peice of software is licensed under MIT.
+This config is licensed under [Do What The F*ck You Want To Public License (WTFPL)](LICENSE).
