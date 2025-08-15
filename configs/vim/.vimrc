@@ -1,5 +1,17 @@
 set rnu
 set termguicolors
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set scrolloff=5
+"set cursorline
+set clipboard=unnamedplus
+set undofile
+"set colorcolumn=80
+
+nnoremap _ :Explore<CR>
+
 let g:lightline = {'colorscheme': 'catppuccin_mocha'}
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))

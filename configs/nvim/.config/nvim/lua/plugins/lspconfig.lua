@@ -20,6 +20,7 @@ return {
 					"tailwindcss",
 					"rust_analyzer",
 					"clangd",
+					"csharp_ls",
 					"pylsp",
 					"jinja_lsp",
 				},
@@ -40,6 +41,7 @@ return {
 				ts_ls = {},
 				bashls = {},
 				clangd = {},
+				csharp_ls = {},
 				tailwindcss = {},
 				rust_analyzer = {
 					settings = {

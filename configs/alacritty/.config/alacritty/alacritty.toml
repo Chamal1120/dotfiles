@@ -3,7 +3,7 @@ general.import = [
 ]
 
 [font]
-size = 11.0
+size = 14
 builtin_box_drawing = false
 
 [font.bold]

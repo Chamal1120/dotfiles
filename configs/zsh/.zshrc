@@ -4,7 +4,7 @@ alias ls='eza --icons'
 alias la='eza -a'
 alias lla='eza -la'
 #alias lt='eza -TL 2'
-alias vim='nvim'
+#alias vim='nvim'
 alias cat='bat'
 alias man='batman'
 alias yt-dlp-fhd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf'
@@ -12,7 +12,7 @@ alias yt-dlp-hd='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-720.conf'
 alias yt-dlp-audio='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-audio.conf'
 #alias ctltui='systemctl-tui'
 #alias kblit='set_kb_backlight'
-alias myed="ed -p ':'"
+#alias myed="ed -p ':'"
 
 export FUNCNEST=1000
 DISABLE_AUTO_TITLE="true"
@@ -28,7 +28,8 @@ setopt EXTENDED_GLOB
 # Variable exports
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export JAVA_HOME=/usr/lib/jvm/java-24-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-24-openjdka
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export FLASK_DEBUG=1
 export XCURSOR_THEME=Adwaita
 export XCURSOR_SIZE=24
