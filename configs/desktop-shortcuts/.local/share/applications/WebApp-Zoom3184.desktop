@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Name=Zoom
+Comment=Online meetings
+Exec=google-chrome-stable --app="https://app.zoom.us/wc/home?from=pwa" --class=WebApp-Zoom3184 --name=WebApp-Zoom3184 --ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=zoom-desktop
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-Zoom3184
+StartupNotify=true
+X-WebApp-Browser=Chrome
+X-WebApp-URL=https://app.zoom.us/wc/home?from=pwa
+X-WebApp-CustomParameters=--ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
+X-WebApp-Navbar=false
+X-WebApp-PrivateWindow=false
+X-WebApp-Isolated=false
+

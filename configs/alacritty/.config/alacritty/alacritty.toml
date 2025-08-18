@@ -35,3 +35,11 @@ opacity = 1
 
 [mouse]
 hide_when_typing = false
+
+[cursor]
+style = { shape = "Block", blinking = "Never" }   # block cursor, no blinking
+vi_mode_style = "Block"                           # use block for vi mode too
+blink_interval = 750
+blink_timeout = 0                                 # never stop blinking (optional)
+unfocused_hollow = false                          # solid block when unfocused
+thickness = 1.0                                   # full width of the cell

@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Name=Youtube
+Comment=Entertainment
+Exec=google-chrome-stable --app="https://youtube.com/" --class=WebApp-Youtube7337 --name=WebApp-Youtube7337 --ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=youtube
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-Youtube7337
+StartupNotify=true
+X-WebApp-Browser=Chrome
+X-WebApp-URL=https://youtube.com/
+X-WebApp-CustomParameters=--ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
+X-WebApp-Navbar=false
+X-WebApp-PrivateWindow=false
+X-WebApp-Isolated=false
+

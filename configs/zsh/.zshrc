@@ -1,5 +1,4 @@
 #Aliases
-#alias cd='z'
 alias ls='eza --icons'
 alias la='eza -a'
 alias lla='eza -la'
@@ -13,6 +12,25 @@ alias yt-dlp-audio='yt-dlp --config-location ~/.config/yt-dlp/yt-dlp-audio.conf'
 #alias ctltui='systemctl-tui'
 #alias kblit='set_kb_backlight'
 #alias myed="ed -p ':'"
+
+# Enable completion system
+autoload -Uz compinit
+compinit
+
+# Load bash completions
+autoload -U bashcompinit && bashcompinit
+
+# Show comp menu if multiple matches
+zstyle ':completion:*' menu select
+
+# Case-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a=z}={A-Za-z}'
+
+# Better completion for paths
+zstyle ':completions:*' list-colors ''
+
+# Ignore duplicate entries
+zstyle ':completions:*' squeeze-slashes true
 
 export FUNCNEST=1000
 DISABLE_AUTO_TITLE="true"
@@ -31,18 +49,16 @@ export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platf
 export JAVA_HOME=/usr/lib/jvm/java-24-openjdka
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export FLASK_DEBUG=1
-export XCURSOR_THEME=Adwaita
 export XCURSOR_SIZE=24
-#export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
-export CHROME_EXECUTABLE=/usr/bin/vivaldi
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export LIBVA_DRIVER_NAME=iHD
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
 export DOCKER_CLIENT_PARALLELISM=1
 export MOZ_ENABLE_WAYLAND=1
 export ELECTRON_ENABLE_WAYLAND=1
 export ELECTRON_OZONE_PLATFORM_HINT=auto # Wayland Electron Development (v28+)
-export EDITOR='nvim' # Set default text edtior for terminal
-export BROWSER='vivaldi'
+export EDITOR='nvim'
+export BROWSER='chrome'
 export BAT_THEME="Catppuccin Mocha"
 export BAT_CONFIG_PATH="/Users/$USER/.config/bat/config/bat.conf"
 export STARSHIP_CONFIG=~/.config/starship.toml
@@ -73,8 +89,7 @@ if [[ -n "$TMUX" ]]; then
 fi
 
 # source directories for custom plugins
-source /home/$USER/.zsh-plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh # Fast Syntax Highlighting
-#source /home/$USER/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh Autosuggestions
+source /home/$USER/.zsh-plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+#source /home/$USER/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source <(fzf --zsh) # enable fzf for zsh completions (use ctrl + t)
-eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

@@ -1,6 +1,6 @@
 <div align="center">
 
-# Dotfiles (WIP - Changing to a boxy UI)
+# Chamal1120's Dotfiles
 _Everything that I'm currently daily driving on Linux._
 
 ![Static Badge](https://img.shields.io/badge/WM-HYPRLAND-%232596be?style=for-the-badge&logo=orange&logoColor=%23ffffff&labelColor=%2311111b)
@@ -12,7 +12,7 @@ _Everything that I'm currently daily driving on Linux._
 ![Discord](https://img.shields.io/discord/1121821626305089647?style=for-the-badge&logo=discord&logoColor=%23ffffff&labelColor=%2311111b&color=%23cba6f7)
 </div>
 
-## Preview
+## Previews
 
 ![image](.github/previews/2025-07-31-180431_hyprshot.webp)
 <br>
@@ -34,28 +34,27 @@ _Everything that I'm currently daily driving on Linux._
 | 04 | Terminal emulator        | Alacritty                                          |
 | 05 | Shell                    | zsh                                                |
 | 06 | Terminal multiplexer     | tmux                                               |
-| 07 | Nerd font                | CaskaydiaCove Nerd Font                            |
+| 07 | fonts                    | CaskaydiaCove NFM (term), Giest (GTK)              |
 | 08 | Text editor and IDE      | Neovim                                             |
-| 09 | Browser                  | Vivaldi                                            |
+| 09 | Browser                  | Chrome                                             |
 | 10 | File Manager (GUI)       | Thunar                                             |
 | 11 | Document viewer          | Zathura                                            |
 | 12 | File Manager (TUI)       | Yazi                                               |
 | 13 | Git manager (TUI)        | Lazygit                                            |
 | 14 | `ls` replacement         | eza                                                |
-| 15 | `cd` replacement         | Zoxide                                             |
-| 16 | `cat` replacement        | Bat                                                |
-| 17 | sysfetch                 | Fastfetch                                          |
-| 18 | App launcher             | Rofi wayland fork                                  |
-| 19 | Cursor theme             | Rose-pine-hyprland (Hyprland), BreezX-RosePine (X)|
-| 20 | Icon theme               | Papirus-Dark                                       |
-| 21 | Icon color theme         | Catppuccin mocha lavender                          |
+| 15 | `cat` replacement        | Bat                                                |
+| 16 | sysfetch                 | Fastfetch                                          |
+| 17 | App launcher             | Rofi (wayland fork)                                |
+| 18 | Cursor theme             | Rose-pine-hyprland (wayland), BreezX-RosePine (X)  |
+| 19 | Icon theme               | Papirus-Dark                                       |
+| 20 | Icon color theme         | Catppuccin mocha lavender                          |
 
 </details>
 
 ## Automated Install
+
 > [!NOTE]
-> This config is made for a minimal Arch Linux install and might conflict with any other customized distro.
-> I recommend using a base Arch install (Hyprland install from ArchInstall Script works).
+> This config is designed to setup on a vanilla base Arch Install.
 
 1. Clone the repo and cd into it:
 ```bash
@@ -170,10 +169,10 @@ stow -D --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux y
 
 ## Community
 
-Click [here](https://discord.gg/PsxwFB4nJA) and hop onto my discord to talk about tech, vim, linux and all other degenerative stuff :-)
+Want support? Hop in [here](https://discord.gg/PsxwFB4nJA)).
 
 ## Credits
 To all FOSS creators, maintainers and other contributors.
 
 ## License
-This config is licensed under [Do What The F*ck You Want To Public License (WTFPL)](LICENSE).
+This project is licensed under [Do What The F*ck You Want To Public License (WTFPL)](LICENSE).
