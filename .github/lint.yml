@@ -1,0 +1,25 @@
+name: Lint Dotfiles
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout Code
+     - uses: actions/checkout@v4
+
+     - name: Run yamllint
+       run: yamllint .
+
+     - name: Setup for toml
+       uses: uncenter/setup-taplo@v1
+       with:
+        version: "0.8.1"
+
+     - name: Run Taplo
+       run: taplo lint
+
+     - name: Run ShellCheck
+       uses: ludeeus/action-shellcheck@master

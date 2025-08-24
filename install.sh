@@ -9,7 +9,7 @@ fi
 set -e
 
 # Define the dirs
-DOTFILES_DIR="$PWD/configs"
+_DOTFILES_DIR="$PWD/configs"
 BACKUP_DIR="$HOME/.dotfiles_backup"
 ZSH_PLUGINS_DIR="$HOME/.zsh-plugins"
 
@@ -174,7 +174,7 @@ symlink_dotfiles() {
   echo "Installing randy's dotfiles with stow"
   [ -d "$HOME/dotfiles/configs" ] || { echo "Dotfiles directory not found"; exit 1; }
   sudo pacman -S --noconfirm stow --needed
-  stow --target=$HOME "$DOTFILE_LIST"
+  stow --target="$HOME" "${DOTFILE_LIST[@]}"
   sudo stow --target=/etc pacman
   echo "Dotfile installed"
 }
@@ -221,11 +221,11 @@ optimizing_vivaldi() {
 }
 
 put_post_instructions() {
-  echo "\nI have disabled the animations, blur and opacity"
-  echo "You can enable them from .config/hypr/hyprland.conf"
-  echo "Plus there are some WindowRules to override opacity in browser and mpv"
-  echo "Remove them if you don't need\n"
-  echo "Restart your shell or run 'exec zsh' to apply changes"
+  printf "\nI have disabled the animations, blur and opacity"
+  printf "You can enable them from .config/hypr/hyprland.conf"
+  printf "Plus there are some WindowRules to override opacity in browser and mpv"
+  printf "Remove them if you don't need\n"
+  printf "Restart your shell or run 'exec zsh' to apply changes"
 }
 
 # Run the functions

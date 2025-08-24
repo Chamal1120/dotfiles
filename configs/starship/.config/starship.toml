@@ -43,6 +43,8 @@ symbol = " "
 
 [directory]
 style = "bold fg:blue"
+truncation_length= 2
+truncate_to_repo = true
 format = "[ $path ]($style)"
 read_only = " 󰌾"
 

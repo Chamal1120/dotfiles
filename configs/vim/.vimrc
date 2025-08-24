@@ -19,12 +19,21 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
 call plug#begin()
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :<C-U>TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :<C-U>TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
 
 " Plugins
 Plug 'tpope/vim-sensible'
 Plug 'lambdalisue/fern.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tribela/vim-transparent'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 silent! colorscheme catppuccin_mocha

@@ -1,0 +1,11 @@
+[Icon Theme]
+Name=FaceTimeHD
+Comment=FaceTimeHD toggle icons
+Example=folder
+Directories=scalable/status
+
+[scalable/status]
+Size=48
+Context=Status
+Type=Scalable
+
