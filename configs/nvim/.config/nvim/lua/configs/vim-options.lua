@@ -9,13 +9,13 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 vim.opt.showmode = false
 vim.opt.showcmd = false
-vim.opt.guicursor = "n-v-i-c:block-Cursor"
 vim.opt.swapfile = false
-
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 vim.o.expandtab = true
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
+vim.o.wrap = false
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.

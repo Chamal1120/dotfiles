@@ -1,0 +1,22 @@
+[Desktop Entry]
+Version=1.0
+Name=Spotify
+Comment=A music streaming service
+GenericName=Music streaming
+Keywords=music;songs;
+Exec=google-chrome-stable --app="https://open.spotify.com/" --class=spotify-web --name=spotify --ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=spotify
+Categories=GTK;AudioVideo;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=spotify-web
+StartupNotify=true
+X-WebApp-Browser=Chrome
+X-WebApp-URL=https://open.spotify.com/
+X-WebApp-CustomParameters=--ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
+X-WebApp-Navbar=false
+X-WebApp-PrivateWindow=false
+X-WebApp-Isolated=false
+

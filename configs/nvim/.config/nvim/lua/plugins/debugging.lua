@@ -61,12 +61,12 @@ return {
         layouts = {
           {
             elements = {
-              {id = "scopes", size = 0.65},
-              {id = "watches", size = 0.15},
-              {id = "breakpoints", size = 0.1},
-              {id = "stacks", size = 0.1},
+              { id = "scopes",      size = 0.65 },
+              { id = "watches",     size = 0.15 },
+              { id = "breakpoints", size = 0.1 },
+              { id = "stacks",      size = 0.1 },
             },
-            size = 30, --total width in columns
+            size = 30,          --total width in columns
             position = "right", -- can be left or right
           },
           {
@@ -91,7 +91,7 @@ return {
           type = "python",
           request = "launch",
           name = "Launch file",
-          program = "${file}",     -- This runs the current file
+          program = "${file}",          -- This runs the current file
           pythonPath = get_python_venv, -- Dynamically resolved Python path
         },
       }
@@ -100,7 +100,7 @@ return {
       dap.adapters.coreclr = {
         type = 'executable',
         command = 'netcoredbg',
-        args = {'--interpreter=vscode'}
+        args = { '--interpreter=vscode' }
       }
 
       -- .NET build function
@@ -109,7 +109,7 @@ return {
         local cwd = vim.fn.getcwd()
         local proj_files = vim.fn.glob(cwd .. "/*.csproj", false, true)
         local proj_path = nil
-        
+
         if #proj_files == 1 then
           -- Found exactly one project file, use it
           proj_path = proj_files[1]
@@ -134,7 +134,7 @@ return {
           proj_path = vim.fn.input('Path to your *proj file: ', default_path, 'file')
           vim.g['dotnet_last_proj_path'] = proj_path
         end
-        
+
         local cmd = 'dotnet build -c Debug ' .. proj_path
         print('Building: ' .. vim.fn.fnamemodify(proj_path, ":t"))
         local result = os.execute(cmd .. ' > /dev/null 2>&1')
@@ -151,7 +151,7 @@ return {
         -- Look for any .dll in bin/Debug/net*/
         local glob_pattern = cwd .. "/bin/Debug/net*/*.dll"
         local dll_files = vim.fn.glob(glob_pattern, false, true)
-        
+
         if #dll_files > 0 then
           -- Return the first DLL found (usually there's only one)
           return dll_files[1]
@@ -161,7 +161,7 @@ return {
           if #proj_files > 0 then
             local proj_name = vim.fn.fnamemodify(proj_files[1], ":t:r") -- Get filename without extension
             -- Try common target frameworks
-            local common_frameworks = {"net9.0", "net8.0", "net6.0", "net7.0"}
+            local common_frameworks = { "net9.0", "net8.0", "net6.0", "net7.0" }
             for _, fw in ipairs(common_frameworks) do
               local dll_path = cwd .. "/bin/Debug/" .. fw .. "/" .. proj_name .. ".dll"
               if vim.fn.filereadable(dll_path) == 1 then
@@ -195,7 +195,8 @@ return {
       }
 
       -- Create build command
-      vim.api.nvim_create_user_command('DapSetupDotnet', build_dotnet_project, { desc = 'Build .NET project (asks for project path)' })
+      vim.api.nvim_create_user_command('DapSetupDotnet', build_dotnet_project,
+        { desc = 'Build .NET project (asks for project path)' })
 
       dap.configurations.cs = dotnet_config
       dap.configurations.fsharp = dotnet_config

@@ -3,7 +3,12 @@ return {
 		"williamboman/mason.nvim",
 		lazy = "Verylazy",
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+				registries = {
+					"github:mason-org/mason-registry",
+					"github:Crashdummyy/mason-registry",
+				}
+			})
 		end,
 	},
 	{
@@ -20,7 +25,6 @@ return {
 					"tailwindcss",
 					"rust_analyzer",
 					"clangd",
-					"csharp_ls",
 					"pylsp",
 					"jinja_lsp",
 				},
@@ -41,7 +45,6 @@ return {
 				ts_ls = {},
 				bashls = {},
 				clangd = {},
-				csharp_ls = {},
 				tailwindcss = {},
 				rust_analyzer = {
 					settings = {

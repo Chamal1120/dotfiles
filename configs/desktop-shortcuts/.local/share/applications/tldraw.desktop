@@ -1,0 +1,22 @@
+[Desktop Entry]
+Version=1.0
+Name=tldraw
+Comment=drawing and sketch tool
+GenericName=drawing tool
+Keywords=sketch;drawing;
+Exec=google-chrome-stable --app="https://www.tldraw.com/" --class=tldraw --name=tldraw --user-data-dir=/home/randy99/.local/share/ice/profiles/tldraw3723 --ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/randy99/.local/share/ice/icons/tldraw.png
+Categories=GTK;Graphics;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=tldraw
+StartupNotify=true
+X-WebApp-Browser=Chrome
+X-WebApp-URL=https://www.tldraw.com/
+X-WebApp-CustomParameters=--ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
+X-WebApp-Navbar=false
+X-WebApp-PrivateWindow=false
+X-WebApp-Isolated=true
+
