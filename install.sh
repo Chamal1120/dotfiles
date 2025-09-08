@@ -233,6 +233,6 @@ backup_existing
 delete_existing
 symlink_dotfiles
 install_packages
-optimizing_vivaldi
+#optimizing_vivaldi
 finalizing_touches
 put_post_instructions
