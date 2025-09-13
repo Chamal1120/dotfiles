@@ -40,6 +40,9 @@ export BAT_CONFIG_PATH="$HOME/.config/bat/config/bat.conf"
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 export COLORTERM=truecolor
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+export NODE_REPL_MODE=sloppy
+export NODE_REPL_HISTORY_FILE=~/.node_repl_history
+export NODE_NO_READLINE=0
 
 # PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"
@@ -115,5 +118,3 @@ eval "$(starship init zsh)"
 # =========================
 bindkey -s '^f' 'tsesh\n'
 bindkey -s '^g' 'gropen\n'
-
-source /home/randy99/.zsh_completion.d/_retro
