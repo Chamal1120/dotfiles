@@ -3,24 +3,40 @@ general.import = [
 ]
 
 [font]
-size = 12
+size = 11
 builtin_box_drawing = false
 
-[font.bold]
-family = "CaskaydiaCove NFM" 
-style = "SemiBold"
+[font.normal]
+family = "CaskaydiaMono NFP"
+style = "Regular"
 
-[font.bold_italic]
-family = "CaskaydiaCove NFM"
-style = "Bold Italic"
+[font.bold]
+family = "CaskaydiaMono NFP" 
+style = "Bold"
 
 [font.italic]
-family = "CaskaydiaCove NFM"
+family = "CaskaydiaMono NFP"
 style = "Italic"
 
-[font.normal]
-family = "CaskaydiaCove NFM"
-style = "Regular"
+[font.bold_italic]
+family = "CaskaydiaMono NFP"
+style = "Bold Italic"
+
+#[font.normal]
+#family = "GeistMono NFP"
+#style = "SemiBold"
+#
+#[font.bold]
+#family = "GeistMono NFP" 
+#style = "Bold"
+#
+#[font.italic]
+#family = "GeistMono NFP"
+#style = "Italic"
+#
+#[font.bold_italic]
+#family = "GeistMono NFP"
+#style = "Bold Italic"
 
 [[hints.enabled]]
 regex = "[^ ]+\\.rs:\\d+:\\d+"

@@ -58,8 +58,8 @@ export FZF_DEFAULT_OPTS=" --preview 'bat -n --color=always {}' \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
-# ghcup environment
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
+# ghcup environment (uncomment if haskell toolchain was installed with ghcup)
+#[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 
 # Custom scripts
 export PATH="$PATH:$HOME/.local/scripts/"
@@ -75,7 +75,8 @@ bindkey -v
 alias ls='eza --icons'
 alias la='eza -a'
 alias lla='eza -la'
-# alias lt='eza -TL 2'
+alias ll='eza -l'
+alias lt='eza -TL 2'
 alias vim='nvim'
 alias cat='bat'
 alias man='batman'

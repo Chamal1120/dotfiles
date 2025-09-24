@@ -53,7 +53,7 @@ read_only = " 󰌾"
 "Downloads" = " Downloads"
 "Music" = "󰝚 Music"
 "Pictures" = " Pictures"
-"things" = " 󰲋 things"
+"things" = "󰲋 things"
 
 [docker_context]
 symbol = " "
@@ -94,6 +94,7 @@ symbol = " "
 
 [haskell]
 symbol = " "
+format = "[$symbol]($style)"
 
 [haxe]
 symbol = " "
@@ -152,7 +153,7 @@ symbol = " "
 [rust]
 symbol = "󱘗 "
 style = "bold yellow"
-#format = 'via[ $symbol($version)]($style)'
+format = 'via[ $symbol]($style)'
 
 [scala]
 symbol = " "

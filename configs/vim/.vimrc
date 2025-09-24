@@ -30,10 +30,11 @@ nnoremap <silent> <c-k> :<C-U>TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
 
 " Plugins
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'tpope/vim-sensible'
 Plug 'lambdalisue/fern.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tribela/vim-transparent'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
-silent! colorscheme catppuccin_mocha
+colorscheme catppuccin_mocha
