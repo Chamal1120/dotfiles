@@ -44,6 +44,9 @@ export NODE_REPL_MODE=sloppy
 export NODE_REPL_HISTORY_FILE=~/.node_repl_history
 export NODE_NO_READLINE=0
 
+# Add .NET Core SDK tools
+export PATH="$PATH:$HOME/.dotnet/tools"
+
 # PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in

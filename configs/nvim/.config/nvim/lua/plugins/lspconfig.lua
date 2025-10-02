@@ -1,3 +1,5 @@
+local lsp_on_attach = require("lsp.on_attach").on_attach
+
 return {
 	{
 		"williamboman/mason.nvim",
@@ -37,38 +39,60 @@ return {
 		lazy = false,
 		opts = {
 			servers = {
-				hls = {},
-				html = {},
-				cssls = {},
-				jinja_lsp = {},
-				lua_ls = {},
-				ts_ls = {},
-				bashls = {},
-				clangd = {},
-				tailwindcss = {},
-				rust_analyzer = {
+				lua_ls = {
 					settings = {
-						["rust-analyzer"] = {
-							imports = {
-								granularity = {
-									group = "module",
-								},
-								prefix = "self",
+						Lua = {
+							runtime = {
+								version = "LuaJIT",
 							},
-							cargo = {
-								buildScripts = {
-									enable = true,
-								},
+							diagnostics = {
+								globals = { "vim" }, -- recognize `vim` as global
 							},
-							procMacro = {
-								enable = true,
+							workspace = {
+								library = vim.api.nvim_get_runtime_file("", true), -- Neovim runtime files
+								checkThirdParty = false,
 							},
-							rustfmt = {
-								extraArgs = { "--config", "tab_spaces=2" },
+							format = {
+								enable = true,   -- enable formatting
+								indent_style = "space", -- use spaces
+								indent_size = 2, -- 2 spaces per indent
+								continuation_indent = 2, -- for wrapped lines
 							},
 						},
 					},
+
 				},
+				-- hls = {},
+				html = {},
+				cssls = {},
+				ts_ls = {},
+				tailwindcss = {},
+				bashls = {},
+				-- jinja_lsp = {},
+				-- clangd = {},
+				--	rust_analyzer = {
+				--		settings = {
+				--			["rust-analyzer"] = {
+				--				imports = {
+				--					granularity = {
+				--						group = "module",
+				--					},
+				--					prefix = "self",
+				--				},
+				--				cargo = {
+				--					buildScripts = {
+				--						enable = true,
+				--					},
+				--				},
+				--				procMacro = {
+				--					enable = true,
+				--				},
+				--				rustfmt = {
+				--					extraArgs = { "--config", "tab_spaces=2" },
+				--				},
+				--			},
+				--		},
+				--	},
 				pylsp = {
 					settings = {
 						pylsp = {
@@ -102,41 +126,15 @@ return {
 		--
 		config = function(_, opts)
 			local lspconfig = require("lspconfig")
-			local configs = require("lspconfig.configs")
 			local blink_cmp = require("blink.cmp")
 
+			-- Setup servers
 			for server, config in pairs(opts.servers) do
 				config.capabilities = blink_cmp.get_lsp_capabilities(config.capabilities)
+				config.on_attach = lsp_on_attach
 				lspconfig[server].setup(config)
 			end
-
-			-- Register ballerina server if not already registered
-			if not configs.ballerina then
-				configs.ballerina = {
-					default_config = {
-						cmd = { "bal", "start-language-server" },
-						filetypes = { "ballerina" },
-						root_dir = function(_)
-							return vim.fs.dirname(vim.fs.find({ "Ballerina.toml" }, { upward = true })[1])
-						end,
-						single_file_support = true,
-					},
-				}
-			end
-
-			-- Setup ballerina
-			lspconfig.ballerina.setup({
-				capabilities = blink_cmp.get_lsp_capabilities(),
-			})
-
-			-- Keymaps
-			local map = vim.keymap.set
-			map("n", "K", vim.lsp.buf.hover, {})
-			map("n", "<leader>gd", vim.lsp.buf.definition, {})
-			map("n", "<leader>gr", vim.lsp.buf.references, {})
-			map("n", "<leader>gf", vim.lsp.buf.format, {})
-			map("n", "<leader>ca", vim.lsp.buf.code_action, {})
-			map("n", "<leader>rn", vim.lsp.buf.rename, {})
 		end,
+
 	},
 }

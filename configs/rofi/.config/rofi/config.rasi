@@ -1,22 +1,17 @@
 /**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
+ * Based on config by : Aditya Shakya ( github: adi1090x)
  **/
 
 /*****----- Configuration -----*****/
 configuration {
     modi:                       "drun,run,filebrowser,emoji,calc";
-    show-icons:                 false;
-    display-drun:               " Apps";
-    display-run:                " Run";
-    display-filebrowser:        " Files";
-    display-emoji:		"󰞅 emoji";
-    display-calc:		"󰪚 Calc";
-    display-window:             " Windows";
+    show-icons:                 true;
+    display-drun:               "	Apps";
+    display-run:                "	Run";
+    display-filebrowser:        "	Files";
+    display-emoji:		"󰞅	emoji";
+    display-calc:		"󰪚	Calc";
+    display-window:             "	Windows";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 	window-format:              "{w} · {c} · {t}";
 }

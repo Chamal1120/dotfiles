@@ -14,9 +14,9 @@ _Everything that I'm currently daily driving on Linux._
 
 ## Previews
 
-![image](.github/previews/2025-07-31-180431_hyprshot.webp)
+![image](.github/previews/2025-10-02-233014_hyprshot.webp)
 <br>
-![image](.github/previews/2025-07-31-180721_hyprshot.webp)
+![image](.github/previews/2025-10-02-233201_hyprshot.webp)
 
 <details>
 
