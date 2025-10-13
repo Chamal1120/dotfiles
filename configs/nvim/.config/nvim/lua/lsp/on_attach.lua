@@ -15,13 +15,13 @@ M.on_attach = function(client, bufnr)
     map("n", "<leader>cl", vim.lsp.codelens.run)
 
     -- Enable CodeLens auto-refresh
-    if client.server_capabilities.codeLensProvider then
-        vim.api.nvim_create_autocmd({ "BufEnter", "InsertLeave" }, {
-            buffer = bufnr,
-            callback = vim.lsp.codelens.refresh,
-        })
-        vim.lsp.codelens.refresh()
-    end
+    -- if client.server_capabilities.codeLensProvider then
+    --     vim.api.nvim_create_autocmd({ "BufEnter", "InsertLeave" }, {
+    --         buffer = bufnr,
+    --         callback = vim.lsp.codelens.refresh,
+    --     })
+    --     vim.lsp.codelens.refresh()
+    -- end
 end
 
 return M

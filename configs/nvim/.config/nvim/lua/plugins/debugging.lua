@@ -8,7 +8,33 @@ return {
       "mfussenegger/nvim-dap-python",
     },
     config = function()
-      -- Helper function to dynamically resolve the Python path
+      -- DAP setup
+      local dap = require("dap")
+      local dapui = require("dapui")
+      dapui.setup({
+        layouts = {
+          {
+            elements = {
+              { id = "scopes",      size = 0.65 },
+              { id = "watches",     size = 0.15 },
+              { id = "breakpoints", size = 0.1 },
+              { id = "stacks",      size = 0.1 },
+            },
+            size = 30,          --total width in columns
+            position = "right", -- can be left or right
+          },
+          {
+            elements = {
+              "repl",
+            },
+            size = 0.25,
+            position = "bottom",
+          },
+        },
+      })
+
+      --------------------Helpers----------------------------------------------
+      -- Python helpers for path resoluton
       local function get_python_venv()
         local cwd = vim.fn.getcwd()
         local python_path = cwd .. "/.venv/bin/python"
@@ -19,7 +45,7 @@ return {
         end
       end
 
-      -- .NET helper functions
+      -- .NET helpers
       vim.g.dotnet_build_project = function()
         local default_path = vim.fn.getcwd() .. '/'
         if vim.g['dotnet_last_proj_path'] ~= nil then
@@ -54,31 +80,6 @@ return {
         return vim.g['dotnet_last_dll_path']
       end
 
-      -- DAP setup
-      local dap = require("dap")
-      local dapui = require("dapui")
-      dapui.setup({
-        layouts = {
-          {
-            elements = {
-              { id = "scopes",      size = 0.65 },
-              { id = "watches",     size = 0.15 },
-              { id = "breakpoints", size = 0.1 },
-              { id = "stacks",      size = 0.1 },
-            },
-            size = 30,          --total width in columns
-            position = "right", -- can be left or right
-          },
-          {
-            elements = {
-              "repl",
-            },
-            size = 0.25,
-            position = "bottom",
-          },
-        },
-      })
-
       -- Python debugging
       require("dap-python").setup(get_python_venv())
       dap.adapters.python = {
@@ -95,6 +96,60 @@ return {
           pythonPath = get_python_venv, -- Dynamically resolved Python path
         },
       }
+
+      -- CodeLLDB debugging
+      local mason_path = vim.fn.stdpath("data") .. "/mason/packages/codelldb/extension/"
+      local codelldb_path = mason_path .. "adapter/codelldb"
+
+      dap.adapters.lldb = {
+        type = 'server',
+        port = "${port}",
+        executable = {
+          command = codelldb_path,
+          args = { "--port", "${port}" },
+          env = { LLDB_PRETTY_PRINT = "1" }
+        },
+      }
+      -- Helper to prompt for executable
+      local function get_executable_path()
+        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+      end
+
+      -- C/C++ configuration
+      dap.configurations.cpp = {
+        {
+          name = "Launch C/C++ executable",
+          type = "lldb",
+          request = "launch",
+          program = get_executable_path,
+          cwd = '${workspaceFolder}',
+          stopOnEntry = false,
+          args = {},
+        },
+      }
+
+      -- C is same as C++
+      dap.configurations.c = dap.configurations.cpp
+
+      -- Rust configuration
+      dap.configurations.rust = {
+        {
+          name = "Launch Rust executable",
+          type = "lldb",
+          request = "launch",
+          program = function()
+            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
+          end,
+          cwd = '${workspaceFolder}',
+          stopOnEntry = false,
+          args = function()
+            -- Prompt for command-line arguments
+            local input = vim.fn.input("Program arguments: ")
+            return vim.fn.split(input, " ", true)
+          end,
+        },
+      }
+
 
       -- .NET debugging setup
       dap.adapters.coreclr = {
@@ -161,7 +216,7 @@ return {
           if #proj_files > 0 then
             local proj_name = vim.fn.fnamemodify(proj_files[1], ":t:r") -- Get filename without extension
             -- Try common target frameworks
-            local common_frameworks = { "net9.0", "net8.0", "net6.0", "net7.0" }
+            local common_frameworks = { "net9.0", "net8.0" }
             for _, fw in ipairs(common_frameworks) do
               local dll_path = cwd .. "/bin/Debug/" .. fw .. "/" .. proj_name .. ".dll"
               if vim.fn.filereadable(dll_path) == 1 then

@@ -12,9 +12,9 @@ vim.opt.showcmd = false
 vim.opt.swapfile = false
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
 vim.o.expandtab = true
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 2
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 vim.o.wrap = false
 
 -- Sync clipboard between OS and Neovim.

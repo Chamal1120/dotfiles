@@ -5,14 +5,12 @@ add_newline = true
 [line_break]
 disabled = true
 
-format = """ 
-$directory\
+format = """$directory\
 $git_branch\
 $git_commit\
 $git_status\
 $docker_context\
-$line_break$character
-"""
+$line_break$character"""
 
 [character] 
 success_symbol = '[](bold fg:green)'
@@ -23,7 +21,7 @@ vimcmd_replace_symbol = '[](bold fg:green)'
 vimcmd_visual_symbol = '[](bold fg:yellow)'
 
 [aws]
-symbol = "  "
+symbol = " aws"
 disabled = true
 
 [buf]
@@ -57,7 +55,7 @@ read_only = " 󰌾"
 
 [docker_context]
 symbol = " "
-format = ' [$symbol $context](blue bold)'
+format = ' [$symbol](blue bold)'
 disabled = false
 
 [elixir]
@@ -88,87 +86,112 @@ format = '([\[$all_status$ahead_behind\]]($style) )'
 
 [golang]
 symbol = " "
+disabled = true
 
 [guix_shell]
 symbol = " "
+disabled = true
 
 [haskell]
 symbol = " "
-format = "[$symbol]($style)"
+disabled = true
 
 [haxe]
 symbol = " "
+disabled = true
 
 [hg_branch]
 symbol = " "
+disabled = true
 
 [hostname]
 ssh_symbol = " "
+disabled = true
 
 [java]
 symbol = " "
+disabled = true
 
 [julia]
 symbol = " "
+disabled = true
 
 [kotlin]
 symbol = " "
+disabled = true
 
 [lua]
-symbol = " "
+#ymbol = " "
+disabled = true
 
-#[memory_usage]
-#symbol = "󰍛 "
+[memory_usage]
+symbol = "󰍛 "
+disabled = true
 
 [meson]
 symbol = "󰔷 "
+disabled = true
 
 [nim]
 symbol = " "
+disabled = true
 
 [nodejs]
 symbol = " "
+#format = 'via [$symbol]($style)'
+disabled = true
 
 [ocaml]
 symbol = " "
+disabled = true
 
 [perl]
 symbol = " "
+disabled = true
 
 [php]
 symbol = " "
+disabled = true
 
 [pijul_channel]
 symbol = " "
+disabled = true
 
 [python]
 symbol = " "
+disabled = true
 
 [rlang]
 symbol = "󰟔 "
+disabled = true
 
 [ruby]
 symbol = " "
+disabled = true
 
 [rust]
 symbol = "󱘗 "
-style = "bold yellow"
-format = 'via[ $symbol]($style)'
+disabled = true
 
 [scala]
 symbol = " "
+disabled = true
 
 [swift]
 symbol = " "
+disabled = true
 
 [zig]
 symbol = " "
+disabled = true
 
 [gradle]
 symbol = " "
+disabled = true
 
 [dotnet]
-format = "[$symbol]($style)"
+style = "purple"
+disabled = true
 
 [cmd_duration]
 disabled = true

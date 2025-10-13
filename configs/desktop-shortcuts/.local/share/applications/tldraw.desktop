@@ -4,11 +4,11 @@ Name=tldraw
 Comment=drawing and sketch tool
 GenericName=drawing tool
 Keywords=sketch;drawing;
-Exec=google-chrome-stable --app="https://www.tldraw.com/" --class=tldraw --name=tldraw --user-data-dir=/home/randy99/.local/share/ice/profiles/tldraw3723 --ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
+Exec=google-chrome-stable --app="https://www.tldraw.com/" --class=tldraw --name=tldraw --user-data-dir=%h/.local/share/ice/profiles/tldraw3723 --ozone-platform=wayland --use-gl=angle --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,UseMultiPlaneFormatForHardwareVideo
 Terminal=false
 X-MultipleArgs=false
 Type=Application
-Icon=/home/randy99/.local/share/ice/icons/tldraw.png
+Icon=%h/.local/share/ice/icons/tldraw.png
 Categories=GTK;Graphics;
 MimeType=text/html;text/xml;application/xhtml_xml;
 StartupWMClass=tldraw

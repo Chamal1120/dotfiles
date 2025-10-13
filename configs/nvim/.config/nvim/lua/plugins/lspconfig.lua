@@ -53,10 +53,10 @@ return {
 								checkThirdParty = false,
 							},
 							format = {
-								enable = true,   -- enable formatting
+								enable = true, -- enable formatting
 								indent_style = "space", -- use spaces
-								indent_size = 2, -- 2 spaces per indent
-								continuation_indent = 2, -- for wrapped lines
+								indent_size = 4, -- 2 spaces per indent
+								continuation_indent = 4, -- for wrapped lines
 							},
 						},
 					},
@@ -69,30 +69,30 @@ return {
 				tailwindcss = {},
 				bashls = {},
 				-- jinja_lsp = {},
-				-- clangd = {},
-				--	rust_analyzer = {
-				--		settings = {
-				--			["rust-analyzer"] = {
-				--				imports = {
-				--					granularity = {
-				--						group = "module",
-				--					},
-				--					prefix = "self",
-				--				},
-				--				cargo = {
-				--					buildScripts = {
-				--						enable = true,
-				--					},
-				--				},
-				--				procMacro = {
-				--					enable = true,
-				--				},
-				--				rustfmt = {
-				--					extraArgs = { "--config", "tab_spaces=2" },
-				--				},
-				--			},
-				--		},
-				--	},
+				clangd = {},
+				rust_analyzer = {
+					settings = {
+						["rust-analyzer"] = {
+							imports = {
+								granularity = {
+									group = "module",
+								},
+								prefix = "self",
+							},
+							cargo = {
+								buildScripts = {
+									enable = true,
+								},
+							},
+							procMacro = {
+								enable = true,
+							},
+							rustfmt = {
+								extraArgs = { "--config", "tab_spaces=2" },
+							},
+						},
+					},
+				},
 				pylsp = {
 					settings = {
 						pylsp = {
