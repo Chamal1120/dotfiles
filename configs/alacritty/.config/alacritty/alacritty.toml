@@ -44,7 +44,7 @@ command = { program = "code", args = [ "--goto" ] }
 mouse = { enabled = true }
 
 [window]
-padding = {x = 20, y = 20}
+padding = {x = 10, y = 10}
 dynamic_padding = true
 decorations = "None"
 opacity = 1

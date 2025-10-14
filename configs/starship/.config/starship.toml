@@ -43,7 +43,7 @@ symbol = " "
 style = "bold fg:blue"
 truncation_length= 1
 truncate_to_repo = true
-format = "[ $path ]($style)"
+format = "[$path ]($style)"
 read_only = " 󰌾"
 
 [directory.substitutions]
