@@ -99,7 +99,8 @@ vim.keymap.set('n', '<C-M-k>', ':resize -5<CR>',
 -- Custom filetype matchings
 vim.filetype.add({
   extension = {
-    bal = 'ballerina' -- Detect .bal as ballerina files
+    bal = 'ballerina',
+    rs = 'rust'
   },
   pattern = {
     [".*/hypr/.*%.conf"] = "hyprlang", -- Detect as hyprlang files

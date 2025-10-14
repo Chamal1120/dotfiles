@@ -11,27 +11,7 @@ return {
       -- DAP setup
       local dap = require("dap")
       local dapui = require("dapui")
-      dapui.setup({
-        layouts = {
-          {
-            elements = {
-              { id = "scopes",      size = 0.65 },
-              { id = "watches",     size = 0.15 },
-              { id = "breakpoints", size = 0.1 },
-              { id = "stacks",      size = 0.1 },
-            },
-            size = 30,          --total width in columns
-            position = "right", -- can be left or right
-          },
-          {
-            elements = {
-              "repl",
-            },
-            size = 0.25,
-            position = "bottom",
-          },
-        },
-      })
+      dapui.setup()
 
       --------------------Helpers----------------------------------------------
       -- Python helpers for path resoluton
