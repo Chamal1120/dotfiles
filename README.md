@@ -1,7 +1,7 @@
 <div align="center">
 
 # Chamal1120's Dotfiles
-_My Linux setup for work._
+_My GNU/Linux setup for work_
 
 ![Static Badge](https://img.shields.io/badge/WM-HYPRLAND-%232596be?style=for-the-badge&logo=orange&logoColor=%23ffffff&labelColor=%2311111b)
 ![Static Badge](https://img.shields.io/badge/distro-arch_linux-blue?style=for-the-badge&logo=linux&logoColor=%23ffffff&labelColor=%2311111b)
@@ -51,7 +51,7 @@ _My Linux setup for work._
 
 </details>
 
-## Automated Install
+## Installation
 
 > [!NOTE]
 > This config is designed to setup on a vanilla base Arch Install.
@@ -79,73 +79,11 @@ make rice
 
 3. Enjoy!
 
-<details>
+## Manual Installation
 
-<summary>
+Go to [here](/docs/manual_installation.md)
 
-## Manual Install
-
-</summary>
-
-I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
-
-> [!IMPORTANT]
-> Please make sure you backup your exisitng configs first.
-
-1. Install stow:
-
-```bash
-paru -S stow # replace with your package manager's syntax
-```
-
-2. clone the repo:
-
-```bash
-git clone --depth 1 --branch main --single branch https://github.com/chamal1120/dotfiles.git
-```
-3. Navigate to the configs directory in the git repo:
-
-```bash
-cd dotfiles-linux-hyprland/configs
-```
-
-4. Remove your existing conflicting configs otherwise stow would not symlink at all.
-
-5. Exit hyprland (You cannot remove existing hyprland config while running it as it will create a new one automcatically).
-
-```bash
-hyprctl dispatch exit
-```
-
-6. Delete the existing hyprland config while in TTY.
-
-```bash
-rm -rf ~/.config/hypr
-```
-
-7. Simlink the configs you need with `stow`.
-
-```bash
-stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # You can simlink multiple files like this
-```
-
-> [!IMPORTANT]
-> * Clone fast-syntax-highlighting and zsh-auto-suggestions from their git repos.
-> * Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to `$HOME/.zsh-plugins/`.
-> * Use **sudo** when simlinking pacman config.
-
-> [!NOTE]
-> I have turned off the workspace animations and blur in the hyprland config. You can turn them on by editing the `hyprland.conf` file in the `~/.config/hypr` directory.
-
-</details>
-
-<details>
-
-<summary>
-
-## Removing the symlinks
-
-</summary>
+## Uninstallation
 
 1. Exit hyprland:
 
@@ -164,9 +102,8 @@ cd dotfiles-linux-hyprland/configs
 ```bash
 stow -D --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi bat electron-flags-wayland icons  # Remove all the symlinks you linked earlier
 ```
-</details>
 
-## Community
+## Contact
 
 Hop in [here](https://discord.gg/PsxwFB4nJA)).
 
