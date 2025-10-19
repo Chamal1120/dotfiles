@@ -1,7 +1,7 @@
 <div align="center">
 
 # Chamal1120's Dotfiles
-_Everything that I'm currently daily driving on Linux._
+_My Linux setup for work._
 
 ![Static Badge](https://img.shields.io/badge/WM-HYPRLAND-%232596be?style=for-the-badge&logo=orange&logoColor=%23ffffff&labelColor=%2311111b)
 ![Static Badge](https://img.shields.io/badge/distro-arch_linux-blue?style=for-the-badge&logo=linux&logoColor=%23ffffff&labelColor=%2311111b)
@@ -85,7 +85,7 @@ make rice
 
 ## Manual Install
 
-</summary
+</summary>
 
 I manage my dotfiles with GNU `stow`. follow the below steps to simlink the files to necessary locations.
 
@@ -132,11 +132,10 @@ stow --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux yazi
 > [!IMPORTANT]
 > * Clone fast-syntax-highlighting and zsh-auto-suggestions from their git repos.
 > * Make sure that you have installed fast-syntax-highlighting and zsh-auto-suggestions to `$HOME/.zsh-plugins/`.
-> * Please use **sudo** when simlinking pacman config.
-> * Use the manual install for catppuccin tmux theme or change the .tmux.conf yourself to get it through tpm.
+> * Use **sudo** when simlinking pacman config.
 
 > [!NOTE]
-> I have turned off the animations and blur in the hyprland config. You can turn them on by editing the `hyprland.conf` file in the `~/.config/hypr` directory.
+> I have turned off the workspace animations and blur in the hyprland config. You can turn them on by editing the `hyprland.conf` file in the `~/.config/hypr` directory.
 
 </details>
 
@@ -169,10 +168,10 @@ stow -D --target=$HOME foot zsh fsh hyprland hyprpanel rofi starship nvim tmux y
 
 ## Community
 
-Want support? Hop in [here](https://discord.gg/PsxwFB4nJA)).
+Hop in [here](https://discord.gg/PsxwFB4nJA)).
 
 ## Credits
-To all FOSS creators, maintainers and other contributors.
+To all FOSS creators, maintainers and contributors.
 
 ## License
-This project is licensed under [Do What The F*ck You Want To Public License (WTFPL)](LICENSE).
+[Do What The F*ck You Want To Public License (WTFPL)](LICENSE).
