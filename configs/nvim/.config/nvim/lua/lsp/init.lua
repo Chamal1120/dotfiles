@@ -23,10 +23,19 @@ local servers = {
       },
     },
   },
+  html = {
+    cmd = { 'vscode-html-language-server', '--stdio' },
+    filetypes = { 'html' },
+  },
+  tailwindcss = {
+    cmd = {'tailwindcss-language-server', '--stdio'},
+    filetypes = { 'html', 'razor', 'tsx', 'jsx' },
+  },
   rust_analyzer = {
     cmd = { 'rust-analyzer' },
     filetypes = { 'rust' },
   },
+  jtdls = {},
 }
 
 -- Enable the LSPs
